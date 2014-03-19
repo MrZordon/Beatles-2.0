@@ -66,7 +66,7 @@
 											</div>
 										</div>
 										<div class="right">
-											<a href="Exodus_home.html" class="button">Login</a>
+											<a href="Exodus_home.php" class="button">Login</a>
 										</div>
 								</div>
 					</div> 

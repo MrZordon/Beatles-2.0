@@ -18,7 +18,7 @@
   		<!-- Header and Nav -->
     	<div class="large-11 columns">
 			<ul class="right button-group">
-				<li><a href="Exodus_MasterSearches.html" class="button" id="searchForResidents">Search for a Resident</a></li>
+				<li><a href="Exodus_MasterSearches.php" class="button" id="searchForResidents">Search for a Resident</a></li>
 				<li><a href="#" class="button" id="link2">Link 2</a></li>
 				<li><a href="#" class="button" id="link3">Link 3</a></li>
 				<li><a href="#" class="button" id="link4">Link 4</a></li>
@@ -56,7 +56,7 @@
                 <div class="panel">
                   <h5>Log Out</h5>
                 <h6 class="subheader">Log out of Exodus application.</h6>
-                <a href="Index.html" class="small button" id="logOut">Log Out</a>
+                <a href="Index.php" class="small button" id="logOut">Log Out</a>
                 </div>
               </div>
           </div>

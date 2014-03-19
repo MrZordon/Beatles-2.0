@@ -23,7 +23,7 @@
 			
   		   	<div class="large-9 columns">
 					<ul class="right button-group">
-						<li><a href="Exodus_home.html" class="button" id="home">Home</a></li>
+						<li><a href="Exodus_home.php" class="button" id="home">Home</a></li>
 						<li><a href="#" class="button" id="link2">Link 2</a></li>
 						<li><a href="#" class="button" id="link3">Link 3</a></li>
 						<li><a href="#" class="button" id="link4">Link 4</a></li>
