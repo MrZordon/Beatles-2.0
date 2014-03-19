@@ -1,0 +1,17 @@
+After Installation of xampp go to: C:\xAmpp (or wherever you installed xampp)
+
+Now go to the phpMyAdmin folder
+
+create a new folder: Exodus
+
+Place the php script, createDB.php, into the Exodus folder
+
+start xampp -- make sure you're running as admin
+
+open your web browser up and navigate to http://localhost/phpmyadmin
+
+to run the script you must navigate to the script directly: http://localhost/phpmyadmin/Exodus/createDB.php
+
+the script will run and the wepage will inform you of its status
+
+you can then go back to localhost/phpmyadmin (homepage) and will see the created DB in the lefthand column
