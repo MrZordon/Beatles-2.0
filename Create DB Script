@@ -1,0 +1,368 @@
+<?php
+	//Establish a connection to the server
+	$con = mysql_connect("localhost","root","");
+	
+	//Database to be created and used
+	$database = "Exodus";
+	$makeDatabase = "CREATE DATABASE " . $database;
+	$useDatabase = "USE " . $database;
+	$dropDatabase = "DROP DATABASE " . $database;
+	
+	//Tables to be made
+	$createTable = "CREATE TABLE ";
+	
+	$userTable = "Users (
+							UserName nvarchar(25),
+							Password nvarchar(20),
+							LastLoggedOn nvarchar(15),
+							CurrentlyLoggedOn nvarchar(5)
+							)";
+						
+	$genericTable = "GenericInfo (
+							ResidentType	CHAR(1),
+							ResidentID	NVARCHAR(10) NOT NULL,
+							Date	DATE,
+							FirstName	NVARCHAR(20),
+							MiddleInitial	CHAR(1),
+							LastName	NVARCHAR(30),
+							Gender	CHAR(1),
+							SSN	NVARCHAR(11),
+							DOB	DATE,
+							Age	INT,
+							Language	NVARCHAR(2),
+							Religion	NVARCHAR(3),
+							Street	NVARCHAR(20),
+							CityTown	NVARCHAR(20),
+							State	NVARCHAR(2),
+							Zip	NVARCHAR(10),
+							PhoneNum	NVARCHAR(12),
+							RefPerson	NVARCHAR(50),
+							RefAgency	NVARCHAR(25),
+							RefPhone	NVARCHAR(12),
+							NextKin	NVARCHAR(50),
+							Kinship	NVARCHAR(10),
+							KinStreet	NVARCHAR(20),
+							KinCityTown	NVARCHAR(20),
+							KinState	NVARCHAR(2),
+							KinZip	NVARCHAR(10),
+							KinPhone	NVARCHAR(12),
+							CounselorRequest	CHAR(1),
+							TermAgree	CHAR(1),
+							SignedBy	NVARCHAR(50),
+							PaidRent	CHAR(1),
+							LeaseAbility	NVARCHAR(140),
+							HousingGoals	NVARCHAR(255),
+							OweCompanies	INT,
+							Concerns	CHAR(1),
+							ExplainConcerns	NVARCHAR(255),
+							PRIMARY KEY (ResidentID) 
+							)";
+	
+	$educationTable = "Education (
+									ResidentID	NVARCHAR(10),
+									EducationMax	NVARCHAR(10),
+									FurtherEd	CHAR(1),
+									FurtherPlans	NVARCHAR(255),
+									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+									)";
+	
+	$domesticTable = "DomesticInfo (
+									ResidentID	NVARCHAR(10),
+									CoParentIssues	NVARCHAR(255),
+									DomViolence	CHAR(1),
+									SafetyPlan	NVARCHAR(255),
+									RestrainingOrder	CHAR(1),
+									PerpName	NVARCHAR(50),
+									FamilyInfo	NVARCHAR(255),
+									HomelessHistory	NVARCHAR(255),
+									HousingHistory	NVARCHAR(255),
+									Independent	CHAR(1),
+									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+									)";
+	
+	$membershipTable = "Membership (
+										ResidentID	NVARCHAR(10),
+										AgencyName1	NVARCHAR(25),
+										Amount1	INT,
+										AgencyName2	NVARCHAR(25),
+										Amount2	INT,
+										TotalIncome	INT,
+										RateOfPay	INT,
+										WorkerName	NVARCHAR(50),
+										WorkerCity	NVARCHAR(20),
+										WorkerPhone	NVARCHAR(12),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+
+	$medicalTable = "Medical (
+								ResidentID	NVARCHAR(10),
+								DocName	NVARCHAR(50),
+								Street	NVARCHAR(20),
+								CityTown	NVARCHAR(20),
+								State	NVARCHAR(2),
+								Zip	NVARCHAR(10),
+								Phone	NVARCHAR(12),
+								Medication	CHAR(1),
+								Med1	NVARCHAR(20),
+								Dose1	NVARCHAR(10),
+								When1	TIME,
+								Med2	NVARCHAR(20),
+								Dose2	NVARCHAR(10),
+								When2	TIME,
+								Allergies	NVARCHAR(50),
+								Siezures	CHAR(1),
+								Epilepsy	CHAR(1),
+								MentalHealthClient	CHAR(1),
+								MentalHealthDoc	NVARCHAR(50),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+										
+	$incarcerationTable = "Incarceration (
+										ResidentID	nvarchar(10),
+										IncarceratedYN	nvarchar(5),
+										IncarcerationLoc	nvarchar(50),
+										IncarceratedStartDate	date,
+										IncarceratedEndDate	date,
+										IncarcerationCharges	nvarchar(80),
+										InstitutionalizedYN	nvarchar(5),
+										NameOfInstitution	nvarchar(50),
+										InstituteStartDate	date,
+										InstituteReleaseDate	date,
+										ReasonForInstitutionalization	nvarchar(80),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+								
+	$vehicleTable = "Vehicle (
+								ResidentID	nvarchar(10),
+								NameOnRegistration	nvarchar(50),
+								LicenseNum	nvarchar(15),
+								State	nvarchar(5),
+								Make	nvarchar(25),
+								Color	nvarchar(25),
+								Model	nvarchar(25),
+								OLN	nvarchar(10),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+	
+	$childrenTable = "Children (
+								ResidentID	nvarchar(10),
+								ChildFirstName1	nvarchar(25),
+								ChildLastName1	nvarchar(25),
+								ChildGender1	nvarchar(10),
+								ChildDOB1	nvarchar(10),
+								ChildSSN1	nvarchar(10),
+								ChildCustodyIssues1	nvarchar(150),
+								ChildFirstName2	nvarchar(25),
+								ChildLastName2	nvarchar(25),
+								ChildGender2	nvarchar(10),
+								ChildDOB2	nvarchar(10),
+								ChildSSN2	nvarchar(10),
+								ChildCustodyIssues2	nvarchar(150),
+								ChildFirstName3	nvarchar(25),
+								ChildLastName3	nvarchar(25),
+								ChildGender3	nvarchar(10),
+								ChildDOB3	nvarchar(10),
+								ChildSSN3	nvarchar(10),
+								ChildCustodyIssues3	nvarchar(150),
+								ChildFirstName4	nvarchar(25),
+								ChildLastName4	nvarchar(25),
+								ChildGender4	nvarchar(10),
+								ChildDOB4	nvarchar(10),
+								ChildSSN4	nvarchar(10),
+								ChildCustodyIssues4	nvarchar(150),
+								ChildFirstName5	nvarchar(25),
+								ChildLastName5	nvarchar(25),
+								ChildGender5	nvarchar(10),
+								ChildDOB5	nvarchar(10),
+								ChildSSN5	nvarchar(10),
+								ChildCustodyIssues5	nvarchar(150),
+								ChildFirstName6	nvarchar(25),
+								ChildLastName6	nvarchar(25),
+								ChildGender6	nvarchar(10),
+								ChildDOB6	nvarchar(10),
+								ChildSSN6	nvarchar(10),
+								ChildCustodyIssues6	nvarchar(150),
+								ChildFirstName7	nvarchar(25),
+								ChildLastName7	nvarchar(25),
+								ChildGender7	nvarchar(10),
+								ChildDOB7	nvarchar(10),
+								ChildSSN7	nvarchar(10),
+								ChildCustodyIssues7	nvarchar(150),
+								ChildFirstName8	nvarchar(25),
+								ChildLastName8	nvarchar(25),
+								ChildGender8	nvarchar(10),
+								ChildDOB8	nvarchar(10),
+								ChildSSN8	nvarchar(10),
+								ChildCustodyIssues8	nvarchar(150),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+	
+	$employmentTable = "Employment (
+										ResidentID	nvarchar(10),
+										CompanyName	nvarchar(100),
+										HoursFrom	nvarchar(10),
+										HoursTo	nvarchar(10),
+										ManagerName	nvarchar(50),
+										ManagerPhoneNum	nvarchar(10),
+										Income	nvarchar(10),
+										RateOfPay	nvarchar(10),
+										CurrentlyEmployedYN	nvarchar(5),
+										EmploymentGoals	nvarchar(250),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+	
+	$moneyTrackerTable = "MoneyTracker(
+											ResidentID	nvarchar(10),
+											CurrentBalance	nvarchar(10),
+											WithdrawOrDeposit	nvarchar(10),
+											PreviousBalance	nvarchar(10),
+											Amount	nvarchar(10),
+											ApprovedBy	nvarchar(50),
+											FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+											)";
+								
+	//Strings
+	$newLine = "<br>";
+	
+	//Create Database
+	if ( mysql_query( $makeDatabase,  $con) )
+	{
+		echo $database . " Created" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create " . $database . $newLine;
+	}
+
+	//Use Database
+	if ( mysql_query( $useDatabase,  $con) )
+	{
+		echo "Successfully using " . $database . $newLine . $newLine;
+	}
+	else
+	{
+		echo "Can't use " . $database . $newLine . $newLine . "Exiting";
+		exit;
+	}
+	
+	//Create User Table
+	if ( mysql_query( $createTable.$userTable,  $con) )
+	{
+		echo "User Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create User Table." . $newLine;
+	}
+	
+	//Create Generic Table
+	if ( mysql_query( $createTable.$genericTable,  $con) )
+	{
+		echo "Generic Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Generic Table." . $newLine;
+	}
+	
+	//Create Education Table
+	if ( mysql_query( $createTable.$educationTable,  $con) )
+	{
+		echo "Education Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Education Table." . $newLine;
+	}
+	
+	//Create Domestic Info Table
+	if ( mysql_query( $createTable.$domesticTable,  $con) )
+	{
+		echo "Domestic Info Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Domestic Info Table." . $newLine;
+	}
+	
+	//Create Membership Table
+	if ( mysql_query( $createTable.$membershipTable,  $con) )
+	{
+		echo "Membership Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Membership Table." . $newLine;
+	}
+	
+	//Create Medical Table
+	if ( mysql_query( $createTable.$medicalTable,  $con) )
+	{
+		echo "Medical Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Medical Table." . $newLine;
+	}
+	
+	//Create Incarceration Table
+	if ( mysql_query( $createTable.$incarcerationTable,  $con) )
+	{
+		echo "Incarceration Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Incarceration Table." . $newLine;
+	}
+	
+	//Create Vehicle Table
+	if ( mysql_query( $createTable.$vehicleTable,  $con) )
+	{
+		echo "Vehicle Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Vehicle Table." . $newLine;
+	}
+	
+	//Create Children Table
+	if ( mysql_query( $createTable.$childrenTable,  $con) )
+	{
+		echo "Children Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Children Table." . $newLine;
+	}
+	
+	//Create  Employment Table
+	if ( mysql_query( $createTable.$employmentTable,  $con) )
+	{
+		echo "Employment Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create Employment Table." . $newLine;
+	}
+	
+	//Create Resident Money Tracker Table
+	if ( mysql_query( $createTable.$moneyTrackerTable,  $con) )
+	{
+		echo "MoneyTracker Table Created!" . $newLine;
+	}
+	else
+	{
+		echo "Failed to create MoneyTracker Table." . $newLine;
+	}
+	
+	/*Drop DB -- for testing purposes
+	if ( mysql_query( $dropDatabase,  $con) )
+	{
+		echo $newLine . "Dropped Database!" . $newLine;
+	}
+	else
+	{
+		echo $newLine. "Failed to Drop Database" . $newLine;
+	}*/
+	
+?>
