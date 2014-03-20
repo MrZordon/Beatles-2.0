@@ -1,10 +1,8 @@
 <html>
-		<!-- Begin header section-->
-		<head>
-			<link rel="stylesheet" href="css/foundation.css" />
-			<script src="js/vendor/modernizr.js"></script>
-		
-		</head>
+		<!-- Include header file -->
+	<?php
+		include('includes/header.php')
+		?>
 		
 		<!-- Begin body of login page -->
 		<body>
@@ -93,17 +91,10 @@
 </div>
  </div> 
 
-<!-- Begin Footer -->
- <footer class="row">
-	<div class="large-12 columns">
-			<hr />
-		<div class="row">
-			<div class="large-6 columns">
-					<p>Lazarus House Ministries, Inc. &copy; All Rights Reserved</p>
-			</div>
-		</div>
-	</div>
-</footer>
+<!--  Incude footer -->
+<?php
+include ('includes/footer.php')
+?>
 
 <!-- End body of login page -->
 	</body>

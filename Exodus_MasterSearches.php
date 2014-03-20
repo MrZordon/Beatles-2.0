@@ -1,8 +1,8 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="css/foundation.css" />
-		<script src="js/vendor/modernizr.js"></script>
-	</head>
+<!-- Include header file -->
+	<?php
+		include('includes/header.php')
+		?>
 
 	<body>
 
@@ -93,31 +93,9 @@
     <!-- End Search Links -->
     
     <!-- Start Content of ModalSearchByName -->
-    <div id="ModalSearchByName" class="reveal-modal" data-reveal>
-		<h2>Search Resident(s) By Name</h2>
-		<hr/>
-		<!-- Start form for first name, middle initial, or last name-->
-		<form>
-			<p>**At least one field is required to be completed in order to search for a resident.</p>
-					<div class="row"> 
-							<div class="large-4 columns"> 
-								<label>First Name: <input type="text" placeholder="First Name" /> </label> 
-							</div> 
-							<div class="large-4 columns"> 
-								<label>Last Name: <input type="text" placeholder="Last Name" /> </label> 
-							</div>
-							<div class="large-4 columns"> 
-								<label>Middle Initial:<input type="text" placeholder="Middle Initial" /> </label> 
-							</div>
-					</div> 
-					
-					<!-- Submit the data to a query for searching for resident by name -->
-					<div class="right">
-						<p><a href="#" data-reveal-id="SearchResultsByName" class="button">Search</a></p>
-					</div>
-	  				<a class="close-reveal-modal">&#215;</a>
-		</form>
-	</div>	
+   		<?php
+   				include('includes/searchResByNameModal.php')
+   			?>
     
     <!-- End Content of ModalSearchByName -->
     
@@ -173,16 +151,10 @@
     
     <!-- End Content of ModalSearchByCounselorRequest -->
  
-    <!-- Default Footer -->
-    	<footer class="row">
-    			<div class="large-12 columns">
-								<hr />
-								<div class="row">
-									<div class="large-6 columns">
-											<p>Lazarus House Ministries, Inc. &copy; All Rights Reserved</p>
-									</div>
-      							</div>
-    				</div>
-  		</footer>
+    <!--  Incude footer -->
+<?php
+include ('includes/footer.php')
+?>
+
 	</body>
 </html>
