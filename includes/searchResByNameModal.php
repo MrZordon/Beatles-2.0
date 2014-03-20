@@ -11,13 +11,13 @@ echo'
 			<p>**At least one field is required to be completed in order to search for a resident.</p>
 					<div class="row"> 
 							<div class="large-4 columns"> 
-								<label>First Name: <input type="text" placeholder="First Name" /> </label> 
+								<label>First Name: <input type="text" id=firstName placeholder="First Name" /> </label> 
 							</div> 
 							<div class="large-4 columns"> 
-								<label>Last Name: <input type="text" placeholder="Last Name" /> </label> 
+								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
 							</div>
 							<div class="large-4 columns"> 
-								<label>Middle Initial:<input type="text" placeholder="Middle Initial" /> </label> 
+								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
 							</div>
 					</div> 
 					

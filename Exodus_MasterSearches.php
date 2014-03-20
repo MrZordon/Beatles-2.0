@@ -96,22 +96,30 @@
    		<?php
    				include('includes/searchResByNameModal.php')
    			?>
-    
     <!-- End Content of ModalSearchByName -->
     
     <!-- Start Content of ModalSearchByResidence -->
-    
+    	<?php
+   				include('includes/searchResByResidenceModal.php')
+   			?>
     <!-- End Content of ModalSearchByResidence -->
     
     <!-- Start Content of ModalSearchByChildren -->
-    
+    	<?php
+   				include('includes/searchResByNumChildrenModal.php')
+   			?>
     <!-- End Content of ModalSearchByChildren -->
     
     <!-- Start Content of ModalSearchByPolicy -->
-    
+   	 	<?php
+   				include('includes/searchResByPolicyAgreement.php')
+   			?>
     <!-- End Content of ModalSearchByPolicy -->
     
     <!-- Start Content of ModalSearchByEmployment -->
+   	 	<?php
+   				include('includes/searchResByEmployment.php')
+   			?>
     
     <!-- End Content of ModalSearchByEmployment -->
     
