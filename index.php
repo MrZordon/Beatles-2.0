@@ -6,6 +6,16 @@
 		
 		<!-- Begin body of login page -->
 		<body>
+		
+		<!-- Scripts for modals using foundation CSS / JS -->
+		<script src="js/vendor/jquery.js"></script>
+    	<script src="js/foundation/foundation.js"></script>
+    	<script src="js/foundation/foundation.joyride.js"></script>
+		<script src="js/foundation/foundation.reveal.js"></script>
+		
+    	<script>
+    		$(document).foundation();
+    	</script>
 
 			  <!-- Header and Nav -->
 			  <div class="row">
@@ -76,14 +86,24 @@
 				<div class="row">
 					<center><div>
 							<div class="left" style="padding:0.5em;">
-								<a href="#" class = "button">Register</a>
+								<a href="#" data-reveal-id="RegisterNewUserModal" onclick="$(document).foundation().foundation('reveal', 'start');" class="button">Register</a>
 							</div>
 					</div></center>
 					<div  class="left" style="padding:0.5em;">
-						<a href="#" class = "button">Forgot Password</a>
+						<a href="#" data-reveal-id="ForgotPasswordModal" onclick="$(document).foundation().foundation('reveal', 'start');" class="button">Forgot Password</a>
 					</div>
 				</div>
 				</div>
+				
+				<!-- Include register user php file -->
+				<?php
+						include ('includes/registerUser.php')
+					?>
+					
+					<!-- Include forgot password php file -->
+				<?php
+						include ('includes/forgotPasswordRequest.php')
+					?>
 				
 			</form>
 			<!-- End Form to login -->
