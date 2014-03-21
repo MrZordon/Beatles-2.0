@@ -1,4 +1,4 @@
-
+<!--  This php include file injects the modal to search the DB for a resident by the number of children they have-->
 <?php
 
 echo'
@@ -14,6 +14,7 @@ echo'
 							<label>* Number of Children:</label> 
 										<select>
 											<option>-- Select --</option>
+											<option value="0">0</option> 
 											<option value="1">1</option> 
 											<option value="2">2</option> 
 											<option value="3">3</option> 
@@ -28,7 +29,7 @@ echo'
 					
 					<!-- Submit the data to a query for searching for resident by number of children -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="SearchResultsByNumChildren" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="searchResultsByNumChildren" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

@@ -1,4 +1,4 @@
-
+<!-- This php include file injects the modal to search the DB for a resident by their name information -->
 <?php
 
 echo'
@@ -14,10 +14,10 @@ echo'
 								<label>First Name: <input type="text" id=firstName placeholder="First Name" /> </label> 
 							</div> 
 							<div class="large-4 columns"> 
-								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
+								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
 							</div>
 							<div class="large-4 columns"> 
-								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
+								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
 							</div>
 					</div> 
 					

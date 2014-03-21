@@ -66,13 +66,10 @@
 											  <a href="#" data-reveal-id="ModalSearchByVehicle" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Vehicle Information</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
-											  <a href="#" data-reveal-id="ModalSearchByType" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Residence Type</a>
+											  <a href="#" data-reveal-id="ModalSearchByType" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Resident Type</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
 											  <a href="#" data-reveal-id="ModalSearchByEducation" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Education</a>
-										</div></left>
-										<left><div class="large-10 small-8 columns">
-											  <a href="#" data-reveal-id="ModalSearchByWarrants" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Warrants</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
 											  <a href="#" data-reveal-id="ModalSearchByPayments" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Overdue Payments</a>
@@ -84,7 +81,7 @@
 											  <a href="#" data-reveal-id="ModalSearchByReferral" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Referral</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
-											  <a href="#" data-reveal-id="ModalSearchByCounselorRequest" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Counselor Request</a>
+											  <a href="#" data-reveal-id="ModalSearchByRequest" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Counselor Request</a>
 										</div></left>
 								  </div>
           			</div>
@@ -94,19 +91,19 @@
     
     <!-- Start Content of ModalSearchByName -->
    		<?php
-   				include('includes/searchResByNameModal.php')
+   				include('includes/searchResByName.php')
    			?>
     <!-- End Content of ModalSearchByName -->
     
     <!-- Start Content of ModalSearchByResidence -->
     	<?php
-   				include('includes/searchResByResidenceModal.php')
+   				include('includes/searchResByFormerResidence.php')
    			?>
     <!-- End Content of ModalSearchByResidence -->
     
     <!-- Start Content of ModalSearchByChildren -->
     	<?php
-   				include('includes/searchResByNumChildrenModal.php')
+   				include('includes/searchResByNumChildren.php')
    			?>
     <!-- End Content of ModalSearchByChildren -->
     
@@ -120,44 +117,55 @@
    	 	<?php
    				include('includes/searchResByEmployment.php')
    			?>
-    
     <!-- End Content of ModalSearchByEmployment -->
     
     <!-- Start Content of ModalSearchByIncarceration -->
-    
+    	<?php
+   				include('includes/searchResByIncarceration.php')
+   			?>
     <!-- End Content of ModalSearchByIncarceration -->
     
     <!-- Start Content of ModalSearchByVehicle -->
-    
+    		<?php
+   				include('includes/searchResByVehicle.php')
+   			?>
     <!-- End Content of ModalSearchByVehicle -->
     
     <!-- Start Content of ModalSearchByType -->
-    
+   	 	<?php
+   				include('includes/searchResByType.php')
+   			?>
     <!-- End Content of ModalSearchByType -->
     
     <!-- Start Content of ModalSearchByEducation -->
-    
+    	<?php
+   				include('includes/searchResByEducation.php')
+   			?>
     <!-- End Content of ModalSearchByEducation -->
     
-    <!-- Start Content of ModalSearchByWarrants -->
-    
-    <!-- End Content of ModalSearchByWarrants -->
-    
     <!-- Start Content of ModalSearchByPayments -->
-    
+    		<?php
+   				include('includes/searchResByPayments.php')
+   			?>
     <!-- End Content of ModalSearchByPayments -->
     
     <!-- Start Content of ModalSearchByStatus -->
-    
+    		<?php
+   				include('includes/searchResByStatus.php')
+   			?>
     <!-- End Content of ModalSearchByStatus -->
     
     <!-- Start Content of ModalSearchByReferral -->
-    
+    		<?php
+   				include('includes/searchResByReferral.php')
+   			?>
     <!-- End Content of ModalSearchByReferral -->
     
-    <!-- Start Content of ModalSearchByCounselorRequest -->
-    
-    <!-- End Content of ModalSearchByCounselorRequest -->
+    <!-- Start Content of ModalSearchByRequest -->
+    		<?php
+   				include('includes/searchResByCounselorRequest.php')
+   			?>
+    <!-- End Content of ModalSearchByRequest -->
  
     <!--  Incude footer -->
 <?php

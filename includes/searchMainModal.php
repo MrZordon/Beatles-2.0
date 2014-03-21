@@ -46,42 +46,6 @@
 					<td>1-555-555-5555</td>
 					<td><a href="#">View Profile</a></td>					
 				</tr> 
-				<tr> 
-					<td>Aaron</td> 
-					<td>Diagram</td> 
-					<td>000-00-6666</td> 
-					<td>00/00/0000</td> 
-					<td>1 StreetName Avenue</td> 
-					<td>Merrimack.</td> 
-					<td>MA</td> 
-					<td>01931</td>
-					<td>1-555-555-5555</td>
-					<td><a href="#">View Profile</a></td>
-				</tr>
-				<tr> 
-					<td>Aaron</td> 
-					<td>Diagram</td> 
-					<td>000-00-6666</td> 
-					<td>00/00/0000</td> 
-					<td>1 StreetName Avenue</td> 
-					<td>Merrimack.</td> 
-					<td>MA</td> 
-					<td>01931</td>
-					<td>1-555-555-5555</td>
-					<td><a href="#">View Profile</a></td>
-				</tr> 
-				<tr> 
-					<td>Aaron</td> 
-					<td>Diagram</td> 
-					<td>000-00-6666</td> 
-					<td>00/00/0000</td> 
-					<td>1 StreetName Avenue</td> 
-					<td>Merrimack.</td> 
-					<td>MA</td> 
-					<td>01931</td>
-					<td>1-555-555-5555</td>
-					<td><a href="#">View Profile</a></td>
-				</tr> 
 			</tbody> 
 		</table>
 	  <a class="close-reveal-modal">&#215;</a>

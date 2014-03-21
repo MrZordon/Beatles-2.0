@@ -85,7 +85,7 @@
                 </div>
  
                 <div class="large-2 small-3 columns">
-                  <a href="#" data-reveal-id="SecondModal1" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search</a>
+                  <a href="#" data-reveal-id="SearchModal" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search</a>
                 </div>
  
               </div>
@@ -199,7 +199,7 @@
 	
 	<!--  This is the Modal for search for members	-->
 	<?php 
-			include('includes/searchModal.php')
+			include('includes/searchMainModal.php')
 		?>
 
 	<!-- This is the Modal to display current residents -->
