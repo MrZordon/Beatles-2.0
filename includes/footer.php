@@ -1,7 +1,5 @@
 <!--  FOOTER -->
-<?php
 
-	echo'
 
 		   <!-- Begin Footer -->
 		 <footer class="row">
@@ -15,4 +13,3 @@
 			</div>
 		</footer>
  
- ';?>

@@ -1,7 +1,5 @@
 <!-- This php include file injects a modal to search the DB for a resident by their former residence information-->
-<?php
 
-echo'
 		<div id="ModalSearchByResidence" class="reveal-modal" data-reveal>
 			<h2>Search Resident(s) By Previous Address</h2>
 			<hr/>
@@ -30,4 +28,3 @@ echo'
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
-'?>

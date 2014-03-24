@@ -7,9 +7,7 @@
 		System Administrator, who will receieve an email with the request. The sys admin must log on to Exodus and approve
 		the request, which will send a notifcation email to the user containing their password.
 -->
-<?php
 
-echo'
 		<div id="ForgotPasswordModal" class="reveal-modal" data-reveal>
 			<h2>Request User\'s Password</h2>
 			<hr/>
@@ -31,4 +29,3 @@ echo'
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
-'?>

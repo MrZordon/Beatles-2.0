@@ -1,7 +1,5 @@
 <!-- This php include file injects the modal to search the DB for residents by their employment information-->
-<?php
 
-echo'
 
 	<div id="ModalSearchByEmployment" class="reveal-modal" data-reveal>
 		<h2>Search Resident(s) By Employment </h2>
@@ -50,4 +48,3 @@ echo'
 			<a class="close-reveal-modal">&#215;</a>
 	</form>
 </div>
-'?>

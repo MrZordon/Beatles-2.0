@@ -8,9 +8,7 @@
 		System Administrator, who will receieve an email with the request. The sys admin must log on to Exodus and approve
 		the request, which will send a notifcation email to the user, who can now use their new username and password.
 -->
-<?php
 
-echo'
 		<div id="RegisterNewUserModal" class="reveal-modal" data-reveal>
 			<h2>Register as a New User</h2>
 			<hr/>
@@ -40,4 +38,3 @@ echo'
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
-'?>

@@ -1,7 +1,4 @@
 
-<?php
-
-	echo'
 
 		<div id="CurrentResidentsModal1" class="reveal-modal" data-reveal>
 				<h2>Current Residents</h2>
@@ -38,5 +35,3 @@
 				</table>
 			  <a class="close-reveal-modal">&#215;</a>
 			</div>
-	
-	'?>

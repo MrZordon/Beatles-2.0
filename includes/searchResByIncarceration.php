@@ -1,7 +1,5 @@
 <!-- This php include file injects a modal to search the DB for a resident by their incarcerations information-->
-<?php
 
-echo'
 		<div id="ModalSearchByIncarceration" class="reveal-modal" data-reveal>
 			<h2>Search Resident(s) By Incarceration / Institutionalization Information</h2>
 			<hr/>
@@ -69,4 +67,3 @@ echo'
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
-'?>
