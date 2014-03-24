@@ -1,0 +1,34 @@
+<?php
+	//Connection Variables
+	$server = "localhost";
+	$user =$_SESSION['user'];
+	$password = $_SESSION['password'];
+
+	//Database to be created and used
+	$database = "Exodus";
+	$makeDatabase = "CREATE DATABASE " . $database;
+	$useDatabase = "USE " . $database;
+	
+	//Establish a connection to the server
+	$con = mysql_connect($server, $user, "");
+	
+	//Strings
+	$newLine = "<br>";
+	
+	//Create Database
+	if ( !mysql_query( $makeDatabase,  $con) )
+	{
+		echo "Failed to create " . $database . $newLine;
+	}
+	else
+	{
+		echo "Created " . $database  . "!" . $newLine;
+	}
+	
+	//Use Database
+	if ( !mysql_query( $useDatabase,  $con) )
+	{
+		echo "Can't use " . $database . $newLine . $newLine . "Exiting";
+		exit;
+	}
+?>
