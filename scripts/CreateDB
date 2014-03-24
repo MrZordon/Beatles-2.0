@@ -1,1 +1,319 @@
-What
+<?php
+
+	//Start our session
+	session_start();
+	
+	//Passing around session data for DB connect
+	$_SESSION['user'] = 'root';
+	$_SESSION['password'] = "";
+
+	//Open the connection
+	include 'OpenConnection.php';
+	
+	//Database to be created and used
+	$database = "Exodus";
+	$makeDatabase = "CREATE DATABASE " . $database;
+	$useDatabase = "USE " . $database;
+	$dropDatabase = "DROP DATABASE " . $database;
+	
+	//Tables to be made
+	$createTable = "CREATE TABLE ";
+	
+	$userTable = "Users (
+							UserName NVARCHAR(25),
+							Password NVARCHAR(20),
+							LastLoggedOn DATE,
+							CurrentlyLoggedOn CHAR(1) CHECK (CurrentlyLoggedOn IN ('Y', 'N') ),
+							UserType Char(1)
+							)";
+						
+	$genericTable = "GenericInfo (
+							ResidentType	CHAR(1),
+							Active CHAR (1) CHECK (Active IN ('Y', 'N') ),
+							ResidentID	BIGINT NOT NULL,
+							DateAdded	DATE,
+							FirstName	NVARCHAR(20),
+							MiddleInitial	CHAR(1),
+							LastName	NVARCHAR(30),
+							Gender	CHAR(1) CHECK (Gender IN ('M', 'F') ),
+							SSN	NVARCHAR(11),
+							DOB	DATE,
+							Age	INT,
+							Language	NVARCHAR(2),
+							Religion	NVARCHAR(3),
+							Street	NVARCHAR(20),
+							CityTown	NVARCHAR(20),
+							State	NVARCHAR(2),
+							Zip	NVARCHAR(10),
+							PhoneNum	NVARCHAR(12),
+							RefPerson	NVARCHAR(50),
+							RefAgency	NVARCHAR(25),
+							RefPhone	NVARCHAR(12),
+							NextKin	NVARCHAR(50),
+							Kinship	NVARCHAR(10),
+							KinStreet	NVARCHAR(20),
+							KinCityTown	NVARCHAR(20),
+							KinState	NVARCHAR(2),
+							KinZip	NVARCHAR(10),
+							KinPhone	NVARCHAR(12),
+							CounselorRequest	CHAR(1) CHECK (CounselorRequest IN ('Y', 'N') ),
+							TermAgree	CHAR(1),
+							SignedBy	NVARCHAR(50),
+							PaidRent	CHAR(1) CHECK (PaidRent IN ('Y', 'N') ),
+							LeaseAbility	NVARCHAR(140),
+							HousingGoals	NVARCHAR(255),
+							OweCompanies	INT,
+							Concerns	CHAR(1) CHECK (Concerns IN ('Y', 'N') ),
+							ExplainConcerns	NVARCHAR(255) CHECK (Concerns = 'Y'),
+							PRIMARY KEY (ResidentID) 
+							)";
+	
+	$educationTable = "Education (
+									ResidentID	BIGINT,
+									EducationMax	NVARCHAR(10),
+									FurtherEd	CHAR(1) CHECK (FurtherEd IN ('Y', 'N') ),
+									FurtherPlans	NVARCHAR(255) CHECK (FurtherEd ='Y'),
+									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+									)";
+	
+	$domesticTable = "DomesticInfo (
+									ResidentID	BIGINT,
+									CoParentIssues	NVARCHAR(255),
+									DomViolence	CHAR(1) CHECK (DomViolence IN ('Y', 'N') ),
+									SafetyPlan	NVARCHAR(255),
+									RestrainingOrder	CHAR(1) CHECK (RestrainingOrder IN ('Y', 'N') ),
+									PerpName	NVARCHAR(50),
+									FamilyInfo	NVARCHAR(255),
+									HomelessHistory	NVARCHAR(255),
+									HousingHistory	NVARCHAR(255),
+									Independent	CHAR(1) CHECK (Independent IN ('Y', 'N') ),
+									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+									)";
+	
+	$membershipTable = "Membership (
+										ResidentID	BIGINT,
+										AgencyName1	NVARCHAR(25),
+										Amount1	INT,
+										AgencyName2	NVARCHAR(25),
+										Amount2	INT,
+										TotalIncome	INT,
+										RateOfPay	INT,
+										WorkerName	NVARCHAR(50),
+										WorkerCity	NVARCHAR(20),
+										WorkerPhone	NVARCHAR(12),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+
+	$medicalTable = "Medical (
+								ResidentID	BIGINT,
+								DocName	NVARCHAR(50),
+								Street	NVARCHAR(20),
+								CityTown	NVARCHAR(20),
+								State	NVARCHAR(2),
+								Zip	NVARCHAR(10),
+								Phone	NVARCHAR(12),
+								Medication	CHAR(1) CHECK (Medication IN ('Y', 'N') ),
+								Med1	NVARCHAR(20) CHECK (Medication = 'Y'),
+								Dose1	NVARCHAR(10) CHECK (Medication = 'Y'),
+								When1	TIME CHECK (Medication = 'Y'),
+								Med2	NVARCHAR(20) CHECK (Medication = 'Y'),
+								Dose2	NVARCHAR(10) CHECK (Medication = 'Y'),
+								When2	TIME CHECK (Medication = 'Y'),
+								Allergies	NVARCHAR(50),
+								Siezures	CHAR(1) CHECK (Siezures IN ('Y', 'N') ),
+								Epilepsy	CHAR(1) CHECK (Epilepsy IN ('Y', 'N') ),
+								MentalHealthClient	CHAR(1) CHECK (MentalHealthClient IN ('Y', 'N') ),
+								MentalHealthDoc	NVARCHAR(50) CHECK (MentalHealthClient = 'Y'),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+										
+	$incarcerationTable = "Incarceration (
+										ResidentID	BIGINT,
+										Incarcerated	CHAR(1) CHECK (Incarcerated IN ('Y', 'N') ),
+										IncarcerationLoc	NVARCHAR(50),
+										IncarceratedStartDate	date,
+										IncarceratedEndDate	date,
+										IncarcerationCharges	NVARCHAR(80),
+										Institutionalized	CHAR(1) CHECK (Institutionalized IN ('Y', 'N') ),
+										NameOfInstitution	NVARCHAR(50),
+										InstituteStartDate	date,
+										InstituteReleaseDate	date,
+										ReasonForInstitutionalization	NVARCHAR(80),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+								
+	$vehicleTable = "Vehicle (
+								ResidentID	BIGINT,
+								NameOnRegistration	NVARCHAR(50),
+								LicenseNum	NVARCHAR(15),
+								State	NVARCHAR(5),
+								Make	NVARCHAR(25),
+								Color	NVARCHAR(25),
+								Model	NVARCHAR(25),
+								OLN	NVARCHAR(10),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+	
+	$childrenTable = "Children (
+								ResidentID	BIGINT,
+								ChildFirstName1	NVARCHAR(25),
+								ChildLastName1	NVARCHAR(25),
+								ChildGender1	NVARCHAR(10),
+								ChildDOB1	NVARCHAR(10),
+								ChildSSN1	NVARCHAR(10),
+								ChildCustodyIssues1	NVARCHAR(150),
+								
+								ChildFirstName2	NVARCHAR(25),
+								ChildLastName2	NVARCHAR(25),
+								ChildGender2	NVARCHAR(10),
+								ChildDOB2	NVARCHAR(10),
+								ChildSSN2	NVARCHAR(10),
+								ChildCustodyIssues2	NVARCHAR(150),
+								
+								ChildFirstName3	NVARCHAR(25),
+								ChildLastName3	NVARCHAR(25),
+								ChildGender3	NVARCHAR(10),
+								ChildDOB3	NVARCHAR(10),
+								ChildSSN3	NVARCHAR(10),
+								ChildCustodyIssues3	NVARCHAR(150),
+								
+								ChildFirstName4	NVARCHAR(25),
+								ChildLastName4	NVARCHAR(25),
+								ChildGender4	NVARCHAR(10),
+								ChildDOB4	NVARCHAR(10),
+								ChildSSN4	NVARCHAR(10),
+								ChildCustodyIssues4	NVARCHAR(150),
+								
+								ChildFirstName5	NVARCHAR(25),
+								ChildLastName5	NVARCHAR(25),
+								ChildGender5	NVARCHAR(10),
+								ChildDOB5	NVARCHAR(10),
+								ChildSSN5	NVARCHAR(10),
+								ChildCustodyIssues5	NVARCHAR(150),
+								
+								ChildFirstName6	NVARCHAR(25),
+								ChildLastName6	NVARCHAR(25),
+								ChildGender6	NVARCHAR(10),
+								ChildDOB6	NVARCHAR(10),
+								ChildSSN6	NVARCHAR(10),
+								ChildCustodyIssues6	NVARCHAR(150),
+								
+								ChildFirstName7	NVARCHAR(25),
+								ChildLastName7	NVARCHAR(25),
+								ChildGender7	NVARCHAR(10),
+								ChildDOB7	NVARCHAR(10),
+								ChildSSN7	NVARCHAR(10),
+								ChildCustodyIssues7	NVARCHAR(150),
+								
+								ChildFirstName8	NVARCHAR(25),
+								ChildLastName8	NVARCHAR(25),
+								ChildGender8	NVARCHAR(10),
+								ChildDOB8	NVARCHAR(10),
+								ChildSSN8	NVARCHAR(10),
+								ChildCustodyIssues8	NVARCHAR(150),
+								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+								)";
+	
+	$employmentTable = "Employment (
+										ResidentID	BIGINT,
+										CompanyName	NVARCHAR(100),
+										HoursFrom	TIME,
+										HoursTo	TIME,
+										ManagerName	NVARCHAR(50),
+										ManagerPhoneNum	NVARCHAR(10),
+										Income	NVARCHAR(10),
+										RateOfPay	NVARCHAR(10),
+										CurrentlyEmployed	CHAR(1) CHECK (CurrentlyEmployed IN ('Y', 'N') ),
+										EmploymentGoals	NVARCHAR(250),
+										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+										)";
+	
+	$moneyTrackerTable = "MoneyTracker(
+											ResidentID	BIGINT,
+											CurrentBalance	NVARCHAR(10),
+											WithdrawOrDeposit	NVARCHAR(10),
+											PreviousBalance	NVARCHAR(10),
+											Amount	NVARCHAR(10),
+											ApprovedBy	NVARCHAR(50),
+											FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
+											)";
+								
+	//Strings
+	$newLine = "<br>";
+	
+	//Create User Table
+	if ( !mysql_query( $createTable.$userTable,  $con) )
+	{
+		echo "Failed to create User Table." . $newLine;
+	}
+	
+	//Create Generic Table
+	if ( !mysql_query( $createTable.$genericTable,  $con) )
+	{
+		echo "Failed to create Generic Table." . $newLine;
+	}
+	
+	//Create Education Table
+	if ( !mysql_query( $createTable.$educationTable,  $con) )
+	{
+		echo "Failed to create Education Table." . $newLine;
+	}
+	
+	//Create Domestic Info Table
+	if ( !mysql_query( $createTable.$domesticTable,  $con) )
+	{
+		echo "Failed to create Domestic Info Table." . $newLine;
+	}
+	
+	//Create Membership Table
+	if ( !mysql_query( $createTable.$membershipTable,  $con) )
+	{
+		echo "Failed to create Membership Table." . $newLine;
+	}
+	
+	//Create Medical Table
+	if ( !mysql_query( $createTable.$medicalTable,  $con) )
+	{
+		echo "Failed to create Medical Table." . $newLine;
+	}
+	
+	//Create Incarceration Table
+	if ( !mysql_query( $createTable.$incarcerationTable,  $con) )
+	{
+		echo "Failed to create Incarceration Table." . $newLine;
+	}
+	
+	//Create Vehicle Table
+	if ( !mysql_query( $createTable.$vehicleTable,  $con) )
+	{
+		echo "Failed to create Vehicle Table." . $newLine;
+	}
+	
+	//Create Children Table
+	if ( !mysql_query( $createTable.$childrenTable,  $con) )
+	{
+		echo "Failed to create Children Table." . $newLine;
+	}
+	
+	//Create  Employment Table
+	if ( !mysql_query( $createTable.$employmentTable,  $con) )
+	{
+		echo "Failed to create Employment Table." . $newLine;
+	}
+	
+	//Create Resident Money Tracker Table
+	if ( !mysql_query( $createTable.$moneyTrackerTable,  $con) )
+	{
+		echo "Failed to create MoneyTracker Table." . $newLine;
+	}
+	
+	//Drop Database Option
+	include 'DropDB.php';
+	
+	//Close the connection to the DB
+	include 'CloseConnection.php';
+	
+	 $completeLink = '<a href="http://localhost/phpmyadmin">Complete</a>';
+	 
+	 echo $newLine . $completeLink;
+?>
