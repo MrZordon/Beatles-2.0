@@ -1,0 +1,159 @@
+<?php
+
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$medicalTable = "Medical (
+								ResidentID,
+								DocName,
+								Street,
+								CityTown,
+								State,
+								Zip,
+								Phone,
+								Medication,
+								Med1,
+								Dose1,
+								When1,
+								Med2,
+								Dose2,
+								When2,
+								Allergies,
+								Seizures,
+								Epilepsy,
+								MentalHealthClient,
+								MentalHealthDoc
+								)  VALUES (
+								:residentID,
+								:docName,
+								:street ,
+								:cityTown ,
+								:state ,
+								:zip ,
+								:phone ,
+								:medication ,
+								:med1 ,
+								:dose1 ,
+								:when1 ,
+								:med2 ,
+								:dose2 ,
+								:when2 ,
+								:allergies ,
+								:seizures ,
+								:epilepsy ,
+								:mentalHealthClient ,
+								:mentalHealthDoc
+								)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $medicalTable ) )
+	{
+		echo "Prepare medical failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':docName', $docName, $string) )
+	{
+		echo "Binding docName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':street', $street, $string) )
+	{
+		echo "Binding street failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':cityTown', $cityTown, $string) )
+	{
+		echo "Binding cityTown failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':state', $state, $string) )
+	{
+		echo "Binding state failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':zip', $zip, $string) )
+	{
+		echo "Binding zip failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':phone', $phone, $string) )
+	{
+		echo "Binding phone failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':medication', $medication, $string) )
+	{
+		echo "Binding medication failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':med1', $med1, $string) )
+	{
+		echo "Binding med1 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':dose1', $dose1, $string) )
+	{
+		echo "Binding dose1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':when1', $when1, $string) )
+	{
+		echo "Binding when1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':med2', $med2, $string) )
+	{
+		echo "Binding med2 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':dose2', $dose2, $string) )
+	{
+		echo "Binding dose2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':when2', $when2, $string) )
+	{
+		echo "Binding when2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':allergies', $allergies, $string) )
+	{
+		echo "Binding allergies failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':seizures', $seizures, $string) )
+	{
+		echo "Binding seizures failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':epilepsy', $epilepsy, $string) )
+	{
+		echo "Binding epilepsy failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':mentalHealthClient', $mentalHealthClient, $string) )
+	{
+		echo "Binding mentalHealthClient failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':mentalHealthDoc', $mentalHealthDoc, $string) )
+	{
+		echo "Binding mentalHealthDoc failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Medical failed. " . $exception->getMessage();
+	}
+?>
