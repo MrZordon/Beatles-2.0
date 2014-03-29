@@ -1,0 +1,390 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$childrenTable = "Children (
+								ResidentID,
+								ChildFirstName1,
+								ChildLastName1,
+								ChildGender1,
+								ChildDOB1,
+								ChildSSN1,
+								ChildCustodyIssues1,
+								
+								ChildFirstName2,
+								ChildLastName2,
+								ChildGender2,
+								ChildDOB2,
+								ChildSSN2,
+								ChildCustodyIssues2,
+								
+								ChildFirstName3,
+								ChildLastName3,
+								ChildGender3,
+								ChildDOB3,
+								ChildSSN3,
+								ChildCustodyIssues3,
+								
+								ChildFirstName4,
+								ChildLastName4,
+								ChildGender4,
+								ChildDOB4,
+								ChildSSN4,
+								ChildCustodyIssues4,
+								
+								ChildFirstName5,
+								ChildLastName5,
+								ChildGender5,
+								ChildDOB5,
+								ChildSSN5,
+								ChildCustodyIssues5,
+								
+								ChildFirstName6,
+								ChildLastName6,
+								ChildGender6,
+								ChildDOB6,
+								ChildSSN6,
+								ChildCustodyIssues6,
+								
+								ChildFirstName7,
+								ChildLastName7,
+								ChildGender7,	
+								ChildDOB7,
+								ChildSSN7,
+								ChildCustodyIssues7,
+								
+								ChildFirstName8,
+								ChildLastName8,
+								ChildGender8,
+								ChildDOB8,
+								ChildSSN8,
+								ChildCustodyIssues8
+								)  VALUES (
+								:residentID ,
+								:childFirstName1 ,
+								:childLastName1 ,
+								:childGender1 ,
+								:childDOB1 ,
+								:childSSN1 ,
+								:childCustodyIssues1 ,
+								
+								:childFirstName2 ,
+								:childLastName2 ,
+								:childGender2 ,
+								:childDOB2 ,
+								:childSSN2 ,
+								:childCustodyIssues2 ,
+								
+								:childFirstName3 ,
+								:childLastName3 ,
+								:childGender3 ,
+								:childDOB3 ,
+								:childSSN3 ,
+								:childCustodyIssues3 ,
+								
+								:childFirstName4 ,
+								:childLastName4 ,
+								:childGender4 ,
+								:childDOB4 ,
+								:childSSN4,
+								:childCustodyIssues4 ,
+								
+								:childFirstName5 ,
+								:childLastName5 ,
+								:childGender5 ,
+								:childDOB5 ,
+								:childSSN5 ,
+								:childCustodyIssues5 ,
+								
+								:childFirstName6 ,
+								:childLastName6 ,
+								:childGender6 ,
+								:childDOB6 ,
+								:childSSN6 ,
+								:childCustodyIssues6 ,
+								
+								:childFirstName7 ,
+								:childLastName7 ,
+								:childGender7 ,
+								:childDOB7 ,
+								:childSSN7 ,
+								:childCustodyIssues7 ,
+								
+								:childFirstName8 ,
+								:childLastName8 ,
+								:childGender8 ,
+								:childDOB8 ,
+								:childSSN8 ,
+								:childCustodyIssues8
+								)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $childrenTable ) )
+	{
+		echo "Prepare failed for children.";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName1', $childFirstName1, $string) )
+	{
+		echo "Binding childFirstName1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName1', $childLastName1, $string) )
+	{
+		echo "Binding childLastName1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender1', $childGender1, $string) )
+	{
+		echo "Binding childGender1 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB1', $childDOB1, $string) )
+	{
+		echo "Binding childDOB1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN1', $childSSN1, $string) )
+	{
+		echo "Binding childSSN1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues1', $childCustodyIssues1, $string) )
+	{
+		echo "Binding childCustodyIssues1 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName2', $childFirstName2, $string) )
+	{
+		echo "Binding childFirstName2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName2', $childLastName2, $string) )
+	{
+		echo "Binding childLastName2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender2', $childGender2, $string) )
+	{
+		echo "Binding childGender2 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB2', $childDOB2, $string) )
+	{
+		echo "Binding childDOB2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN2', $childSSN2, $string) )
+	{
+		echo "Binding childSSN2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues2', $childCustodyIssues2, $string) )
+	{
+		echo "Binding childCustodyIssues failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName3', $childFirstName3, $string) )
+	{
+		echo "Binding childFirstName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName3', $childLastName3, $string) )
+	{
+		echo "Binding childLastName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender3', $childGender3, $string) )
+	{
+		echo "Binding childGender3 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB3', $childDOB3, $string) )
+	{
+		echo "Binding childDOB3 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN3', $childSSN3, $string) )
+	{
+		echo "Binding childSSN failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues3', $childCustodyIssues3, $string) )
+	{
+		echo "Binding childCustodyIssues3 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName4', $childFirstName4, $string) )
+	{
+		echo "Binding childFirstName4 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName4', $childLastName4, $string) )
+	{
+		echo "Binding childLastName4 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender4', $childGender4, $string) )
+	{
+		echo "Binding childGender4 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB4', $childDOB4, $string) )
+	{
+		echo "Binding childDOB4 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN4', $childSSN4, $string) )
+	{
+		echo "Binding childSSN4 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues4', $childCustodyIssues4, $string) )
+	{
+		echo "Binding childCustodyIssuess4 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName5', $childFirstName5, $string) )
+	{
+		echo "Binding childFirstName5 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName5', $childLastName5, $string) )
+	{
+		echo "Binding childLastName5 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender5', $childGender5, $string) )
+	{
+		echo "Binding childGender5 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB5', $childDOB5, $string) )
+	{
+		echo "Binding childDOB5 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN5', $childSSN5, $string) )
+	{
+		echo "Binding childSSN5 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues5', $childCustodyIssues5, $string) )
+	{
+		echo "Binding childCustodyIssues5 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName6', $childFirstName6, $string) )
+	{
+		echo "Binding childFirstName6 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName6', $childLastName6, $string) )
+	{
+		echo "Binding childLastName6 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender6', $childGender6, $string) )
+	{
+		echo "Binding childGender6 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB6', $childDOB6, $string) )
+	{
+		echo "Binding childDOB6 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN6', $childSSN6, $string) )
+	{
+		echo "Binding childSSN6 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues6', $childCustodyIssues6, $string) )
+	{
+		echo "Binding childCustodyIssues6 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName7', $childFirstName7, $string) )
+	{
+		echo "Binding childFirstName7 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName7', $childLastName7, $string) )
+	{
+		echo "Binding childLastName7 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender7', $childGender7, $string) )
+	{
+		echo "Binding childGender7 failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB7', $childDOB7, $string) )
+	{
+		echo "Binding childDOB7 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN7', $childSSN7, $string) )
+	{
+		echo "Binding childSSN7 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues7', $childCustodyIssues7, $string) )
+	{
+		echo "Binding childCustodyIssues7 failed.";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childFirstName8', $childFirstName8, $string) )
+	{
+		echo "Binding childFirstName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childLastName8', $childLastName8, $string) )
+	{
+		echo "Binding childLastName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childGender8', $childGender8, $string) )
+	{
+		echo "Binding childGender failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childDOB8', $childDOB8, $string) )
+	{
+		echo "Binding childDOB failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childSSN8', $childSSN8, $string) )
+	{
+		echo "Binding childSSN8 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':childCustodyIssues8', $childCustodyIssues8, $string) )
+	{
+		echo "Binding childCustodyIssues8 failed.";
+	}
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Children failed. " . $exception->getMessage();
+	}
+?>
