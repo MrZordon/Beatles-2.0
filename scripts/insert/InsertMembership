@@ -1,0 +1,96 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$membershipTable = "Membership (
+										ResidentID,
+										AgencyName1,
+										Amount1,
+										AgencyName2,
+										Amount2,
+										TotalIncome,
+										RateOfPay,
+										WorkerName,
+										WorkerCity,
+										WorkerPhone
+										)  VALUES (
+										:residentID ,
+										:agencyName1 ,
+										:amount1 ,
+										:agencyName2 ,
+										:amount2 ,
+										:totalIncome ,
+										:rateOfPay ,
+										:workerName ,
+										:workerCity ,
+										:workerPhone
+										)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $membershipTable ) )
+	{
+		echo "Prepare membership failed.";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':agencyName1', $agencyName1, $string) )
+	{
+		echo "Binding agencyName1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':amount1', $amount1, $int) )
+	{
+		echo "Binding amount1 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':agencyName2', $agencyName2, $string) )
+	{
+		echo "Binding agencyName2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':amount2', $amount2, $int) )
+	{
+		echo "Binding amount2 failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':totalIncome', $totalIncome, $int) )
+	{
+		echo "Binding totalIncome failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':rateOfPay', $rateOfPay, $int) )
+	{
+		echo "Binding rateOfPay failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':workerName', $workerName, $string) )
+	{
+		echo "Binding workerName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':workerCity', $workerCity, $string) )
+	{
+		echo "Binding workerCity failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':workerPhone', $workerPhone, $string) )
+	{
+		echo "Binding workerPhone failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Membership failed. " . $exception->getMessage();
+	}									
+?>
