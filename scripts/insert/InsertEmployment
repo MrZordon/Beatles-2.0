@@ -1,0 +1,96 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$employmentTable = "Employment (
+										ResidentID,
+										CompanyName,
+										HoursFrom,
+										HoursTo,
+										ManagerName,
+										ManagerPhoneNum,
+										Income,
+										RateOfPay,
+										CurrentlyEmployed,
+										EmploymentGoals
+										)  VALUES (
+										:residentID,
+										:companyName ,
+										:hoursFrom ,
+										:hoursTo ,
+										:managerName ,
+										:managerPhoneNum ,
+										:income ,
+										:rateOfPay ,
+										:currentlyEmployed ,
+										:employmentGoals
+										)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $employmentTable ) )
+	{
+		echo "Prepare employee failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':companyName', $companyName, $string) )
+	{
+		echo "Binding companyName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':hoursFrom', $hoursFrom, $string) )
+	{
+		echo "Binding hoursFrom failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':hoursTo', $hoursTo, $string) )
+	{
+		echo "Binding hoursTo failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':managerName', $managerName, $string) )
+	{
+		echo "Binding managerName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':managerPhoneNum', $managerPhoneNum, $string) )
+	{
+		echo "Binding managerPhoneNum failed.";
+	}	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':income', $income, $int) )
+	{
+		echo "Binding income failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':rateOfPay', $rateOfPay, $int) )
+	{
+		echo "Binding rateOfPay failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':currentlyEmployed', $currentlyEmployed, $string) )
+	{
+		echo "Binding currentlyEmployed failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':employmentGoals', $employmentGoals, $string) )
+	{
+		echo "Binding employmentGoals failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Employment failed. " . $exception->getMessage();
+	}									
+?>
