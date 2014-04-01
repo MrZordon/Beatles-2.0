@@ -1,9 +1,32 @@
 <html>
 	<!-- Include header file -->
-	<?php
-		include('includes/header.php')
-		?>
-
+	<head>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<?php include ('includes/header.php');
+			
+			//	if (!isset($_SESSION['userName']) || !isset($_COOKIE['user'])) 
+					//{
+					//		header('Location: /Exodus');
+				//	}?>
+=======
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
+	<?php include 'includes/header.php';?>
+	
+		<?php include('includes/header.php'); ?>
+	
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
+	</head>
 	<body>
 
     	<script src="js/vendor/jquery.js"></script>
@@ -85,7 +108,7 @@
                 </div>
  
                 <div class="large-2 small-3 columns">
-                  <a href="#" data-reveal-id="SecondModal1" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search</a>
+                  <a href="#" data-reveal-id="SearchModal" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search</a>
                 </div>
  
               </div>
@@ -152,7 +175,7 @@
             <h4>View Current Residents</h4>
             <p>View all current residents of both Lazarus House & Capernaum Place.</p>
         </li>
-        <li data-id="addResident" data-class="custom so-awesome" data-options="tip_location: top data-text="Next">
+        <li data-id="addResident" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
             <h4>Add a Resident</h4>
             <p>Create a profile for a new resident</p>
         </li>
@@ -160,7 +183,7 @@
             <h4>Edit a Resident's Profile</h4>
             <p>Edit the profile of an existing resident</p>
         </li>
-        <li data-id="backUpDB" data-class="custom so-awesome" data-options="tip_location: top data-text="Next">
+        <li data-id="backUpDB" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
             <h4>Backup Database</h4>
             <p>Download a zip file of the entire database for backup</p>
         </li>
@@ -189,28 +212,67 @@
 	
 	<!--  This is the Modal for adding generic information to residents profile	-->
 	<?php 
-			include('includes/newMemberModal1.php')
+			include('includes/newMemberModal1.php');
 		?>
 		
 	<!--  This is the Modal for adding Children to residents profile	-->
 	<?php 
-			include('includes/newMemberModal2.php')
+			include('includes/newMemberModal2.php');
+		?>
+		
+	<!--  This is the Modal for adding Agency Assist to residents profile	-->
+	<?php 
+			include('includes/newMemberModal3.php');
+		?>
+		
+	<!--  This is the Modal for adding Medical to residents profile	-->
+	<?php 
+			include('includes/newMemberModal4.php');
+		?>
+		
+	<!--  This is the Modal for adding Employment to residents profile	-->
+	<?php 
+			include('includes/newMemberModal5.php');
+		?>
+		
+	<!--  This is the Modal for adding Criminal to residents profile	-->
+	<?php 
+			include('includes/newMemberModal6.php');
+		?>
+		
+	<!--  This is the Modal for adding Vehichle Info to residents profile	-->
+	<?php 
+			include('includes/newMemberModal7.php');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+		?>
+		
+		<!--  This is the Modal for adding Education Info to residents profile	-->
+	<?php 
+			include('includes/newMemberModal8.php');
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 		?>
 	
 	<!--  This is the Modal for search for members	-->
 	<?php 
-			include('includes/searchModal.php')
+			include('includes/searchMainModal.php');
 		?>
 
 	<!-- This is the Modal to display current residents -->
 	<?php
-		include('includes/currentResidentsModal.php')
+		include('includes/currentResidentsModal.php');
 	?>
 	
  
     <!--  Incude footer -->
 	<?php
-		include ('includes/footer.php')
+		include ('includes/footer.php');
 	?>
 
 </body>

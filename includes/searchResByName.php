@@ -1,7 +1,16 @@
+<!-- This php include file injects the modal to search the DB for a resident by their name information -->
+<<<<<<< HEAD:includes/searchResByName.php
+<<<<<<< HEAD:includes/searchResByName.php
+<<<<<<< HEAD:includes/searchResByName.php
+=======
 
-<?php
+>>>>>>> FETCH_HEAD:includes/searchResByName.php
+=======
 
-echo'
+>>>>>>> FETCH_HEAD:includes/searchResByName.php
+=======
+
+>>>>>>> FETCH_HEAD:includes/searchResByName.php
 
 	 <div id="ModalSearchByName" class="reveal-modal" data-reveal>
 		<h2>Search Resident(s) By Name</h2>
@@ -14,10 +23,10 @@ echo'
 								<label>First Name: <input type="text" id=firstName placeholder="First Name" /> </label> 
 							</div> 
 							<div class="large-4 columns"> 
-								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
+								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
 							</div>
 							<div class="large-4 columns"> 
-								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
+								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
 							</div>
 					</div> 
 					
@@ -28,4 +37,3 @@ echo'
 	  				<a class="close-reveal-modal">&#215;</a>
 		</form>
 	</div>	
-'?>

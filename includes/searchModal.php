@@ -1,9 +1,6 @@
 
-<?php 
 
-	echo'
-	
-			<div id="SearchModal" class="reveal-modal" data-reveal>
+	<div id="SearchModal" class="reveal-modal" data-reveal>
 		<h2>Search Results</h2>
 		<p></p>
 		<table> 
@@ -87,4 +84,3 @@
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
 	
-	';?>

@@ -1,8 +1,15 @@
 <!--  FOOTER -->
-<?php
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 
-	echo'
 
+>>>>>>> FETCH_HEAD
 		   <!-- Begin Footer -->
 		 <footer class="row">
 			<div class="large-12 columns">
@@ -15,4 +22,3 @@
 			</div>
 		</footer>
  
- ';?>

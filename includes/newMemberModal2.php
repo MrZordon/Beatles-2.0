@@ -1,18 +1,15 @@
-<?php
 
-	echo'
-	
 		<div id="NewMemberModal2" class="reveal-modal" data-reveal>
 		<h2>Children</h2>
 		<form>
 	  
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -20,12 +17,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -201,11 +198,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -213,12 +210,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -394,11 +391,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -406,12 +403,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -587,11 +584,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -599,12 +596,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -780,11 +777,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -792,12 +789,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -973,11 +970,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -985,12 +982,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -1166,11 +1163,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -1178,12 +1175,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -1359,11 +1356,11 @@
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name<input type="text" placeholder="Zip Code" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -1371,12 +1368,12 @@
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
-						<label>Date Of Birth</label> 
+						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
 							<select>
 							<option>Month</option>
@@ -1551,8 +1548,28 @@
 				</div>
 			</div>
 		</form>
-		<p><a href="#" data-reveal-id="NewMemberModal3" class="secondary button">Next</a></p>
+		<div class="row">
+			<div class="large-3 columns"> 
+				<p><a href="#" data-reveal-id="NewMemberModal3" class="secondary button">Next</a></p>
+			</div>
+			<div class="large-9 columns">
+				<h4>Progress</h4>
+				<div class="progress large-9 round"> 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+					<span class="meter" style="width: 20%"></span> 
+=======
+					<span class="meter" style="width: 15%"></span> 
+>>>>>>> FETCH_HEAD
+=======
+					<span class="meter" style="width: 15%"></span> 
+>>>>>>> FETCH_HEAD
+=======
+					<span class="meter" style="width: 15%"></span> 
+>>>>>>> FETCH_HEAD
+				</div>
+			</div>
+		<div>
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
-	
-	'?>

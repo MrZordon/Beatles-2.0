@@ -1,6 +1,8 @@
 <html>
 		<!-- Include header file -->
-	<?php include('includes/header.php'); ?>
+	<?php
+		include('includes/header.php')
+		?>
 		
 		<!-- Begin body of login page -->
 		<body>
@@ -60,7 +62,7 @@
 														<label for="userName" class="right inline">Username</label>
 													</div>
 													<div class="small-9 columns">
-														<input type="text" id="userName" name="userName" placeholder="Username">
+														<input type="text" id="userName" placeholder="Username">
 													</div>
 												</div>
 												<div class="row">
@@ -68,11 +70,11 @@
 														<label for="password" class="right inline">Password</label>
 													</div>
 													<div class="small-9 columns">
-														<input type="password" id="password" name="password" placeholder="Password">
+														<input type="password" id="password" placeholder="Password">
 													</div>
 												</div>
 												<div class="right">
-													<input type="submit" id="submit" name="submit" class="button">
+													<input type="submit" id="submit" class="button">
 												</div>
 								</div> <!-- end column -->
 						</div> <!-- end row -->
@@ -103,18 +105,6 @@
 				<?php
 						include ('includes/forgotPasswordRequest.php')
 					?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-				
-			</form>
-			<!-- End Form to login -->
->>>>>>> FETCH_HEAD
  	</div>
 </div>
  </div> 

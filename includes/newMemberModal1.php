@@ -1,8 +1,14 @@
 
-<?php
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
 
-echo'
-
+>>>>>>> FETCH_HEAD
 	<div id="NewMemberModal1" class="reveal-modal" data-reveal>
 		<h2>Generic Information</h2>
 		<p></p>
@@ -10,22 +16,20 @@ echo'
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>First Name <input type="text" placeholder="First Name" /> </label> 
+					<label>First Name: <input type="text" placeholder="First Name" /> </label> 
 				</div> 
-				
 				<div class="large-4 columns"> 
-				<label>Last Name <input type="text" placeholder="Last Name" /> </label> 
+				<label>Middle Initial:<input type="text" placeholder="Middle Initial" /> </label> 
 				</div>
-				
 				<div class="large-4 columns"> 
-				<label>Middle Initial<input type="text" placeholder="Middle Initial" /> </label> 
+				<label>Last Name: <input type="text" placeholder="Last Name" /> </label> 
 				</div>
 				
 			</div> 
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>Gender</label> 
+					<label>Gender:</label> 
 					<input type="radio" name="gender" value="Male" id="Male">
 						<label for="Male">Male</label> 
 					<input type="radio" name="gender" value="Female" id="Female">
@@ -33,11 +37,11 @@ echo'
 				</div> 
 				
 				<div class="large-4 columns"> 
-					<label>Social Security Number <input type="text" placeholder="Social Security Number" /> </label> 
+					<label>Social Security Number:<input type="text" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-4 columns"> 
-				<label>Date Of Birth</label> 
+				<label>Date Of Birth:</label> 
 					<div class="large-4 columns"> 
 					<select>
 						<option>Month</option>
@@ -214,12 +218,13 @@ echo'
 			<div class="row"> 
 				
 				<div class="large-4 columns"> 
-					<label>Cell Phone<input type="text" placeholder="Cell Phone" /> </label> 
+					<label>Cell Phone:<input type="text" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div> 
 
 				<div class="large-4 columns"> 
-					<label>Religion
+					<label>Religion:
 					<select> 
+						<option value="-- Select --">-- Select --</option>
 						<option value="Christianity">Christianity</option> 
 						<option value="Judaism">Judaism</option> 
 						<option value="Buddhism">Buddhism</option> 
@@ -230,96 +235,133 @@ echo'
 					</label> 
 				</div>
 				
-				<div class="large-4 columns"> 
-					
-				</div> 
+					<div class="large-4 columns"> 
+								<label>Select a Resident Type:</label> 
+										<select>
+											<option>-- Select --</option>
+											<option value="Lazarus House">Lazarus House</option> 
+											<option value="Capernaum Place">Capernaum Place</option> 
+										</select>
+						</div> 
 			</div> 
 			
 			<h2>Previous Address Info</h2>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address <input type="text" placeholder="Previous Street Address" /> </label> 
+					<label>Street Address: <input type="text" placeholder="Previous Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City <input type="text" placeholder="City" /> </label> 
+					<label>City: <input type="text" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State<input type="text" placeholder="State" /> </label> 
+					<label>State:<input type="text" placeholder="State" /> </label> 
 				</div>
 
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code <input type="text" placeholder="Zip Code" /> </label> 
+					<label>Zip Code: <input type="text" placeholder="XXXXX" /> </label> 
 				</div> 
 			</div>
 			
 			<h2>Referral Info</h2>
 			
 			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Referral Person <input type="text" placeholder="Referral Person" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Referral Agency <input type="text" placeholder="Referral Agency" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-				</div>
-
+								<div class="large-4 columns"> 
+									<label>Name of Referral Person: <input type="text" id="referralName"  /> </label> 
+								</div> 
+								<div class="large-4 columns"> 
+									<label>Name of Referral Agency: <input type="text" id="referralAgency" /> </label> 
+								</div> 
+								<div class="large-4 columns"> 
+										<label>Referral Agency Phone Number: <input type="text" id="referralPhoneNum" placeholder="XXX-XXX-XXXX"  /> </label> 
+								</div>
 			</div>
+
 			<h2>Next of Kin</h2>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Name<input type="text" placeholder="Name" /> </label> 
+					<label>Full Name:<input type="text" placeholder="Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Relationship <input type="text" placeholder="Relationship" /> </label> 
+					<label>Relationship: <input type="text" placeholder="Relationship" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>Phone Number<input type="text" placeholder="Phone Number" /> </label> 
+					<label>Phone Number:<input type="text" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address <input type="text" placeholder="Previous Street Address" /> </label> 
+					<label>Street Address: <input type="text" placeholder="Previous Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City <input type="text" placeholder="City" /> </label> 
+					<label>City: <input type="text" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State<input type="text" placeholder="State" /> </label> 
+					<label>State:<input type="text" placeholder="State" /> </label> 
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code <input type="text" placeholder="Zip Code" /> </label> 
+					<label>Zip Code: <input type="text" placeholder="XXXXX" /> </label> 
 				</div>
 			</div>
 				
 			
 			<div class="row"> 
 				<div class="large-12 columns"> 
-					<label>Comments <textarea placeholder="Comments"></textarea> </label> 
+					<label>Comments: <textarea placeholder="Comments"></textarea> </label> 
 				</div> 
 			</div> 
 		</form>
 	  
-	  <p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
+	  <div class="row">
+			<div class="large-3 columns"> 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+				<p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
+=======
+				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
+>>>>>>> FETCH_HEAD
+=======
+				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
+>>>>>>> FETCH_HEAD
+=======
+				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
+>>>>>>> FETCH_HEAD
+			</div>
+			<div class="large-9 columns">
+				<h4>Progress</h4>
+				<div class="progress large-9 round"> 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+					<span class="meter" style="width: 10%"></span> 
+=======
+					<span class="meter" style="width: 1%"></span> 
+>>>>>>> FETCH_HEAD
+=======
+					<span class="meter" style="width: 1%"></span> 
+>>>>>>> FETCH_HEAD
+=======
+					<span class="meter" style="width: 1%"></span> 
+>>>>>>> FETCH_HEAD
+				</div>
+			</div>
+		<div>
+	  
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
 	
-
-'?>
