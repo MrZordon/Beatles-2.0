@@ -11,7 +11,7 @@
 			<h2>Request User's Password</h2>
 			<hr/>
 			<!-- Start form to request a forgotten password -->
-			<form>
+			<form action="" method="post">
 				<p> *Required </p>
 				
 					<div class="row">

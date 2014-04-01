@@ -5,6 +5,7 @@
 	// Inialize session
 	session_start();
 	
+	//include sessions script to check session has started
 	include('Exodus_SessionStart.php');
 
 	//include the script to connect to the DB
@@ -14,7 +15,7 @@
 	$userName=$_POST['userName'];
 	$password=$_POST['password'];
 	
-	//real escape
+	//real escape the credentials
 	$userName = mysql_real_escape_string($userName);
 	$password = mysql_real_escape_string($password);
 
@@ -24,6 +25,7 @@
 	//input the sql string into a query function and save the results to a variable
 	$result=mysql_query($sql);
 	
+	//throw exception is the query cant run
 	if(!$result) die ('Unable to run login query:'.mysql_error());
 	
 	//Count the number of rows returned in the resut set and save as a variable
@@ -32,7 +34,8 @@
 	//if only one record matching the userName and password is found, and the security code matched the session, login success and session initiated
 	if($count==1) 
 	{
-			$_SESSION['userName'] = $_POST['userName'];
+			//set the username as a session variable
+			$_SESSION['userName'] = $userName;
 		
 			// set the time for the session to expire 30 minutes after user logs in
 			$expire=time()+1800;
@@ -48,9 +51,34 @@
 	
 			// if query doesnt work throw exception
 			if(!$result2) die ('Unable to run login query:'.mysql_error());
-		
-		//if success, redirect to home page
-		header("Location: /Exodus/Exodus_home.php");
+			
+			//sql query to see what type of user it is, and redirect to correct homepage
+			$userType_sql = "SELECT 'userType' FROM Users WHERE UserName='$userName' AND Password='$password' ";
+			
+			//input the sql string into a query function and save the results to a variable
+			$result3=mysql_query($userType_sql);
+			// if query doesnt work throw exception
+			if(!$result3) die ('Unable to run login query:'.mysql_error());
+			
+			//extract the userType from the results set returned
+			$row = mysql_fetch_row($result3);
+			echo $row[0];
+			echo $row[1];
+			echo $row[2];
+			
+							// redirect if system administrator	
+							if($row[0] = 'SA')
+							{
+								header("Location: /Exodus/Exodus_Admin_home.php");
+							}
+							else if($row[0] = 'LH') //redirect if lazarus house user
+							{
+								header("Location: /Exodus/Exodus_LH_home.php");
+							}
+							else if($row[0] = 'CP') //redirect if capernaum place user
+							{
+								header("Location: /Exodus/Exodus_CP_home.php");
+							}
 	}
 	else { 
 	//show an error page

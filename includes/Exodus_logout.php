@@ -10,7 +10,7 @@ include('connect_ExodusDB.inc');
 $userName = $_SESSION['userName'];
 
 //sql query to check the username in the DB for a user that is currently logged on
-$sql="SELECT * FROM Users WHERE UserName='sysadmin1'  AND CurrentlyLoggedOn='Y' ";
+$sql="SELECT * FROM Users WHERE UserName='$userName'  AND CurrentlyLoggedOn='Y' ";
 	
 	//input the sql string into a query function and save the results to a variable
 	$result=mysql_query($sql);
@@ -24,7 +24,7 @@ $sql="SELECT * FROM Users WHERE UserName='sysadmin1'  AND CurrentlyLoggedOn='Y' 
 	if($count==1) 
 	{
 			//sql query to update that the user is not currently logged on to the system
-			$login_sql="UPDATE Users SET CurrentlyLoggedOn='N', LastLoggedOn=CURDATE() WHERE UserName='sysadmin1'";
+			$login_sql="UPDATE Users SET CurrentlyLoggedOn='N', LastLoggedOn=CURDATE() WHERE UserName='$userName'";
 	
 			//input the sql string into a query function and save the results to a variable
 			$result2=mysql_query($login_sql);
@@ -38,6 +38,7 @@ $sql="SELECT * FROM Users WHERE UserName='sysadmin1'  AND CurrentlyLoggedOn='Y' 
 	} //if not a successful loggout, throw exception / display error page
 	else
 	{
+		echo $userName;
 		include ('Exodus_error.php');
 	}
 ?>

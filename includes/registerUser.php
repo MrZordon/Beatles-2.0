@@ -13,37 +13,37 @@
 			<h2>Register as a New User</h2>
 			<hr/>
 			<!-- Start form to register a new user with Exodus -->
-			<form action="includes/emailNewUserRequest.php"  method="post">
+			<form action="/Exodus/includes/newUserRequest.php"  method="post">
 				<p> *Required </p>
 				
 					<div class="row">
 								<div class="large-6 columns"> 
-									<label>*New User Name: <input type="text" id="userName"  /> </label> 
+									<label>*New User Name: <input type="text" name="userName"  /> </label> 
 								</div> 
 								<div class="large-6 columns"> 
-									<label>*Email Address: <input type="text" id="emailAddress"  placeholder="email@domain.com" /> </label> 
+									<label>*Email Address: <input type="text" name="emailAddress"  placeholder="email@domain.com" /> </label> 
 								</div> 
 					</div>
 					<div class="row">
 						<div class="large-4 columns"> 
 							<label>*Select a user type:</label> 
-										<select id="userType">
+										<select name="userType">
 											<option>-- Select --</option>
-											<option value="Lazarus House">Lazarus House</option> 
-											<option value="Capernaum Place">Capernaum Place</option> 
+											<option value="LH">Lazarus House</option> 
+											<option value="CP">Capernaum Place</option> 
 										</select>
 						</div> 
 					</div>
 					<div class="row">
 								<div class="large-6 columns"> 
-									<label>*New Password: <input type="password" id="password" placeholder="At least 8 characters in length" /> </label> 
+									<label>*New Password: <input type="password" name="password" placeholder="At least 8 characters in length" /> </label> 
 								</div> 
 								<div class="large-6 columns"> 
-									<label>*Confirm New Password: <input type="password" id="confirmPassword" placeholder="At least 8 characters in length" /> </label> 
+									<label>*Confirm New Password: <input type="password" name="confirmPassword" placeholder="At least 8 characters in length" /> </label> 
 								</div> 
 						</div>
 						<div class="right">
-							<input type="submit" id="submit" class="button" name="Submit Request">
+							<input type="submit" name="submit" class="button" name="Submit Request">
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
