@@ -1,0 +1,60 @@
+<?php
+	//Insertion
+	$insert = "INSERT INTO ";
+	
+	$userTable = "Users (
+							UserName,
+							Password,
+							LastLoggedOn,
+							CurrentlyLoggedOn,
+							UserType
+							)  VALUES (
+							:userName, 
+							:password,
+							:lastLoggedOn,
+							:currentlyLoggedOn,
+							:userType
+							)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $userTable ) )
+	{
+		echo "Prepare users failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':userName', $userName, $string) )
+	{
+		echo "Binding userName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':password', $password, $string) )
+	{
+		echo "Binding password failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':lastLoggedOn', $lastLoggedOn, $string) )
+	{
+		echo "Binding lastLogged failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':currentlyLoggedOn', $currentlyLoggedOn, $string) )
+	{
+		echo "Binding currentlyLoggedOn failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':userType', $userType, $string) )
+	{
+		echo "Binding userType failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Users failed. " . $exception->getMessage();
+	}
+?>

@@ -7,26 +7,8 @@
 		System Administrator, who will receieve an email with the request. The sys admin must log on to Exodus and approve
 		the request, which will send a notifcation email to the user containing their password.
 -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<div id="ForgotPasswordModal" class="reveal-modal" data-reveal>
 			<h2>Request User's Password</h2>
-=======
-
-		<div id="ForgotPasswordModal" class="reveal-modal" data-reveal>
-			<h2>Request User\'s Password</h2>
->>>>>>> FETCH_HEAD
-=======
-
-		<div id="ForgotPasswordModal" class="reveal-modal" data-reveal>
-			<h2>Request User\'s Password</h2>
->>>>>>> FETCH_HEAD
-=======
-
-		<div id="ForgotPasswordModal" class="reveal-modal" data-reveal>
-			<h2>Request User\'s Password</h2>
->>>>>>> FETCH_HEAD
 			<hr/>
 			<!-- Start form to request a forgotten password -->
 			<form>
@@ -45,16 +27,4 @@
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		</div>
-=======
-		</div>
->>>>>>> FETCH_HEAD
-=======
-		</div>
->>>>>>> FETCH_HEAD
-=======
-		</div>
->>>>>>> FETCH_HEAD

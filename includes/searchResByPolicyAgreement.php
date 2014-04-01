@@ -1,16 +1,4 @@
 <!-- This php include file injects the modal to search the DB for a resident by their agreement to policies set forth in Lazarus House and Capernaum Place-->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> FETCH_HEAD
-=======
-
->>>>>>> FETCH_HEAD
-=======
-
->>>>>>> FETCH_HEAD
 
 <div id="ModalSearchByPolicy" class="reveal-modal" data-reveal>
 			<h2>Search Resident(s) By Policy Agreement</h2>

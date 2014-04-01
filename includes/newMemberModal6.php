@@ -4,9 +4,6 @@
 		
 		
 		<form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<h2> Incarcerations</h2>
 						<!-- Incarceration information-->
 					<div class="row">
@@ -61,51 +58,6 @@
 									<label>Institution Release Date: <input type="text" id="institutionEnd"  placeholder="mm/dd/yyyy"/> </label> 
 								</div> 
 						</div>
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-			<h2>Incarcerations</h2>
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>When<input type="text" placeholder="When" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Where<input type="text" placeholder="Where" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>Charges<input type="text" placeholder="Charges" /> </label> 
-				</div>
-
-			</div>
-			
-			<h2>Institutionalized</h2>
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>When<input type="text" placeholder="When" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Where<input type="text" placeholder="Where" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>Charges<input type="text" placeholder="Charges" /> </label> 
-				</div>
-
-			</div>
-
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 			
 		</form>
 		
@@ -117,19 +69,7 @@
 				
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<span class="meter" style="width: 60%"></span> 
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
 				</div>
 			</div>
 		<div>

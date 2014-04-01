@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-
->>>>>>> FETCH_HEAD
 	<div id="NewMemberModal1" class="reveal-modal" data-reveal>
 		<h2>Generic Information</h2>
 		<p></p>
@@ -328,36 +318,12 @@
 	  
 	  <div class="row">
 			<div class="large-3 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
-=======
-				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
->>>>>>> FETCH_HEAD
-=======
-				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
->>>>>>> FETCH_HEAD
-=======
-				<p><p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
->>>>>>> FETCH_HEAD
 			</div>
 			<div class="large-9 columns">
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<span class="meter" style="width: 10%"></span> 
-=======
-					<span class="meter" style="width: 1%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 1%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 1%"></span> 
->>>>>>> FETCH_HEAD
 				</div>
 			</div>
 		<div>

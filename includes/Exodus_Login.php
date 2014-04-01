@@ -32,13 +32,22 @@
 	//if only one record matching the userName and password is found, and the security code matched the session, login success and session initiated
 	if($count==1) 
 	{
-		$_SESSION['userName'] = $_POST['userName'];
+			$_SESSION['userName'] = $_POST['userName'];
 		
 			// set the time for the session to expire 30 minutes after user logs in
 			$expire=time()+1800;
 		
 			//set cookie to use the expire time for the userName logged in with
 			setcookie("user", $userName , $expire);
+			
+			//sql query to update that the user is currently logged on to the system
+			$login_sql="UPDATE Users SET CurrentlyLoggedOn='Y', LastLoggedOn=CURDATE() WHERE UserName='$userName' AND Password='$password' ";
+	
+			//input the sql string into a query function and save the results to a variable
+			$result2=mysql_query($login_sql);
+	
+			// if query doesnt work throw exception
+			if(!$result2) die ('Unable to run login query:'.mysql_error());
 		
 		//if success, redirect to home page
 		header("Location: /Exodus/Exodus_home.php");

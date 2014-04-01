@@ -1,0 +1,68 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$moneyTrackerTable = "MoneyTracker(
+											ResidentID,
+											CurrentBalance,
+											WithdrawOrDeposit,
+											PreviousBalance,
+											Amount,
+											ApprovedBy
+											)  VALUES (
+											:residentID ,
+											:currentBalance ,
+											:withdrawOrDeposit ,
+											:previousBalance ,
+											:amount ,
+											:approvedBy
+											)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $moneyTrackerTable ) )
+	{
+		echo "Prepare moneyTracker failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':currentBalance', $currentBalance, $int) )
+	{
+		echo "Binding currentBalance failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':withdrawOrDeposit', $withdrawOrDeposit, $string) )
+	{
+		echo "Binding withdrawOrDeposit failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':previousBalance', $previousBalance, $int) )
+	{
+		echo "Binding previousBalance failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':amount', $amount, $string) )
+	{
+		echo "Binding amount failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':approvedBy', $approvedBy, $string) )
+	{
+		echo "Binding approvedBy failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Users failed. " . $exception->getMessage();
+	}									
+?>

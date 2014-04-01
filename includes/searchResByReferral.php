@@ -9,19 +9,7 @@
 				
 					<div class="row">
 								<div class="large-4 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 									<label>Name of Referral Person: <input type="text" id="referralName"  /> </label> 
-=======
-									<label>Name on Referral Person: <input type="text" id="referralName"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-									<label>Name on Referral Person: <input type="text" id="referralName"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-									<label>Name on Referral Person: <input type="text" id="referralName"  /> </label> 
->>>>>>> FETCH_HEAD
 								</div> 
 								<div class="large-4 columns"> 
 									<label>Name of Referral Agency: <input type="text" id="referralAgency" /> </label> 

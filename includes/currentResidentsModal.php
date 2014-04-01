@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-
->>>>>>> FETCH_HEAD
 		<div id="CurrentResidentsModal1" class="reveal-modal" data-reveal>
 				<h2>Current Residents</h2>
 				<p></p>

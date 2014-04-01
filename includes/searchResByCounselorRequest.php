@@ -17,19 +17,7 @@
 					</div>
 					<div class="row">
 						<div class="large-6 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 							<label>Name of Counselor Requested: <input type="text" id="counselorName"  /> </label> 
-=======
-							<label>Name of Counselor: <input type="text" id="counselorName"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-							<label>Name of Counselor: <input type="text" id="counselorName"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-							<label>Name of Counselor: <input type="text" id="counselorName"  /> </label> 
->>>>>>> FETCH_HEAD
 						</div> 
 					</div>
 						<div class="right">

@@ -13,19 +13,7 @@
 			<h2>Register as a New User</h2>
 			<hr/>
 			<!-- Start form to register a new user with Exodus -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 			<form action="includes/emailNewUserRequest.php"  method="post">
-=======
-			<form>
->>>>>>> FETCH_HEAD
-=======
-			<form>
->>>>>>> FETCH_HEAD
-=======
-			<form>
->>>>>>> FETCH_HEAD
 				<p> *Required </p>
 				
 					<div class="row">
@@ -33,9 +21,6 @@
 									<label>*New User Name: <input type="text" id="userName"  /> </label> 
 								</div> 
 								<div class="large-6 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 									<label>*Email Address: <input type="text" id="emailAddress"  placeholder="email@domain.com" /> </label> 
 								</div> 
 					</div>
@@ -50,22 +35,6 @@
 						</div> 
 					</div>
 					<div class="row">
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-									<label>*Email Address: <input type="text" id="userName"  placeholder="email@domain.com" /> </label> 
-								</div> 
-					</div>
-					<div class="row">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 								<div class="large-6 columns"> 
 									<label>*New Password: <input type="password" id="password" placeholder="At least 8 characters in length" /> </label> 
 								</div> 
@@ -74,28 +43,8 @@
 								</div> 
 						</div>
 						<div class="right">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 							<input type="submit" id="submit" class="button" name="Submit Request">
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-							<p><a href="#" data-reveal-id="submitRegisterNewUserRequest" class="button">Submit Request</a></p>
-						</div>
-						<a class="close-reveal-modal">&#215;</a>
-			</form>
-		</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD

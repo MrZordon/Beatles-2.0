@@ -1,0 +1,103 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$incarcerationTable = "Incarceration (
+										ResidentID,
+										Incarcerated,
+										IncarcerationLoc,
+										IncarceratedStartDate,
+										IncarceratedEndDate,
+										IncarcerationCharges,
+										Institutionalized,
+										NameOfInstitution,
+										InstituteStartDate,
+										InstituteReleaseDate,
+										ReasonForInstitutionalization
+										)  VALUES (
+										:residentID ,
+										:incarcerated ,
+										:incarcerationLoc ,
+										:incarceratedStartDate ,
+										:incarceratedEndDate ,
+										:incarcerationCharges ,
+										:institutionalized ,
+										:nameOfInstitution ,
+										:instituteStartDate ,
+										:instituteReleaseDate ,
+										:reasonForInstitutionalization
+										)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $incarcerationTable ) )
+	{
+		echo "Prepare incarceration failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':incarcerated', $incarcerated, $string) )
+	{
+		echo "Binding incarcerated failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':incarcerationLoc', $incarcerationLoc, $string) )
+	{
+		echo "Binding incarcerationLoc failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':incarceratedStartDate', $incarceratedStartDate, $string) )
+	{
+		echo "Binding incarceratedStartDate failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':incarceratedEndDate', $incarceratedEndDate, $string) )
+	{
+		echo "Binding incarceratedEndDate failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':incarcerationCharges', $incarcerationCharges, $string) )
+	{
+		echo "Binding incarcerationCharges failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':institutionalized', $institutionalized, $string) )
+	{
+		echo "Binding institutionalized failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':nameOfInstitution', $nameOfInstitution, $string) )
+	{
+		echo "Binding nameOfInstitution failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':instituteStartDate', $instituteStartDate, $string) )
+	{
+		echo "Binding instituteStartDate failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':instituteReleaseDate', $instituteReleaseDate, $string) )
+	{
+		echo "Binding instituteReleaseDate failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':reasonForInstitutionalization', $reasonForInstitutionalization, $string) )
+	{
+		echo "Binding reasonForInstitutionalization failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Incarceration failed. " . $exception->getMessage();
+	}
+?>

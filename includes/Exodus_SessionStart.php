@@ -3,11 +3,9 @@
 		This prevents malicious users from editing the URL and accessing the application without a verified login 
 -->
 <?php
-	ob_start();
 		// Check, if username session is NOT set or cookie does not exist then this page will jump to Exodus login page
 		if (!isset($_SESSION['userName']) || !isset($_COOKIE['user'])) 
 		{
-			header("Location: /Exodus");
+			header("Location: /Exodus/index.php");
 		}
-		ob_flush();
 ?>

@@ -103,18 +103,6 @@
 				<?php
 						include ('includes/forgotPasswordRequest.php')
 					?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-				
-			</form>
-			<!-- End Form to login -->
->>>>>>> FETCH_HEAD
  	</div>
 </div>
  </div> 

@@ -16,9 +16,6 @@
 							</div> 
 					</div>
 					<div class="row">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 						<div class="large-4 columns"> 
 							<label>*Select a facility:</label> 
 										<select>
@@ -27,25 +24,6 @@
 											<option value="Capernaum Place">Capernaum Place</option> 
 										</select>
 						</div> 
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-						<div class="large-10 columns"> 
-								<label>* Select a facility: </label> 
-										<input type="radio" name="facility" value="Lazarus House" id="LH">
-											<label for="LH">Lazarus House</label> 
-										<input type="radio" name="facility" value="Capernaum Place" id="CP">
-											<label for="CP">Capernaum Place</label> 	
-							</div> 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 					</div>
 						<div class="right">
 							<p><a href="#" data-reveal-id="searchResultsByStatus" class="button">Search</a></p>

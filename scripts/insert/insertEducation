@@ -1,0 +1,54 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$educationTable = "Education (
+									ResidentID,
+									EducationMax,
+									FurtherEd,
+									FurtherPlans
+									)  VALUES (
+									:residentID,
+									:educationMax ,
+									:furtherEd,
+									:furtherPlans
+									)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $educationTable ) )
+	{
+		echo "Prepare education failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':educationMax', $educationMax, $string) )
+	{
+		echo "Binding educationMax failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':furtherEd', $furtherEd, $string) )
+	{
+		echo "Binding furtherEd failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':furtherPlans', $furtherPlans, $string) )
+	{
+		echo "Binding furtherPlans failed";
+	}
+		
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Education failed. " . $exception->getMessage();
+	}
+?>

@@ -1,16 +1,4 @@
 <!-- This php include file injects the modal to search the DB for residents by their employment information-->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> FETCH_HEAD
-=======
-
->>>>>>> FETCH_HEAD
-=======
-
->>>>>>> FETCH_HEAD
 
 	<div id="ModalSearchByEmployment" class="reveal-modal" data-reveal>
 		<h2>Search Resident(s) By Employment </h2>
@@ -30,29 +18,10 @@
 						<label>Company Name: <input type="text" id="companyName" placeholder="Company Name" /> </label> 
 					</div> 
 					<div class="large-4 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 						<label>Manager's Name: <input type="text" id="managerName" placeholder="Manager's Name" /> </label> 
 					</div>
 					<div class="large-4 columns"> 
 						<label>Manager\s Phone Number:<input type="text" id="managerPhoneNum" placeholder="xxx-xxx-xxxx" /> </label> 
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-						<label>Manager\'s Name: <input type="text" id="managerName" placeholder="Manager\'s Name" /> </label> 
-					</div>
-					<div class="large-4 columns"> 
-						<label>Manager\'s Phone Number:<input type="text" id="managerPhoneNum" placeholder="xxx-xxx-xxxx" /> </label> 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 					</div>
 			</div> 
 			<div class="row"> 

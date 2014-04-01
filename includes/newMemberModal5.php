@@ -4,9 +4,6 @@
 		
 		<h2>Employment</h2>
 		<form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<div class="row"> 
 				<div class="large-4 columns"> 
 									<label>Currently employed?</label> 
@@ -43,51 +40,6 @@
 							<label>Income:<input type="text" id="income" /> </label> 
 						</div>
 					</div>
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-	  
-			<div class="row">
-				<div class="large-9 columns">
-					<label>Manager Name<input type="text" placeholder="Manager Name" /> </label> 
-				</div>
-
-				<div class="large-3 columns"> 
-					<label>Phone Number<input type="text" placeholder="Phone Number" /></label> 
-				</div> 
-				
-			</div>
-				
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Business Name <input type="text" placeholder="Business Name" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Hours (To-From) <input type="text" placeholder="Hours (To-From)" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>Pay (Per Hour)<input type="text" placeholder="Pay (Per Hour)" /> </label> 
-				</div>
-
-			</div>
-			
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Monthly Income <input type="text" placeholder="Monthly Income" /> </label> 
-				</div> 
-			</div>
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 			
 		</form>
 		
@@ -99,19 +51,7 @@
 				
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<span class="meter" style="width: 50%"></span> 
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 30%"></span> 
->>>>>>> FETCH_HEAD
 				</div>
 			</div>
 		<div>

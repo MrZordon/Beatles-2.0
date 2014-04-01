@@ -1555,19 +1555,7 @@
 			<div class="large-9 columns">
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<span class="meter" style="width: 20%"></span> 
-=======
-					<span class="meter" style="width: 15%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 15%"></span> 
->>>>>>> FETCH_HEAD
-=======
-					<span class="meter" style="width: 15%"></span> 
->>>>>>> FETCH_HEAD
 				</div>
 			</div>
 		<div>

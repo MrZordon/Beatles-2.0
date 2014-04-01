@@ -1,0 +1,82 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$vehicleTable = "Vehicle (
+								ResidentID	,
+								NameOnRegistration,
+								LicenseNum,
+								State,
+								Make,
+								Color,
+								Model,
+								OLN
+								)  VALUES (
+								:residentID ,
+								:nameOnRegistration ,
+								:licenseNum ,
+								:state ,
+								:make ,
+								:color ,
+								:model ,
+								:oln
+								)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $vehicleTable ) )
+	{
+		echo "Prepare vehicle failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $int) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':nameOnRegistration', $nameOnRegistration, $string) )
+	{
+		echo "Binding nameOnRegistration failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':licenseNum', $licenseNum, $string) )
+	{
+		echo "Binding licenseNum failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':state', $state, $string) )
+	{
+		echo "Binding state failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':make', $make, $string) )
+	{
+		echo "Binding make failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':color', $color, $string) )
+	{
+		echo "Binding color failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':model', $model, $string) )
+	{
+		echo "Binding model failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':oln', $oln, $string) )
+	{
+		echo "Binding oln failed.";
+	}
+	
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Vehicle failed. " . $exception->getMessage();
+	}
+?>

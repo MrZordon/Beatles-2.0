@@ -1,16 +1,4 @@
 <!-- This php include file injects the modal to search the DB for a resident by their name information -->
-<<<<<<< HEAD:includes/searchResByName.php
-<<<<<<< HEAD:includes/searchResByName.php
-<<<<<<< HEAD:includes/searchResByName.php
-=======
-
->>>>>>> FETCH_HEAD:includes/searchResByName.php
-=======
-
->>>>>>> FETCH_HEAD:includes/searchResByName.php
-=======
-
->>>>>>> FETCH_HEAD:includes/searchResByName.php
 
 	 <div id="ModalSearchByName" class="reveal-modal" data-reveal>
 		<h2>Search Resident(s) By Name</h2>

@@ -1,0 +1,285 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$genericTable = "GenericInfo (
+							ResidentType,
+							Active,
+							ResidentID,
+							DateAdded,
+							FirstName,
+							MiddleInitial,
+							LastName,
+							Gender,
+							SSN,
+							DOB,
+							Age,
+							Language,
+							Religion,
+							Street,
+							CityTown,
+							State,
+							Zip,
+							PhoneNum,
+							RefPerson,
+							RefAgency,
+							RefPhone,
+							NextKin,
+							Kinship,
+							KinStreet,
+							KinCityTown,
+							KinState,
+							KinZip,
+							KinPhone,
+							CounselorRequest,
+							TermAgree,
+							SignedBy,
+							PaidRent,
+							LeaseAbility,
+							HousingGoals,
+							OweCompanies,
+							Concerns,
+							ExplainConcerns
+							)  VALUES (
+							:residentType, 
+							:active , 
+							:residentID , 
+							:dateAdded , 
+							:firstName , 
+							:middleInitial , 
+							:lastName , 
+							:gender , 
+							:ssn , 
+							:dob , 
+							:age , 
+							:language , 
+							:religion , 
+							:street , 
+							:cityTown , 
+							:state , 
+							:zip , 
+							:phoneNum , 
+							:refPerson , 
+							:refAgency , 
+							:refPhone , 
+							:nextKin , 
+							:kinship , 
+							:kinStreet , 
+							:kinCityTown , 
+							:kinState , 
+							:kinZip , 
+							:kinPhone , 
+							:counselorRequest , 
+							:termAgree , 
+							:signedBy , 
+							:paidRent , 
+							:leaseAbility , 
+							:housingGoals , 
+							:oweCompanies , 
+							:concerns ,
+							:explainConcerns
+							)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $genericTable ) )
+	{
+		echo "Prepare failed";
+	}
+	
+	//Bind the statement parameters
+	if ( !$stmt->bindValue ( ':residentType', $residentType, $string) )
+	{
+		echo "Binding residentType failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':active', $active, $string) )
+	{
+		echo "Binding active failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $string) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':dateAdded', $dateAdded, $string) )
+	{
+		echo "Binding dateAdded failed";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':firstName', $firstName, $string) )
+	{
+		echo "Binding firstName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':middleInitial', $middleInitial, $string) )
+	{
+		echo "Binding middleInitial failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':lastName', $lastName, $string) )
+	{
+		echo "Binding lastName failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':gender', $gender, $string) )
+	{
+		echo "Binding gender failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':ssn', $ssn, $string) )
+	{
+		echo "Binding ssn failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':dob', $dob, $string) )
+	{
+		echo "Binding dob failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':age', $age, $string) )
+	{
+		echo "Binding age failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':language', $language, $string) )
+	{
+		echo "Binding language failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':religion', $religion, $string) )
+	{
+		echo "Binding religion failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':street', $street, $string) )
+	{
+		echo "Binding street failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':cityTown', $cityTown, $string) )
+	{
+		echo "Binding cityTown failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':state', $state, $string) )
+	{
+		echo "Binding state failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':zip', $zip, $string) )
+	{
+		echo "Binding zip failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':phoneNum', $phoneNum, $string) )
+	{
+		echo "Binding phoneNum failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':refPerson', $refPerson, $string) )
+	{
+		echo "Binding refPerson failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':refAgency', $refAgency, $string) )
+	{
+		echo "Binding refAgency failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':refPhone', $refPhone, $string) )
+	{
+		echo "Binding refPhone failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':nextKin', $nextKin, $string) )
+	{
+		echo "Binding nextKin failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinship', $kinship, $string) )
+	{
+		echo "Binding kinship failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinStreet', $kinStreet, $string) )
+	{
+		echo "Binding kinStreet failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinCityTown', $kinCityTown, $string) )
+	{
+		echo "Binding kinCityTown failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinState', $kinState, $string) )
+	{
+		echo "Binding kinState failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinZip', $kinZip, $string) )
+	{
+		echo "Binding kinZip failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':kinPhone', $kinPhone, $string) )
+	{
+		echo "Binding kinPhone failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':counselorRequest', $counselorRequest, $string) )
+	{
+		echo "Binding counselorRequest failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':termAgree', $termAgree, $string) )
+	{
+		echo "Binding termAgree failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':signedBy', $signedBy, $string) )
+	{
+		echo "Binding signedBy failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':paidRent', $paidRent, $string) )
+	{
+		echo "Binding paidRent failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':leaseAbility', $leaseAbility, $string) )
+	{
+		echo "Binding leaseAbility failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':housingGoals', $housingGoals, $string) )
+	{
+		echo "Binding housingGoals failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':oweCompanies', $oweCompanies, $string) )
+	{
+		echo "Binding oweCompanies failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':concerns', $concerns, $string) )
+	{
+		echo "Binding concerns failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':explainConcerns', $explainConcerns, $string) )
+	{
+		echo "Binding explainConcerns failed.";
+	}
+
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Generic failed. " . $exception->getMessage();
+	}
+?>

@@ -1,31 +1,9 @@
 <html>
 	<!-- Include header file -->
 	<head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<?php include ('includes/header.php');
-			
-			//	if (!isset($_SESSION['userName']) || !isset($_COOKIE['user'])) 
-					//{
-					//		header('Location: /Exodus');
-				//	}?>
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-	<?php include 'includes/header.php';?>
-	
-		<?php include('includes/header.php'); ?>
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
+			<?php
+						include ('includes/header.php');
+				?>
 	</head>
 	<body>
 
@@ -41,8 +19,8 @@
   		<!-- Header and Nav -->
     	<div class="large-11 columns">
 			<ul class="right button-group">
+				<li><p class="button">Welcome <?php echo $_SESSION['userName']; ?>!</p></li>
 				<li><a href="Exodus_MasterSearches.php" class="button" id="searchForResidents">Search for a Resident</a></li>
-				<li><a href="#" class="button" id="link2">Link 2</a></li>
 				<li><a href="#" class="button" id="link3">Link 3</a></li>
 				<li><a href="#" class="button" id="link4">Link 4</a></li>
 			</ul>
@@ -79,7 +57,7 @@
                 <div class="panel">
                   <h5>Log Out</h5>
                 <h6 class="subheader">Log out of Exodus application.</h6>
-                <a href="Index.php" class="small button" id="logOut">Log Out</a>
+                <a href="includes/Exodus_logout.php" class="small button" id="logOut">Log Out</a>
                 </div>
               </div>
           </div>
@@ -159,6 +137,10 @@
           </div>
  
         </div>
+        <!--  Incude footer -->
+	<?php
+		include ('includes/footer.php');
+	?>
  
       <!-- End Thumbnails -->
  
@@ -243,20 +225,11 @@
 	<!--  This is the Modal for adding Vehichle Info to residents profile	-->
 	<?php 
 			include('includes/newMemberModal7.php');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		?>
 		
 		<!--  This is the Modal for adding Education Info to residents profile	-->
 	<?php 
 			include('includes/newMemberModal8.php');
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 		?>
 	
 	<!--  This is the Modal for search for members	-->
@@ -270,10 +243,7 @@
 	?>
 	
  
-    <!--  Incude footer -->
-	<?php
-		include ('includes/footer.php');
-	?>
+    
 
 </body>
 </html>

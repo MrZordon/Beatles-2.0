@@ -1,15 +1,4 @@
 <!--  FOOTER -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
-
-
->>>>>>> FETCH_HEAD
 		   <!-- Begin Footer -->
 		 <footer class="row">
 			<div class="large-12 columns">

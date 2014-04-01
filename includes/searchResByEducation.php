@@ -8,19 +8,7 @@
 				<p>*Required</p>
 					<div class="row">
 						<div class="large-8 columns"> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 							<label>Resident's highest achieved degree: <input type="text" id="residentDegree"  /> </label> 
-=======
-							<label>Resident\'s highest achieved degree: <input type="text" id="residentDegree"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-							<label>Resident\'s highest achieved degree: <input type="text" id="residentDegree"  /> </label> 
->>>>>>> FETCH_HEAD
-=======
-							<label>Resident\'s highest achieved degree: <input type="text" id="residentDegree"  /> </label> 
->>>>>>> FETCH_HEAD
 						</div> 
 					</div>
 					<div class="row">

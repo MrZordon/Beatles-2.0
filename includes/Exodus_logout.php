@@ -1,0 +1,43 @@
+<?php
+
+// Exodus_logout.php - this file handles the logging out of users from Exodus. This php script will submit a query to the DB to changed the user's status of logged in from Y to N.
+// It also will end the session and redirect back to the login page of Exodus.
+
+//include the script to connect to the DB
+include('connect_ExodusDB.inc');
+
+//get the user name from the session variables
+$userName = $_SESSION['userName'];
+
+//sql query to check the username in the DB for a user that is currently logged on
+$sql="SELECT * FROM Users WHERE UserName='sysadmin1'  AND CurrentlyLoggedOn='Y' ";
+	
+	//input the sql string into a query function and save the results to a variable
+	$result=mysql_query($sql);
+	
+	if(!$result) die ('Unable to run logout query:'.mysql_error());
+	
+	//Count the number of rows returned in the resut set and save as a variable
+	$count=mysql_num_rows($result);
+	
+	//if only one record matching the userName and status is found, logout the user and end the session
+	if($count==1) 
+	{
+			//sql query to update that the user is not currently logged on to the system
+			$login_sql="UPDATE Users SET CurrentlyLoggedOn='N', LastLoggedOn=CURDATE() WHERE UserName='sysadmin1'";
+	
+			//input the sql string into a query function and save the results to a variable
+			$result2=mysql_query($login_sql);
+	
+			// if query doesnt work throw exception
+			if(!$result2) die ('Unable to run logout query:'.mysql_error());
+		
+		//if success, redirect to home page
+		header("Location: /Exodus/");
+
+	} //if not a successful loggout, throw exception / display error page
+	else
+	{
+		include ('Exodus_error.php');
+	}
+?>
