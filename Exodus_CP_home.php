@@ -39,7 +39,7 @@
  
             <div class="panel">
               <h4 class="hide-for-small">Lazarus House Ministries, Inc. <hr/></h4>
-            <h5 class="subheader">Welcome to the Capernaum Place  home page of Exodus. This is your database access to all resident information. From this page you will be able to access everything you need concerning the information of residents of
+            <h5 class="subheader">Welcome to the Capernaum Place home page of Exodus. This is your database access to all resident information. From this page you will be able to access everything you need concerning the information of residents of
             Capernaum Place. If this is your first time using the application, please see the tutorial for help.</h5>
             </div>
  
@@ -111,21 +111,21 @@
           <div class="large-3 small-6 columns">
             <a href="#" data-reveal-id="CurrentResidentsModal1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/homeIcon.png"></a>
             <div class="panel" id="viewCurrentResidents">
-              <p>View Current Residents</p>
+              <p>View Current Capernaum Place Residents</p>
             </div>
           </div>
  
           <div class="large-3 small-6 columns">
             <a href="#" data-reveal-id="NewMemberModal1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/addUserIcon.png"></a>
             <div id="addResident" class="panel">
-              <p>Add A Resident</p>
+              <p>Add A Capernaum Place Resident</p>
             </div>
           </div>
  
           <div class="large-3 small-6 columns">
             <img id="editResidentProfile" src="img/editIcon.png" >
             <div class="panel">
-              <p>Edit A Resident's Profile</p>
+              <p>Edit A Capernaum Place Resident's Profile</p>
             </div>
           </div>
  
@@ -154,16 +154,16 @@
             <p>You can search for a member by name using this search function.</p>
         </li>
         <li data-id="viewCurrentResidents" data-class="custom so-awesome" data-text="Next">
-            <h4>View Current Residents</h4>
+            <h4>View Current Capernaum Place Residents</h4>
             <p>View all current residents of Capernaum Place.</p>
         </li>
         <li data-id="addResident" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
             <h4>Add a Resident</h4>
-            <p>Create a profile for a new resident</p>
+            <p>Create a profile for a new Capernaum Place resident</p>
         </li>
         <li data-id="editResidentProfile" data-class="custom so-awesome" data-text="Next">
-            <h4>Edit a Resident's Profile</h4>
-            <p>Edit the profile of an existing resident</p>
+            <h4>Edit a Capernaum Place Resident's Profile</h4>
+            <p>Edit the profile of an existing resident of Capernaum Place.</p>
         </li>
         <li data-id="backUpDB" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
             <h4>Backup Database</h4>
@@ -175,7 +175,7 @@
         </li>
         <li data-id="searchForResidents" data-class="custom so-awesome" data-text="Next">
             <h4>Search for a Resident</h4>
-            <p>Search for a resident using different search criteria</p>
+            <p>Search for a Capernaum Place resident using different search criteria</p>
         </li>
         <li data-id="link2" data-class="custom so-awesome" data-text="Next">
             <h4>Link2</h4>

@@ -11,19 +11,19 @@
 			<h2>Request User's Password</h2>
 			<hr/>
 			<!-- Start form to request a forgotten password -->
-			<form action="" method="post">
+			<form action="/Exodus/includes/emailForgotPasswordRequest.php" method="post">
 				<p> *Required </p>
 				
 					<div class="row">
 								<div class="large-6 columns"> 
-									<label>*Current User Name: <input type="text" id="userName" /> </label> 
+									<label>*Current User Name: <input type="text" name="userName" /> </label> 
 								</div> 
 								<div class="large-6 columns"> 
-									<label>*Current Email Address: <input type="text" id="emailAddress" placeholder="email@domain.com"/> </label> 
+									<label>*Current Email Address: <input type="text" name="emailAddress" placeholder="email@domain.com"/> </label> 
 								</div> 
 						</div>
 						<div class="right">
-							<p><a href="#" data-reveal-id="submitForgotPasswordRequest" class="button">Submit Request</a></p>
+							<input type="submit" name="submit" class="button" name="Submit Request">
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>

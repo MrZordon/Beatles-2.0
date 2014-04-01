@@ -1,6 +1,6 @@
 <!-- This php include file injects the modal to search the DB for a resident by their residence type (either Lazarus House or Capernaum Place) -->
 
-<div id="ModalSearchByType" class="reveal-modal" data-reveal>
+<div id="ModalSearchByTypeCP" class="reveal-modal" data-reveal>
 			<h2>Search Resident(s) By Residency Type</h2>
 			<hr/>
 			<!-- Start form for residency type-->
@@ -12,7 +12,6 @@
 										<select>
 											<option>-- Select --</option>
 											<option value="CP">Capernaum Place</option> 
-											<option value="LH">Lazarus House</option> 
 										</select>
 						</div> 
 					</div>

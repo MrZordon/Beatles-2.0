@@ -30,12 +30,12 @@
 	{
 			//Setup values to be used to send email				
 			$from = "From: $emailAddress\n";
-			$to = "chimo@comcast.net";
+			$to = "chimo@comcast.net, $emailAddress";
 			$subject="Request to Register As New Exodus User";
 			$body = "I would like to register as a $userType user with Exodus.\n\n Email Address:$emailAddress\n User Name: $userName\n Password: $password\n ";
 			$message = wordwrap($body, 70);
 			
-			//send and email
+			//send the email with all the parameters set above
 			if(mail($to, $subject, $message, $from)) 
 			{
 			?>
@@ -67,7 +67,7 @@
 					<div class="panel">
 						<h4 class="hide-for-small">Request to be a New User Sent!<hr/></h4>
              		  	<h4 class="show-for-small">Request to be a New User Sent!<hr/></h4>
-									<h5 class="subheader">Thank you for registering as a new user with Exodus! Check your inbox of the email address you supplied for a confirmation email.</h5>
+									<h5 class="subheader">Thank you for registering as a new user with Exodus! Check your inbox of the email address you provided for a confirmation email.</h5>
 									<h5 class="subheader">Please follow the link provided to return to the Exodus login page.</h5>
 									<a href="/Exodus" class="small button" id="home">Login to Exodus</a>
 						</div>
@@ -75,13 +75,13 @@
 </div></center>
 </body>
 </html>
-		<?php	}
+		<?php include ('footer.php');	}
 			else 
 			{
 				header("Location: /Exodus/");
 			}
 	}
-	else
+	else // if not successfull, display an error page
 	{
 		header("Location: /Exodus/includes/Exodus_error.php");
 	}

@@ -40,7 +40,7 @@
             	<div class="radius panel">
 
 							<!-- Prompt the user to select a way to search for residents -->
-							<h3 id="searchResidentBar"> Select a Method to Search for a Resident:</h3>
+							<h3 id="searchResidentBar"> Select a Method to Search for a Capernaum Place Resident:</h3>
  
  							<!--  List of links to search for a resident formatted to look like buttons stacked-->
 								<div class="row collapse">
@@ -66,7 +66,7 @@
 											  <a href="#" data-reveal-id="ModalSearchByVehicle" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Vehicle Information</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
-											  <a href="#" data-reveal-id="ModalSearchByType" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Resident Type</a>
+											  <a href="#" data-reveal-id="ModalSearchByTypeCP" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Resident Type</a>
 										</div></left>
 										<left><div class="large-10 small-8 columns">
 											  <a href="#" data-reveal-id="ModalSearchByEducation" onclick="$(document).foundation().foundation('reveal', 'start');" class="postfix button expand">Search Resident(s) By Education</a>
@@ -133,7 +133,7 @@
     
     <!-- Start Content of ModalSearchByType -->
    	 	<?php
-   				include('includes/searchResByType.php')
+   				include('includes/searchResByType_CP.php')
    			?>
     <!-- End Content of ModalSearchByType -->
     

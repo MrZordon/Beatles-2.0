@@ -111,21 +111,21 @@
           <div class="large-3 small-6 columns">
             <a href="#" data-reveal-id="CurrentResidentsModal1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/homeIcon.png"></a>
             <div class="panel" id="viewCurrentResidents">
-              <p>View Current Residents</p>
+              <p>View Current Lazarus House Residents</p>
             </div>
           </div>
  
           <div class="large-3 small-6 columns">
             <a href="#" data-reveal-id="NewMemberModal1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/addUserIcon.png"></a>
             <div id="addResident" class="panel">
-              <p>Add A Resident</p>
+              <p>Add A Lazarus House Resident</p>
             </div>
           </div>
  
           <div class="large-3 small-6 columns">
             <img id="editResidentProfile" src="img/editIcon.png" >
             <div class="panel">
-              <p>Edit A Resident's Profile</p>
+              <p>Edit A Lazarus House Resident's Profile</p>
             </div>
           </div>
  
@@ -154,16 +154,16 @@
             <p>You can search for a member by name using this search function.</p>
         </li>
         <li data-id="viewCurrentResidents" data-class="custom so-awesome" data-text="Next">
-            <h4>View Current Residents</h4>
+            <h4>View Current Lazarus House Residents</h4>
             <p>View all current residents of Lazarus House.</p>
         </li>
         <li data-id="addResident" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
-            <h4>Add a Resident</h4>
-            <p>Create a profile for a new resident</p>
+            <h4>Add a Lazarus House Resident</h4>
+            <p>Create a profile for a new Lazarus House resident</p>
         </li>
         <li data-id="editResidentProfile" data-class="custom so-awesome" data-text="Next">
-            <h4>Edit a Resident's Profile</h4>
-            <p>Edit the profile of an existing resident</p>
+            <h4>Edit a Lazarus House Resident's Profile</h4>
+            <p>Edit the profile of an existing Lazarus House resident</p>
         </li>
         <li data-id="backUpDB" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
             <h4>Backup Database</h4>
@@ -174,8 +174,8 @@
             <p>Logout of the Exodus application</p>
         </li>
         <li data-id="searchForResidents" data-class="custom so-awesome" data-text="Next">
-            <h4>Search for a Resident</h4>
-            <p>Search for a resident using different search criteria</p>
+            <h4>Search for a Lazarus House Resident</h4>
+            <p>Search for a Lazarus House resident using different search criteria</p>
         </li>
         <li data-id="link2" data-class="custom so-awesome" data-text="Next">
             <h4>Link2</h4>

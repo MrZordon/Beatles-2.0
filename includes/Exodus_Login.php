@@ -28,7 +28,7 @@
 	//throw exception is the query cant run
 	if(!$result) die ('Unable to run login query:'.mysql_error());
 	
-	//Count the number of rows returned in the resut set and save as a variable
+	//Count the number of rows returned in the result set and save as a variable
 	$count=mysql_num_rows($result);
 	
 	//if only one record matching the userName and password is found, and the security code matched the session, login success and session initiated
@@ -53,33 +53,38 @@
 			if(!$result2) die ('Unable to run login query:'.mysql_error());
 			
 			//sql query to see what type of user it is, and redirect to correct homepage
-			$userType_sql = "SELECT 'userType' FROM Users WHERE UserName='$userName' AND Password='$password' ";
+			$userType_sql = "SELECT userType FROM Users WHERE UserName='$userName' AND Password='$password' ";
 			
 			//input the sql string into a query function and save the results to a variable
 			$result3=mysql_query($userType_sql);
+			
 			// if query doesnt work throw exception
 			if(!$result3) die ('Unable to run login query:'.mysql_error());
 			
 			//extract the userType from the results set returned
-			$row = mysql_fetch_row($result3);
-			echo $row[0];
-			echo $row[1];
-			echo $row[2];
+			if($result3)
+			{
+					// get the results as an array
+					$row = mysql_fetch_row($result3);
 			
-							// redirect if system administrator	
-							if($row[0] = 'SA')
-							{
-								header("Location: /Exodus/Exodus_Admin_home.php");
-							}
-							else if($row[0] = 'LH') //redirect if lazarus house user
-							{
-								header("Location: /Exodus/Exodus_LH_home.php");
-							}
-							else if($row[0] = 'CP') //redirect if capernaum place user
-							{
-								header("Location: /Exodus/Exodus_CP_home.php");
-							}
-	}
+									// redirect if system administrator	
+									if($row[0]=='SA')
+									{
+										header("Location: /Exodus/Exodus_Admin_home.php");
+									}
+									else 
+									{
+											if($row[0]=='LH') //redirect if lazarus house user
+											{
+												header("Location: /Exodus/Exodus_LH_home.php");
+											}
+											else //redirect if capernaum place user
+											{
+												header("Location: /Exodus/Exodus_CP_home.php");
+											}
+									}//end else
+			}//end if result is true
+	} //end if count == 1
 	else { 
 	//show an error page
 		?>
