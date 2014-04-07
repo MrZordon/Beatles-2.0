@@ -3,6 +3,9 @@
 // Exodus_logout.php - this file handles the logging out of users from Exodus. This php script will submit a query to the DB to changed the user's status of logged in from Y to N.
 // It also will end the session and redirect back to the login page of Exodus.
 
+// We need to make sure the session has been started or else everything below is useless.
+session_start();
+
 //include the script to connect to the DB
 include('connect_ExodusDB.inc');
 
@@ -31,14 +34,17 @@ $sql="SELECT * FROM Users WHERE UserName='$userName'  AND CurrentlyLoggedOn='Y' 
 	
 			// if query doesnt work throw exception
 			if(!$result2) die ('Unable to run logout query:'.mysql_error());
+			
+			// If the logout is successful we also need to destroy the session
+			session_destroy();
 		
 		//if success, redirect to home page
-		header("Location: /Exodus/");
+		header("Location: ../index.php");
 
 	} //if not a successful loggout, throw exception / display error page
 	else
 	{
-		echo $userName;
+		//echo $userName;
 		include ('Exodus_error.php');
 	}
 ?>

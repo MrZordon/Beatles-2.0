@@ -13,7 +13,7 @@
 			<h2>Register as a New User</h2>
 			<hr/>
 			<!-- Start form to register a new user with Exodus -->
-			<form action="/Exodus/includes/newUserRequest.php"  method="post">
+			<form action="includes/newUserRequest.php"  method="post">
 				<p> *Required </p>
 				
 					<div class="row">

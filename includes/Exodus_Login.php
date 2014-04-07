@@ -6,7 +6,7 @@
 	session_start();
 	
 	//include sessions script to check session has started
-	include('Exodus_SessionStart.php');
+	//include('Exodus_SessionStart.php');
 
 	//include the script to connect to the DB
 	include('connect_ExodusDB.inc');
@@ -14,7 +14,7 @@
 	//Define Username and Password While using real escape string to help protect against msql injection
 	$userName=$_POST['userName'];
 	$password=$_POST['password'];
-	
+
 	//real escape the credentials
 	$userName = mysql_real_escape_string($userName);
 	$password = mysql_real_escape_string($password);
@@ -24,18 +24,20 @@
 	
 	//input the sql string into a query function and save the results to a variable
 	$result=mysql_query($sql);
-	
 	//throw exception is the query cant run
 	if(!$result) die ('Unable to run login query:'.mysql_error());
 	
 	//Count the number of rows returned in the result set and save as a variable
-	$count=mysql_num_rows($result);
-	
+	$count = mysql_num_rows($result);
+	echo "$count";
 	//if only one record matching the userName and password is found, and the security code matched the session, login success and session initiated
-	if($count==1) 
+	if($count == 1) 
 	{
 			//set the username as a session variable
 			$_SESSION['userName'] = $userName;
+			
+			echo $_SESSION['userName'];
+			echo "hello";
 		
 			// set the time for the session to expire 30 minutes after user logs in
 			$expire=time()+1800;
@@ -70,17 +72,17 @@
 									// redirect if system administrator	
 									if($row[0]=='SA')
 									{
-										header("Location: /Exodus/Exodus_Admin_home.php");
+										header("Location: ../Exodus_Admin_home.php");
 									}
 									else 
 									{
-											if($row[0]=='LH') //redirect if lazarus house user
+											if($row[0]=='L') //redirect if lazarus house user
 											{
-												header("Location: /Exodus/Exodus_LH_home.php");
+												header("Location: ../Exodus_LH_home.php");
 											}
 											else //redirect if capernaum place user
 											{
-												header("Location: /Exodus/Exodus_CP_home.php");
+												header("Location: ../Exodus_CP_home.php");
 											}
 									}//end else
 			}//end if result is true
@@ -91,14 +93,14 @@
 		<html>
 	<!-- Include header file -->
 	
-	<link rel="stylesheet" href="/Exodus/css/foundation.css" />
-			<script src="/Exodus/js/vendor/modernizr.js"></script>	
+	<link rel="stylesheet" href="../css/foundation.css" />
+			<script src="../js/vendor/modernizr.js"></script>	
 	<body>
 
-    	<script src="/Exodus/js/vendor/jquery.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.joyride.js"></script>
-		<script src="/Exodus/js/foundation/foundation.reveal.js"></script>
+    	<script src="../js/vendor/jquery.js"></script>
+    	<script src="../js/foundation/foundation.js"></script>
+    	<script src="../js/foundation/foundation.joyride.js"></script>
+		<script src="../js/foundation/foundation.reveal.js"></script>
 		
     	<script>
     		$(document).foundation();
@@ -107,7 +109,7 @@
 <center><div class="row">
       <!--  Lazarus House logo on the left-->
           <div class="large-6 columns">
-				<img src="/Exodus/img/LazarusHouseLogoBig.jpg"><br>
+				<img src="../img/LazarusHouseLogoBig.jpg"><br>
           </div>
 </div>
  <div class="row">
@@ -119,7 +121,7 @@
 									<h5 class="subheader">It appears that your credentials do not match up with our records!</h5>
 									<h5 class="subheader">You will not be able to access the full functionality of Exodus without properly logging in.</h5>
 									<h5 class="subheader">Please follow the link provided to return to the Exodus login page.</h5>
-									<a href="/Exodus" class="small button" id="home">Login to Exodus</a>
+									<a href="../index.php" class="small button" id="home">Login to Exodus</a>
 						</div>
           </div>
 </div></center>

@@ -1,7 +1,7 @@
 
 <?php
 
-$$host="localhost"; //host name
+	$host="localhost"; //host name
 	$username="root";//mysql username
 	$password="";//mysql password
 	$databaseName="Exodus";//database name

@@ -42,14 +42,14 @@
 <html>
 	<!-- Include header file -->
 	
-	<link rel="stylesheet" href="/Exodus/css/foundation.css" />
-			<script src="/Exodus/js/vendor/modernizr.js"></script>	
+	<link rel="stylesheet" href="../css/foundation.css" />
+			<script src="../js/vendor/modernizr.js"></script>	
 	<body>
 
-    	<script src="/Exodus/js/vendor/jquery.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.joyride.js"></script>
-		<script src="/Exodus/js/foundation/foundation.reveal.js"></script>
+    	<script src="../js/vendor/jquery.js"></script>
+    	<script src="../js/foundation/foundation.js"></script>
+    	<script src="../foundation/foundation.joyride.js"></script>
+		<script src="../js/foundation/foundation.reveal.js"></script>
 		
     	<script>
     		$(document).foundation();
@@ -58,7 +58,7 @@
 <center><div class="row">
       <!--  Lazarus House logo on the left-->
           <div class="large-6 columns">
-				<img src="/Exodus/img/LazarusHouseLogoBig.jpg"><br>
+				<img src="../img/LazarusHouseLogoBig.jpg"><br>
           </div>
 </div>
  <div class="row">
@@ -69,7 +69,7 @@
              		  	<h4 class="show-for-small">Request to be a New User Sent!<hr/></h4>
 									<h5 class="subheader">Thank you for registering as a new user with Exodus! Check your inbox of the email address you provided for a confirmation email.</h5>
 									<h5 class="subheader">Please follow the link provided to return to the Exodus login page.</h5>
-									<a href="/Exodus" class="small button" id="home">Login to Exodus</a>
+									<a href="../index.php" class="small button" id="home">Login to Exodus</a>
 						</div>
           </div>
 </div></center>
@@ -78,12 +78,12 @@
 		<?php include ('footer.php');	}
 			else 
 			{
-				header("Location: /Exodus/");
+				header("Location: ../index.php");
 			}
 	}
 	else // if not successfull, display an error page
 	{
-		header("Location: /Exodus/includes/Exodus_error.php");
+		header("Location: Exodus_error.php");
 	}
 	
 ?>

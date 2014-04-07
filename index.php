@@ -47,7 +47,7 @@
 					<div class="large-5 columns">
 	
 	<!--  Start form to submit a query to validate the username and password using POST -->
-		<form action="/Exodus/includes/Exodus_Login.php" method="post">
+		<form action="includes/Exodus_Login.php" method="post">
 				<div class="panel callout radius">
 						<h3>Login<hr/></h3>
 		

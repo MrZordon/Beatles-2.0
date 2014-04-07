@@ -1,9 +1,21 @@
+<?php
+
+	// Inialize session
+	session_start();
+
+	// Check, if username session is NOT set then this page will jump to login page
+	if (!isset($_SESSION['userName'])) 
+	{
+		header('Location: index.php');
+	}
+
+?>
 <html>
 	<!-- Include header file -->
 	<head>
 			<?php
-						include ('includes/header.php');
-				?>
+					include ('includes/header.php');
+			?>
 	</head>
 	<body>
 
@@ -116,7 +128,7 @@
           </div>
  
           <div class="large-3 small-6 columns">
-            <a href="#" data-reveal-id="NewMemberModal1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/addUserIcon.png"></a>
+            <a href="#" data-reveal-id="NewMemberModalCP1" onclick="$(document).foundation().foundation('reveal', 'start');"><img src="img/addUserIcon.png"></a>
             <div id="addResident" class="panel">
               <p>Add A Capernaum Place Resident</p>
             </div>
@@ -194,37 +206,37 @@
 	
 	<!--  This is the Modal for adding generic information to residents profile	-->
 	<?php 
-			include('includes/newMemberModal1.php');
+			include('includes/newMemberModalCP1.php');
 		?>
 		
 	<!--  This is the Modal for adding Children to residents profile	-->
 	<?php 
-			include('includes/newMemberModal2.php');
+			include('includes/newMemberModalCP2.php');
 		?>
 		
-	<!--  This is the Modal for adding Agency Assist to residents profile	-->
+	<!--  This is the Modal for adding Domestic Violence info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal3.php');
+			include('includes/newMemberModalCP3.php');
 		?>
 		
-	<!--  This is the Modal for adding Medical to residents profile	-->
+	<!--  This is the Modal for adding Personal Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal4.php');
+			include('includes/newMemberModalCP4.php');
 		?>
 		
 	<!--  This is the Modal for adding Employment to residents profile	-->
 	<?php 
-			include('includes/newMemberModal5.php');
+			include('includes/newMemberModalCP5.php');
 		?>
 		
 	<!--  This is the Modal for adding Criminal to residents profile	-->
 	<?php 
-			include('includes/newMemberModal6.php');
+			include('includes/newMemberModalCP6.php');
 		?>
 		
 	<!--  This is the Modal for adding Vehichle Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal7.php');
+			include('includes/newMemberModalCP7.php');
 		?>
 		
 		<!--  This is the Modal for adding Education Info to residents profile	-->

@@ -4,7 +4,7 @@
 	session_start();
 
 	// Check, if username session is NOT set then this page will jump to login page
-	if (!isset($_SESSION['username'])) 
+	if (!isset($_SESSION['userName'])) 
 	{
 		header('Location: index.php');
 	}
@@ -239,10 +239,16 @@
 			include('includes/newMemberModal7.php');
 		?>
 		
-		<!--  This is the Modal for adding Education Info to residents profile	-->
+	<!--  This is the Modal for adding Education Info to residents profile	-->
 	<?php 
 			include('includes/newMemberModal8.php');
 		?>
+		
+	<!--  This is the Modal for adding Education Info to residents profile	-->
+	<?php 
+			include('includes/newMemberModal9.php');
+		?>
+	
 	
 	<!--  This is the Modal for search for members	-->
 	<?php 

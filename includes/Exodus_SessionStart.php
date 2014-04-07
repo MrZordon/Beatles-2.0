@@ -6,6 +6,6 @@
 		// Check, if username session is NOT set or cookie does not exist then this page will jump to Exodus login page
 		if (!isset($_SESSION['userName']) || !isset($_COOKIE['user'])) 
 		{
-			header("Location: /Exodus/index.php");
+			header("Location: ../index.php");
 		}
 ?>

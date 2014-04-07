@@ -5,10 +5,10 @@
 	</head>
 	<body>
 
-    	<script src="/Exodus/js/vendor/jquery.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.js"></script>
-    	<script src="/Exodus/js/foundation/foundation.joyride.js"></script>
-		<script src="/Exodus/js/foundation/foundation.reveal.js"></script>
+    	<script src="../js/vendor/jquery.js"></script>
+    	<script src="../js/foundation/foundation.js"></script>
+    	<script src="../js/foundation/foundation.joyride.js"></script>
+		<script src="../js/foundation/foundation.reveal.js"></script>
 		
     	<script>
     		$(document).foundation();
@@ -20,7 +20,7 @@
 <center><div class="row">
       <!--  Lazarus House logo on the left-->
           <div class="large-6 columns">
-				<img src="/Exodus/img/LazarusHouseLogoBig.jpg"><br>
+				<img src="../img/LazarusHouseLogoBig.jpg"><br>
           </div>
           </div>
  <div class="row">
