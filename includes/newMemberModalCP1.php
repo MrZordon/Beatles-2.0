@@ -6,13 +6,13 @@
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>First Name: <input type="text" placeholder="First Name" /> </label> 
+					<label>First Name: <input type="text" name="fName" placeholder="First Name" /> </label> 
 				</div> 
 				<div class="large-4 columns"> 
-				<label>Middle Initial:<input type="text" placeholder="Middle Initial" /> </label> 
+				<label>Middle Initial:<input type="text" name="middleInitial" placeholder="Middle Initial" /> </label> 
 				</div>
 				<div class="large-4 columns"> 
-				<label>Last Name: <input type="text" placeholder="Last Name" /> </label> 
+				<label>Last Name: <input type="text" name="lName" placeholder="Last Name" /> </label> 
 				</div>
 				
 			</div> 
@@ -27,13 +27,13 @@
 				</div> 
 				
 				<div class="large-4 columns"> 
-					<label>Social Security Number:<input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number:<input type="text" name="ssn" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-4 columns"> 
 				<label>Date Of Birth:</label> 
 					<div class="large-4 columns"> 
-					<select>
+					<select name="month">
 						<option>Month</option>
 						<option value="January">January</option> 
 						<option value="February">February</option> 
@@ -50,7 +50,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select>
+					<select name="day">
 						<option>Day</option>
 						<option value="01">01</option> 
 						<option value="02">02</option> 
@@ -86,7 +86,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select>
+					<select name="year">
 						<option>Year</option>
 						<option value="2011">2011</option>
 						<option value="2010">2010</option>
@@ -208,7 +208,7 @@
 			<div class="row"> 
 				
 				<div class="large-4 columns"> 
-					<label>Cell Phone:<input type="text" placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>Cell Phone:<input type="text" name="cellPhoneNum" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div> 
 
 					

@@ -1,3 +1,15 @@
+<?php
+
+	// Inialize session
+	session_start();
+
+	// Check, if username session is NOT set then this page will jump to login page
+	if (!isset($_SESSION['userName'])) 
+	{
+		header('Location: index.php');
+	}
+
+?>
 <html>
 <!-- Include header file -->
 	<?php include 'includes/header.php';?>
@@ -41,7 +53,7 @@
 
 							<!-- Prompt the user to select a way to search for residents -->
 							<h3 id="searchResidentBar"> Select a Method to Search for a Capernaum Place Resident:</h3>
- 
+ 							<div class="reveal-modal-bg" style="display: none"></div>
  							<!--  List of links to search for a resident formatted to look like buttons stacked-->
 								<div class="row collapse">
 										<left><div class="large-10 small-8 columns">
@@ -151,7 +163,7 @@
     
     <!-- Start Content of ModalSearchByStatus -->
     		<?php
-   				include('includes/searchResByStatus.php')
+   				include('includes/searchResByStatusCP.php')
    			?>
     <!-- End Content of ModalSearchByStatus -->
     

@@ -18,9 +18,8 @@
 					<div class="row">
 						<div class="large-4 columns"> 
 							<label>*Select a facility:</label> 
-										<select name="facilityName">
+										<select name="facilityNameCP">
 											<option>-- Select --</option>
-											<option value="Lazarus House">Lazarus House</option> 
 											<option value="Capernaum Place">Capernaum Place</option> 
 										</select>
 						</div> 

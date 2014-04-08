@@ -76,11 +76,11 @@
 									}
 									else 
 									{
-											if($row[0]=='L') //redirect if lazarus house user
+											if($row[0]=='LH') //redirect if lazarus house user
 											{
 												header("Location: ../Exodus_LH_home.php");
 											}
-											else //redirect if capernaum place user
+											else if($row[0]=='CP') //redirect if capernaum place user
 											{
 												header("Location: ../Exodus_CP_home.php");
 											}

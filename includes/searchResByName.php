@@ -8,19 +8,19 @@
 			<p>**At least one field is required to be completed in order to search for a resident.</p>
 					<div class="row"> 
 							<div class="large-4 columns"> 
-								<label>First Name: <input type="text" id=firstName placeholder="First Name" /> </label> 
+								<label>First Name: <input type="text" id="firstName" name="firstName" placeholder="First Name" /> </label> 
 							</div> 
 							<div class="large-4 columns"> 
-								<label>Middle Initial:<input type="text" id=middleInitial placeholder="Middle Initial" /> </label> 
+								<label>Middle Initial:<input type="text" id="middleInitial" name="middleInitial" placeholder="Middle Initial" /> </label> 
 							</div>
 							<div class="large-4 columns"> 
-								<label>Last Name: <input type="text" id=lastName placeholder="Last Name" /> </label> 
+								<label>Last Name: <input type="text" id="lastName" name="lastName" placeholder="Last Name" /> </label> 
 							</div>
 					</div> 
 					
 					<!-- Submit the data to a query for searching for resident by name -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="SearchResultsByName" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="SearchResultsByName" name="submit" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 		</form>

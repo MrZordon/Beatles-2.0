@@ -8,22 +8,22 @@
 				<p>**At least one field is required to be completed in order to search for a resident.</p>
 					<div class="row">
 						<div class="large-4 columns"> 
-							<label>Street Address: <input type="text" id="streetAddress" placeholder="Street Address" /> </label> 
+							<label>Street Address: <input type="text" id="streetAddress" name="streetAddress" placeholder="Street Address" /> </label> 
 						</div> 
 						<div class="large-4 columns"> 
-							<label>City: <input type="text" id="city" placeholder="City" /> </label> 
+							<label>City: <input type="text" id="city"  name="city" placeholder="City" /> </label> 
 						</div>
 						<div class="large-4 columns"> 
-							<label>State: <input type="text" id="state" placeholder="State" /> </label> 
+							<label>State: <input type="text" id="state" name="state" placeholder="State" /> </label> 
 						</div>
 					</div>
 					<div class="row">
 						<div class="large-4 columns"> 
-							<label>Zip Code: <input type="text" id="zipCode" placeholder="XXXXX" /> </label> 
+							<label>Zip Code: <input type="text" id="zipCode" name="zipCode" placeholder="XXXXX" /> </label> 
 						</div> 
 					</div>
 						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByResidence" class="button">Search</a></p>
+							<p><a href="#" data-reveal-id="searchResultsByResidence" name="submit" class="button">Search</a></p>
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>

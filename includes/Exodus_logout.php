@@ -7,7 +7,7 @@
 session_start();
 
 //include the script to connect to the DB
-include('connect_ExodusDB.inc');
+include('../includes/connect_ExodusDB.inc');
 
 //get the user name from the session variables
 $userName = $_SESSION['userName'];
@@ -38,8 +38,8 @@ $sql="SELECT * FROM Users WHERE UserName='$userName'  AND CurrentlyLoggedOn='Y' 
 			// If the logout is successful we also need to destroy the session
 			session_destroy();
 		
-		//if success, redirect to home page
-		header("Location: ../index.php");
+			//if success, redirect to home page
+			header("Location: ../index.php");
 
 	} //if not a successful loggout, throw exception / display error page
 	else

@@ -9,22 +9,22 @@
 					<div class="row">
 						<div class="large-10 columns"> 
 								<label>* Does the resident have outstanding payments?</label> 
-										<input type="radio" name="outstandingPayments" value="Yes" id="Yes">
-											<label for="Yes">Yes</label> 
-										<input type="radio" name="outstandingPayments" value="No" id="No">
-											<label for="No">No</label> 	
+										<input type="radio" name="outstandingPayments" value="Yes" id="overdueYes">
+											<label for="overdueYes">Yes</label> 
+										<input type="radio" name="outstandingPayments" value="No" id="overdueNo">
+											<label for="overdueNo">No</label> 	
 							</div> 
 					</div>
 					<div class="row">
 						<div class="large-5 columns"> 
-							<label>Owed to whom: <input type="text" id="companiesOwed"  /> </label> 
+							<label>Owed to whom: <input type="text" id="companiesOwed" name="companiesOwed"  /> </label> 
 						</div> 
 						<div class="large-5 columns"> 
-							<label>Amount Owed: <input type="text" id="amountOwed"  /> </label> 
+							<label>Amount Owed: <input type="text" id="amountOwed" name="amountOwed"  /> </label> 
 						</div> 
 					</div>
 						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByOverduePayments" class="button">Search</a></p>
+							<p><a href="#" data-reveal-id="searchResultsByOverduePayments" name="submit" class="button">Search</a></p>
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>

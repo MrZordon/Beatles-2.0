@@ -9,17 +9,17 @@
 				
 					<div class="row">
 								<div class="large-4 columns"> 
-									<label>Name of Referral Person: <input type="text" id="referralName"  /> </label> 
+									<label>Name of Referral Person: <input type="text" id="referralName" name="referralName"  /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-									<label>Name of Referral Agency: <input type="text" id="referralAgency" /> </label> 
+									<label>Name of Referral Agency: <input type="text" id="referralAgency" name="referralAgency" /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-										<label>Referral Agency Phone Number: <input type="text" id="referralPhoneNum" placeholder="XXX-XXX-XXXX"  /> </label> 
+										<label>Referral Agency Phone Number: <input type="text" id="referralPhoneNum" name="referralPhoneNum" placeholder="XXX-XXX-XXXX"  /> </label> 
 								</div>
 						</div>
 						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByReferral" class="button">Search</a></p>
+							<p><a href="#" data-reveal-id="searchResultsByReferral" name="submit" class="button">Search</a></p>
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>

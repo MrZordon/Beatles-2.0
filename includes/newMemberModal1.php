@@ -230,7 +230,6 @@
 										<select>
 											<option>-- Select --</option>
 											<option value="Lazarus House">Lazarus House</option> 
-											<option value="Capernaum Place">Capernaum Place</option> 
 										</select>
 						</div> 
 			</div> 

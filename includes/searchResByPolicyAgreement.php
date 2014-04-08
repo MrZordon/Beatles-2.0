@@ -9,16 +9,16 @@
 					<div class="row">
 							<div class="large-10 columns"> 
 								<label>* Did the applicant agree to the policies set forth by Lazarus House Ministries to be a resident and use the facilities?</label> 
-										<input type="radio" name="agreement" value="Yes" id="Yes">
-											<label for="Yes">Yes</label> 
-										<input type="radio" name="agreement" value="No" id="No">
-											<label for="No">No</label> 	
+										<input type="radio" name="agreement" value="Yes" id="policyYes">
+											<label for="policyYes">Yes</label> 
+										<input type="radio" name="agreement" value="No" id="policyNo">
+											<label for="policyNo">No</label> 	
 							</div> 
 					</div> 
 					
 					<!-- Submit the data to a query for searching for resident by policy agreement -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByPolicyAgreement" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="searchResultsByPolicyAgreement" name="submit" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

@@ -8,8 +8,8 @@
 				<p>* Required </p>
 					<div class="row">
 						<div class="large-4 columns"> 
-							<label>* Number of Children:</label> 
-										<select>
+							<label>* Number of Children: 
+										<select id="numChildren" name="numChildren">
 											<option>-- Select --</option>
 											<option value="0">0</option> 
 											<option value="1">1</option> 
@@ -21,12 +21,13 @@
 											<option value="7">7</option> 
 											<option value="8">8</option> 
 										</select>
+							</label>
 						</div> 
 					</div>
 					
 					<!-- Submit the data to a query for searching for resident by number of children -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByNumChildren" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="searchResultsByNumChildren" name="submit" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

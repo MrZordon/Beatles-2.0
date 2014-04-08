@@ -9,19 +9,19 @@
 					<div class="row">
 						<div class="large-10 columns"> 
 								<label>* Did the resident request to meet with a counselor?</label> 
-										<input type="radio" name="requestCounselor" value="Yes" id="Yes">
-											<label for="Yes">Yes</label> 
-										<input type="radio" name="requestCounselor" value="No" id="No">
-											<label for="No">No</label> 	
+										<input type="radio" name="requestCounselor" value="Yes" id="requestYes">
+											<label for="requestYes">Yes</label> 
+										<input type="radio" name="requestCounselor" value="No" id="requestNo">
+											<label for="requestNo">No</label> 	
 							</div> 
 					</div>
 					<div class="row">
 						<div class="large-6 columns"> 
-							<label>Name of Counselor Requested: <input type="text" id="counselorName"  /> </label> 
+							<label>Name of Counselor Requested: <input type="text" id="counselorName" name="counselorName"  /> </label> 
 						</div> 
 					</div>
 						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByCounselorRequest" class="button">Search</a></p>
+							<p><a href="#" data-reveal-id="searchResultsByCounselorRequest" name="submit" class="button">Search</a></p>
 						</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>

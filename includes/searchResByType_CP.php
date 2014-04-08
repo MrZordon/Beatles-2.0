@@ -8,17 +8,18 @@
 					<p>* Required </p>
 					<div class="row">
 						<div class="large-4 columns"> 
-							<label>*Select a Resident type:</label> 
-										<select>
+							<label>*Select a Resident type:
+										<select name="resTypeCP">
 											<option>-- Select --</option>
 											<option value="CP">Capernaum Place</option> 
 										</select>
+							</label> 
 						</div> 
 					</div>
 					
 					<!-- Submit the data to a query for searching for resident by resident type -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByResidencyType" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="searchResultsByResidencyType" name="submit" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

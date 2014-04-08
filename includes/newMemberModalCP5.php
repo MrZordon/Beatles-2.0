@@ -7,37 +7,37 @@
 		<div class="row"> 
 				<div class="large-4 columns"> 
 									<label>Currently employed?</label> 
-											<input type="radio" name="agreement" value="Yes" id="Yes">
-												<label for="Yes">Yes</label> 
-											<input type="radio" name="agreement" value="No" id="No">
-												<label for="No">No</label> 	
+											<input type="radio" name="agreementYN" value="Yes" id="agreementY">
+												<label for="agreementY">Yes</label> 
+											<input type="radio" name="agreementYN" value="No" id="agreementN">
+												<label for="agreementN">No</label> 	
 				</div> 
 		</div>
 			<div class="row"> 
 					<div class="large-4 columns"> 
-						<label>Company Name: <input type="text" id="companyName" placeholder="Company Name" /> </label> 
+						<label>Company Name: <input type="text" id="companyName" name="companyName" placeholder="Company Name" /> </label> 
 					</div> 
 					<div class="large-4 columns"> 
-						<label>Manager's Name: <input type="text" id="managerName" placeholder="Manager's Name" /> </label> 
+						<label>Manager's Name: <input type="text" id="managerName" name="managerName" placeholder="Manager's Name" /> </label> 
 					</div>
 					<div class="large-4 columns"> 
-						<label>Manager\s Phone Number:<input type="text" id="managerPhoneNum" placeholder="xxx-xxx-xxxx" /> </label> 
+						<label>Manager's Phone Number:<input type="text" id="managerPhoneNum" name="managerPhoneNum" placeholder="xxx-xxx-xxxx" /> </label> 
 					</div>
 			</div> 
 			<div class="row"> 
 					<div class="large-4 columns"> 
-						<label>Hours From: <input type="text" id="hoursFrom" /> </label> 
+						<label>Hours From: <input type="text" name="hoursFrom" id="hoursFrom" /> </label> 
 					</div> 
 					<div class="large-4 columns"> 
-						<label>Hours To: <input type="text" id="hoursTo"  /> </label> 
+						<label>Hours To: <input type="text"  name="hoursTo" id="hoursTo"  /> </label> 
 					</div>
 					<div class="large-4 columns"> 
-						<label>Rate of Pay:<input type="text" id="rateOfPay" /> </label> 
+						<label>Rate of Pay:<input type="text" name="rateOfPay" id="rateOfPay" /> </label> 
 					</div>
 				</div> 
 				<div class="row"> 
 					<div class="large-4 columns"> 
-							<label>Income:<input type="text" id="income" /> </label> 
+							<label>Income:<input type="text" name="income" id="income" /> </label> 
 						</div>
 					</div>
 			

@@ -9,7 +9,7 @@
 					<div class="row">
 						<div class="large-4 columns"> 
 							<label>*Select a Resident type:</label> 
-										<select>
+										<select name="resType">
 											<option>-- Select --</option>
 											<option value="CP">Capernaum Place</option> 
 											<option value="LH">Lazarus House</option> 
@@ -19,7 +19,7 @@
 					
 					<!-- Submit the data to a query for searching for resident by resident type -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByResidencyType" class="button">Search</a></p>
+						<p><a href="#" data-reveal-id="searchResultsByResidencyType" name="submit" class="button">Search</a></p>
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

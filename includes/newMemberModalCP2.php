@@ -5,26 +5,26 @@
 	  
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName1" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender1" value="Male" id="Male1">
+						<label for="Male1">Male</label> 
+					<input type="radio" name="gender1" value="Female" id="Female1">
+						<label for="Female1">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN1" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild1">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -41,7 +41,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild1">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -77,7 +77,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild1">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -198,33 +198,33 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues1" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			
 			
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName2" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender2" value="Male" id="Male2">
+						<label for="Male2">Male</label> 
+					<input type="radio" name="gender2" value="Female" id="Female2">
+						<label for="Female2">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN2"placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild2">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -241,7 +241,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild2">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -277,7 +277,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild2">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -398,31 +398,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues2" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName3" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender3" value="Male" id="Male3">
+						<label for="Male3">Male</label> 
+					<input type="radio" name="gender3" value="Female" id="Female3">
+						<label for="Female3">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN3" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild3">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -439,7 +439,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild3">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -475,7 +475,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild3">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -596,31 +596,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues3" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName4" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender4" value="Male" id="Male4">
+						<label for="Male4">Male</label> 
+					<input type="radio" name="gender4" value="Female" id="Female4">
+						<label for="Female4">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN4" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild4">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -637,7 +637,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild4">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -673,7 +673,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild4">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -794,31 +794,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues4" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName5" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender5" value="Male" id="Male5">
+						<label for="Male5">Male</label> 
+					<input type="radio" name="gender5" value="Female" id="Female5">
+						<label for="Female5">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN5" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild5">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -835,7 +835,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild5">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -871,7 +871,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild5">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -992,31 +992,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues5" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName6" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender6" value="Male" id="Male6">
+						<label for="Male6">Male</label> 
+					<input type="radio" name="gender6" value="Female" id="Female6">
+						<label for="Female6">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN6" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild6">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -1033,7 +1033,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild6">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -1069,7 +1069,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild6">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -1190,31 +1190,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues6" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName7" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender7" value="Male" id="Male7">
+						<label for="Male7">Male</label> 
+					<input type="radio" name="gender7" value="Female" id="Female7">
+						<label for="Female7">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN7" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild7">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -1231,7 +1231,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild7">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -1267,7 +1267,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild7">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -1388,31 +1388,31 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues7" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-3 columns">
-					<label>Full Name:<input type="text" placeholder="Full Name" /> </label> 
+					<label>Full Name:<input type="text" name="childName8" placeholder="Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
-						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
-						<label for="Female">Female</label> 	
+					<input type="radio" name="gender8" value="Male" id="Male8">
+						<label for="Male8">Male</label> 
+					<input type="radio" name="gender8" value="Female" id="Female8">
+						<label for="Female8">Female</label> 	
 				</div> 
 				
 				<div class="large-3 columns"> 
-					<label>Social Security Number: <input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number: <input type="text" name="childSSN8" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-3 columns"> 
 					<div class="row">
 						<label>Date Of Birth:</label> 
 						<div class="large-4 columns"> 
-							<select>
+							<select name="monthChild8">
 							<option>Month</option>
 							<option value="January">January</option> 
 							<option value="February">February</option> 
@@ -1429,7 +1429,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns">						
-							<select>
+							<select name="dayChild8">
 								<option>Day</option>
 								<option value="01">01</option> 
 								<option value="02">02</option> 
@@ -1465,7 +1465,7 @@
 							</select>
 						</div>
 						<div class="large-4 columns"> 
-							<select>
+							<select name="yearChild8">
 								<option>Year</option>
 								<option value="2011">2011</option>
 								<option value="2010">2010</option>
@@ -1586,12 +1586,12 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Custody Issues:<input type="text" placeholder="Custody Issues" /> </label> 
+					<label>Custody Issues:<input type="text" name="custIssues8" placeholder="Custody Issues" /> </label> 
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<label>Co-Parent and Co-Parenting Support Issues: <textarea placeholder="Co-Parent and Co-Parenting Support Issues"> </textarea> </label> 
+					<label>Co-Parent and Co-Parenting Support Issues: <textarea name="supportIssues" placeholder="Co-Parent and Co-Parenting Support Issues"> </textarea> </label> 
 				</div>
 			</div>
 		</form>
