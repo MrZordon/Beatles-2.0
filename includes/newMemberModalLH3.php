@@ -6,34 +6,34 @@
 	  
 			<div class="row">
 				<div class="large-9 columns">
-					<label>Name of Agency:<input type="text" placeholder="Agency Name" /> </label> 
+					<label>Name of Agency:<input type="text" name="agencyName" id="agencyName" placeholder="Agency Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Monthly Dollar Amount:<input type="text" placeholder="Monthly Dollar Amount" /></label> 
+					<label>Monthly Dollar Amount:<input type="text" name="monthlyAmount" id="monthlyAmount" placeholder="Monthly Dollar Amount" /></label> 
 				</div> 
 				
 			</div>
 			
 			<div class="row">
 				<div class="large-9 columns">
-					<label>Name of Agency:<input type="text" placeholder="Agency Name" /> </label> 
+					<label>Name of Agency:<input type="text"  name="agencyName2" id="agencyName2" placeholder="Agency Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Monthly Dollar Amount:<input type="text" placeholder="Monthly Dollar Amount" /></label> 
+					<label>Monthly Dollar Amount:<input type="text" name="monthlyAmount2" id="monthlyAmount2" placeholder="Monthly Dollar Amount" /></label> 
 				</div> 
 				
 			</div>
 			
 			<div class="row">
 				<div class="large-9 columns">
-					<label>Total Amount of Income:<input type="text" placeholder="Total Income" /> </label> 
+					<label>Total Amount of Income:<input type="text" name="totalIncome" id="totalIncome" placeholder="Total Income" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>Rate of Pay:</label> 
-						<select>
+						<select name="rateOfPay" id="rateOfPay" >
 							<option value="-- Select --">-- Select --</option>
 							<option value="Weekly">Weekly</option> 
 							<option value="Bi-Monthly">Bi-Monthly</option> 
@@ -44,15 +44,15 @@
 			
 			<div class="row">
 				<div class="large-4 columns">
-					<label>Welfare Worker's Full Name:<input type="text" placeholder="Welfare Worker's Full Name" /> </label> 
+					<label>Welfare Worker's Full Name:<input type="text" name="workerName" id="workerName" placeholder="Welfare Worker's Full Name" /> </label> 
 				</div>
 
 				<div class="large-4 columns"> 
-					<label>City:<input type="text" placeholder="City" /></label> 
+					<label>City:<input type="text" name="workerCity" id="workerCity" placeholder="City" /></label> 
 				</div> 
 				
 				<div class="large-4 columns"> 
-					<label>Phone Number:<input type="text" placeholder="XXX-XXX-XXXX" /></label> 
+					<label>Phone Number:<input type="text" name="workerPhoneNum" id="workerPhoneNum" placeholder="XXX-XXX-XXXX" /></label> 
 				</div> 
 				
 			</div>

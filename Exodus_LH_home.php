@@ -206,47 +206,47 @@
 	
 	<!--  This is the Modal for adding generic information to residents profile	-->
 	<?php 
-			include('includes/newMemberModal1.php');
+			include('includes/newMemberModalLH1.php');
 		?>
 		
 	<!--  This is the Modal for adding Children to residents profile	-->
 	<?php 
-			include('includes/newMemberModal2.php');
+			include('includes/newMemberModalLH2.php');
 		?>
 		
 	<!--  This is the Modal for adding Agency Assist to residents profile	-->
 	<?php 
-			include('includes/newMemberModal3.php');
+			include('includes/newMemberModalLH3.php');
 		?>
 		
 	<!--  This is the Modal for adding Medical to residents profile	-->
 	<?php 
-			include('includes/newMemberModal4.php');
+			include('includes/newMemberModalLH4.php');
 		?>
 		
 	<!--  This is the Modal for adding Employment to residents profile	-->
 	<?php 
-			include('includes/newMemberModal5.php');
+			include('includes/newMemberModalLH5.php');
 		?>
 		
 	<!--  This is the Modal for adding Criminal to residents profile	-->
 	<?php 
-			include('includes/newMemberModal6.php');
+			include('includes/newMemberModalLH6.php');
 		?>
 		
 	<!--  This is the Modal for adding Vehichle Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal7.php');
+			include('includes/newMemberModalLH7.php');
 		?>
 		
 	<!--  This is the Modal for adding Education Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal8.php');
+			include('includes/newMemberModalLH8.php');
 		?>
 		
 	<!--  This is the Modal for adding Education Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModal9.php');
+			include('includes/newMemberModalLH9.php');
 		?>
 	
 	

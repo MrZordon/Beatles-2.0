@@ -239,11 +239,6 @@
 			include('includes/newMemberModalCP7.php');
 		?>
 		
-		<!--  This is the Modal for adding Education Info to residents profile	-->
-	<?php 
-			include('includes/newMemberModal8.php');
-		?>
-	
 	<!--  This is the Modal for search for members	-->
 	<?php 
 			include('includes/searchMainModal.php');

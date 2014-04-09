@@ -6,13 +6,13 @@
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>First Name: <input type="text" placeholder="First Name" /> </label> 
+					<label>First Name: <input type="text" name="fName" id="fName" placeholder="First Name" /> </label> 
 				</div> 
 				<div class="large-4 columns"> 
-				<label>Middle Initial:<input type="text" placeholder="Middle Initial" /> </label> 
+				<label>Middle Initial:<input type="text" name="middleInitial" id="middleInitial" placeholder="Middle Initial" /> </label> 
 				</div>
 				<div class="large-4 columns"> 
-				<label>Last Name: <input type="text" placeholder="Last Name" /> </label> 
+				<label>Last Name: <input type="text" name="lName" id="lName" placeholder="Last Name" /> </label> 
 				</div>
 				
 			</div> 
@@ -27,13 +27,13 @@
 				</div> 
 				
 				<div class="large-4 columns"> 
-					<label>Social Security Number:<input type="text" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number:<input type="text"  name="ssn" id="ssn" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-4 columns"> 
 				<label>Date Of Birth:</label> 
 					<div class="large-4 columns"> 
-					<select>
+					<select name="month">
 						<option>Month</option>
 						<option value="January">January</option> 
 						<option value="February">February</option> 
@@ -50,7 +50,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select>
+					<select name="day">
 						<option>Day</option>
 						<option value="01">01</option> 
 						<option value="02">02</option> 
@@ -86,7 +86,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select>
+					<select name="year">
 						<option>Year</option>
 						<option value="2011">2011</option>
 						<option value="2010">2010</option>
@@ -208,12 +208,12 @@
 			<div class="row"> 
 				
 				<div class="large-4 columns"> 
-					<label>Cell Phone:<input type="text" placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>Cell Phone:<input type="text" name="cellPhoneNum" id="cellPhoneNum"placeholder="XXX-XXX-XXXX" /> </label> 
 				</div> 
 
 				<div class="large-4 columns"> 
 					<label>Religion:
-					<select> 
+					<select name="religion" > 
 						<option value="-- Select --">-- Select --</option>
 						<option value="Christianity">Christianity</option> 
 						<option value="Judaism">Judaism</option> 
@@ -227,7 +227,7 @@
 				
 					<div class="large-4 columns"> 
 								<label>Select a Resident Type:</label> 
-										<select>
+										<select name="resType" >
 											<option>-- Select --</option>
 											<option value="Lazarus House">Lazarus House</option> 
 										</select>
@@ -238,22 +238,22 @@
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address: <input type="text" placeholder="Previous Street Address" /> </label> 
+					<label>Street Address: <input type="text" id="streetAddress" name="streetAddress" placeholder="Previous Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City: <input type="text" placeholder="City" /> </label> 
+					<label>City: <input type="text" id="city" name="city" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State:<input type="text" placeholder="State" /> </label> 
+					<label>State:<input type="text" id="state" city="state" placeholder="State" /> </label> 
 				</div>
 
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code: <input type="text" placeholder="XXXXX" /> </label> 
+					<label>Zip Code: <input type="text" id="zipCode" name="zipCode" placeholder="XXXXX" /> </label> 
 				</div> 
 			</div>
 			
@@ -261,13 +261,13 @@
 			
 			<div class="row">
 								<div class="large-4 columns"> 
-									<label>Name of Referral Person: <input type="text" id="referralName"  /> </label> 
+									<label>Name of Referral Person: <input type="text" id="referralName" name="referralName"  /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-									<label>Name of Referral Agency: <input type="text" id="referralAgency" /> </label> 
+									<label>Name of Referral Agency: <input type="text" id="referralAgency" name="referralAgency" /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-										<label>Referral Agency Phone Number: <input type="text" id="referralPhoneNum" placeholder="XXX-XXX-XXXX"  /> </label> 
+										<label>Referral Agency Phone Number: <input type="text" id="referralPhoneNum" name="referralPhoneNum" placeholder="XXX-XXX-XXXX"  /> </label> 
 								</div>
 			</div>
 
@@ -275,42 +275,42 @@
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Full Name:<input type="text" placeholder="Name" /> </label> 
+					<label>Full Name:<input type="text" name="nameKin" id="nameKin" placeholder="Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Relationship: <input type="text" placeholder="Relationship" /> </label> 
+					<label>Relationship: <input type="text" name="relationship" id="relationship" placeholder="Relationship" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>Phone Number:<input type="text" placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>Phone Number:<input type="text" name="phoneNum" id="phoneNum" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address: <input type="text" placeholder="Previous Street Address" /> </label> 
+					<label>Street Address: <input type="text" name="streetAddressKin" id="streetAddressKin" placeholder="Previous Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City: <input type="text" placeholder="City" /> </label> 
+					<label>City: <input type="text" name="cityKin" id="cityKin" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State:<input type="text" placeholder="State" /> </label> 
+					<label>State:<input type="text" name="stateKin" id="stateKin" placeholder="State" /> </label> 
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code: <input type="text" placeholder="XXXXX" /> </label> 
+					<label>Zip Code: <input type="text" name="zipKin" id="zipKin" placeholder="XXXXX" /> </label> 
 				</div>
 			</div>
 				
 			
 			<div class="row"> 
 				<div class="large-12 columns"> 
-					<label>Comments: <textarea placeholder="Comments"></textarea> </label> 
+					<label>Comments: <textarea name="comments" id="comments" placeholder="Comments"></textarea> </label> 
 				</div> 
 			</div> 
 		</form>

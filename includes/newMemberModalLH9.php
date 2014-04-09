@@ -4,7 +4,7 @@
 		<form>
 					<div class="row">
 						<div class="large-8 columns"> 
-							<label>Signature: <input type="text" id="Signature"  /> </label> 
+							<label>Signature: <input type="text" id="Signature"  name="Signature"  /> </label> 
 						</div> 
 					</div>
 		</form>

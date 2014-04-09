@@ -4,27 +4,27 @@
 		<form>
 			<div class="row">
 								<div class="large-4 columns"> 
-									<label>Name on Registration: <input type="text" id="registrationName"  /> </label> 
+									<label>Name on Registration: <input type="text" id="registrationName" name="registrationName"  /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-									<label>License Number: <input type="text" id="licenseNum" /> </label> 
+									<label>License Number: <input type="text" id="licenseNum" name="licenseNum" /> </label> 
 								</div> 
 								<div class="large-4 columns"> 
-										<label>State: <input type="text" id="state" /> </label> 
+										<label>State: <input type="text" id="state"  name="state" /> </label> 
 								</div>
 						</div>
 						<div class="row">
 								<div class="large-3 columns"> 
-									<label>Make: <input type="text" id="make" /> </label> 
+									<label>Make: <input type="text" id="make" name="make" /> </label> 
 								</div> 
 								<div class="large-3 columns"> 
-									<label>Color: <input type="text" id="color"/> </label> 
+									<label>Color: <input type="text" id="color"  name="color"/> </label> 
 								</div> 
 								<div class="large-3 columns"> 
-									<label>Model: <input type="text" id="model"/> </label> 
+									<label>Model: <input type="text" id="model"  name="model"/> </label> 
 								</div> 
 								<div class="large-3 columns"> 
-									<label>OLN: <input type="text" id="oln" placeholder="SXXXXXXXX" /> </label> 
+									<label>OLN: <input type="text" id="oln"  name="oln"  placeholder="SXXXXXXXX" /> </label> 
 								</div> 
 						</div>
 		</form>
