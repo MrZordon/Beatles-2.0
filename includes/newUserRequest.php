@@ -11,16 +11,6 @@
 	$password=$_POST['password'];
 	$currentlyLoggedOn = 'N';
 	
-	//if any fields are empty, redirect to error page and do not execute the insert
-	 if ( empty($_POST["userName"]) || empty($_POST["emailAddress"]) || empty($_POST["userType"]) || empty($_POST["password"])        ) 
-	{
-       //header("Location: Exodus_error.php");
-       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../includes/Exodus_error.php">';    
-  	  exit;  
-    }
- else 
-{
-       
 	//real escape the credentials
 	$userName = mysql_real_escape_string($userName);
 	$emailAddress = mysql_real_escape_string($emailAddress);
@@ -94,8 +84,6 @@
 	else // if not successfull, display an error page
 	{
 		header("Location: Exodus_error.php");
-	}
-	
 	}
 	
 ?>
