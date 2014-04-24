@@ -6,6 +6,7 @@
 	session_start();
 	
 	//include sessions script to check session has started
+	//include('Exodus_SessionStart.php');
 
 	//include the script to connect to the DB
 	include('connect_ExodusDB.inc');
@@ -28,14 +29,21 @@
 	
 	//Count the number of rows returned in the result set and save as a variable
 	$count = mysql_num_rows($result);
+	echo "$count";
 	//if only one record matching the userName and password is found, and the security code matched the session, login success and session initiated
 	if($count == 1) 
 	{
 			//set the username as a session variable
 			$_SESSION['userName'] = $userName;
+			
+			echo $_SESSION['userName'];
+			echo "hello";
 		
 			// set the time for the session to expire 30 minutes after user logs in
-			$_SESSION['expire'] = time()+1800;
+			$expire=time()+1800;
+		
+			//set cookie to use the expire time for the userName logged in with
+			setcookie("user", $userName , $expire);
 			
 			//sql query to update that the user is currently logged on to the system
 			$login_sql="UPDATE Users SET CurrentlyLoggedOn='Y', LastLoggedOn=CURDATE() WHERE UserName='$userName' AND Password='$password' ";
@@ -70,7 +78,6 @@
 									{
 											if($row[0]=='LH') //redirect if lazarus house user
 											{
-												echo "hello";
 												header("Location: ../Exodus_LH_home.php");
 											}
 											else if($row[0]=='CP') //redirect if capernaum place user
@@ -78,7 +85,6 @@
 												header("Location: ../Exodus_CP_home.php");
 											}
 									}//end else
-									
 			}//end if result is true
 	} //end if count == 1
 	else { 

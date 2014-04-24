@@ -8,20 +8,12 @@
 	{
 		header('Location: index.php');
 	}
-	
-    $now = time(); // checking the time now when home page starts
-    if($now > $_SESSION['expire'])
-    {
-        session_destroy();
-        header('Location: includes/Exodus_logout.php');
-    }
 
 ?>
 <html>
 	<!-- Include header file -->
 	<?php
-		include('includes/header.php');
-		include('includes/connect_ExodusDB.inc');
+		include('includes/header.php')
 		?>
 
 	<body>
@@ -59,7 +51,7 @@
             <div class="panel">
               <h4 class="hide-for-small">Lazarus House Ministries, Inc. <hr/></h4>
             <h5 class="subheader">Welcome to the System Administrator home page of Exodus. This is your database access to all resident information. From this page you will be able to access everything you need concerning the information of residents of Lazarus House
-            and Capernaum Place. Please note that this is page is different from other admin pages in that you can see what other users of the system have been doing. If this is your first time using the application, please see the tutorial for help.</h5>
+            and Capernaum Place. If this is your first time using the application, please see the tutorial for help.</h5>
             </div>
  
           <div class="row">
@@ -86,55 +78,7 @@
         </div>
  
       <!-- End Header Content -->
-      
-      <div class="row">
- 			
- 			<div class="large-12 columns">
- 				
- 			<table style="width:100%;>  
-			<thead style="width:100%; overflow:auto;"> 
-			<tr> 
-			<th align= "left">User Name</th> 
-			<th align= "left">Password</th> 
-			<th align= "left">Last Login</th> 
-			<th align= "left">Currently Logged On</th>
-			<th align= "left">Email</th>
-			<th align= "left">User Type</th>
-			</tr> 
-			</thead> 
-			
-			<tbody style="width:%100; overflow:auto;"> 
-				
-				<?php	
-						
-						$query = mysql_query("SELECT * FROM users");
-						if (mysql_num_rows($query) < 1) 
-						{
-						    echo "No data.";
-						} 
-						else 
-						{
-						    while ($row = mysql_fetch_array($query)) 
-						    {
-						        echo '<tr>';
-						    	echo "<td>$row[UserName]</td>";
-								echo "<td>$row[Password]</td>";
-								echo "<td>$row[LastLoggedOn]</td>";
-								echo "<td>$row[CurrentlyLoggedOn]</td>";
-								echo "<td>$row[userEmail]</td>";
-								echo "<td>$row[UserType]</td>";
-						        echo "</tr>";
-						    }
-						  
-						}
-				
-				
-				?>
-				</tbody>
-				</table>
- 				
- 			</div>		      	
-      </div>
+ 
  
       <!-- Search Bar to search for residents in the Database by name -->
 
