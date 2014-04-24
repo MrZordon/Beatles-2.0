@@ -2,7 +2,7 @@
 	
 		The new user will be asked to enter the following:
 				- A unique username
-				- A unique and secure password (must be more than 8 chars long)
+				- A unique and secure password
 				- An email address that they can be reached at / associated with their account
 		The user will click the "submit" button to request to be a new user on Exodus. The user must be approved by the 
 		System Administrator, who will receieve an email with the request. The sys admin must log on to Exodus and approve
@@ -21,7 +21,7 @@
 									<label>*New User Name: <input type="text" name="userName"  /> </label> 
 								</div> 
 								<div class="large-6 columns"> 
-									<label>*Email Address: <input type="text" name="emailAddress"  placeholder="email@domain.com" /> </label> 
+									<label>*Email Address: <input type="email" name="emailAddress"  placeholder="email@domain.com" /> </label> 
 								</div> 
 					</div>
 					<div class="row">
@@ -36,10 +36,7 @@
 					</div>
 					<div class="row">
 								<div class="large-6 columns"> 
-									<label>*New Password: <input type="password" name="password" placeholder="At least 8 characters in length" /> </label> 
-								</div> 
-								<div class="large-6 columns"> 
-									<label>*Confirm New Password: <input type="password" name="confirmPassword" placeholder="At least 8 characters in length" /> </label> 
+									<label>*New Password: <input type="password" name="password" placeholder="password" /> </label> 
 								</div> 
 						</div>
 						<div class="right">
