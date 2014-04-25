@@ -4,19 +4,19 @@
 			<h2>Search Resident(s) By Number of Children</h2>
 			<hr/>
 			<!-- Start form for number of children a residence has-->
-			<form>
+			<form action="includes/selectAndViewByNumChild.php"  method="post">
 				<p>* Required </p>
 					<div class="row">
 						<div class="large-4 columns"> 
 							<label>* Number of Children: 
 										<select id="numChildren" name="numChildren">
-											<option>-- Select --</option>
+											<option value="">-- Select --</option>
 											<option value="0">0</option> 
 											<option value="1">1</option> 
 											<option value="2">2</option> 
 											<option value="3">3</option> 
 											<option value="4">4</option>
-											<option value="5">5</option> 
+											<option value="5">5</option>  
 											<option value="6">6</option> 
 											<option value="7">7</option> 
 											<option value="8">8</option> 
@@ -27,7 +27,7 @@
 					
 					<!-- Submit the data to a query for searching for resident by number of children -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByNumChildren" name="submit" class="button">Search</a></p>
+					<input type="submit" name="submit" class="button" name="Search">
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>
