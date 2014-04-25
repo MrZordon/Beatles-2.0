@@ -39,7 +39,9 @@ $sql="SELECT * FROM Users WHERE UserName='$userName'  AND CurrentlyLoggedOn='Y' 
 			session_destroy();
 		
 			//if success, redirect to home page
-			header("Location: ../index.php");
+			 echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../index.php">';    
+  	 		 exit;  
+			//header("Location: ../index.php");
 
 	} //if not a successful loggout, throw exception / display error page
 	else
