@@ -24,40 +24,6 @@
 		include('../includes/connect_ExodusDB.inc');
 		?>
 
-<<<<<<< HEAD
-	//sql query to check the username and password in the DB
-	$sql="SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType  FROM GenericInfo WHERE FirstName='$firstName' AND MiddleInitial='$middleInitial' AND LastName='$lastName' ";
-	
-	//submit the query
-	$result=mysql_query($sql);
-	
-	//throw exception is the query cant run
-	if(!$result) die ('Unable to run search query:'.mysql_error());
-	
-	if($result) 
-	{ 
-	
-		$line = mysql_fetch_array($result, MYSQL_ASSOC);
-		foreach (array_keys($line) as $col_name)
-				{
-					
-				}
-		
-		do {
-				foreach ($line as $col_value)
-					{
-						$col_value;
-					}
-			
-			} while($line = mysql_fetch_array($result, MYSQL_ASSOC));
-	}
-	else // if not successfull, display an error page
-	{
-		header("Location: Exodus_error.php");
-	}
-	
-?>
-=======
 	<body>
 
     	<script src="../js/vendor/jquery.js"></script>
@@ -97,30 +63,25 @@
 			</thead> 
 				<tbody style="width:80%; overflow:auto;"> 
 				
-						<?php	
-						
-							$firstName=$_POST['firstName'];
-							$middleInitial=$_POST['middleInitial'];
-							$lastName=$_POST['lastName'];
+				<?php	
+						$numChildren=$_POST['numChildren'];
 							
 					//if any fields are empty, redirect back to master search page and do not execute the insert
-					 if ( empty($firstName) || empty($middleInitial) || empty($lastName) ) 
+					 if ( empty($numChildren) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
-						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">'; 
+						//echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">'; 
 					}
 					 else 
 					 {
 							//real escape the credentials
-							$firstName = mysql_real_escape_string($firstName);
-							$middleInitial = mysql_real_escape_string($middleInitial);
-							$lastName = mysql_real_escape_string($lastName);
-						
-								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM GenericInfo WHERE FirstName='$firstName' AND MiddleInitial='$middleInitial'  AND LastName='$lastName';");
+							$numChildren = mysql_real_escape_string($numChildren);
+							
+								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM GenericInfo, Children WHERE GenericInfo.ResidentID=Children.ResidentID AND totalChildren = (SELECT COUNT((ChildSSN1) + (ChildSSN2) + (ChildSSN3) + (ChildSSN4) + (ChildSSN5 ) + (ChildSSN6) + (ChildSSN7) + (ChildSSN8)) FROM Children WHERE totalChildren = '$numChildren');");
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';
-						   			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">';    
+						   			//echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">';    
 								} 
 								else 
 								{
@@ -151,4 +112,3 @@
 
 	</body>
 </html>
->>>>>>> dc4a116869eadae56be5e4e3a9db05b2a9b8c731

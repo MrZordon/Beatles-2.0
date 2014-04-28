@@ -35,7 +35,11 @@
 			$_SESSION['userName'] = $userName;
 		
 			// set the time for the session to expire 30 minutes after user logs in
+<<<<<<< HEAD
 			$_SESSION['expire'] = time()+1600;
+=======
+			$_SESSION['expire'] = time()+1800;
+>>>>>>> dc4a116869eadae56be5e4e3a9db05b2a9b8c731
 			
 			//sql query to update that the user is currently logged on to the system
 			$login_sql="UPDATE Users SET CurrentlyLoggedOn='Y', LastLoggedOn=CURDATE() WHERE UserName='$userName' AND Password='$password' ";

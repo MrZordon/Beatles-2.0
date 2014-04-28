@@ -25,10 +25,10 @@
 
 	<body>
 
-    	<script src="js/vendor/jquery.js"></script>
-    	<script src="js/foundation/foundation.js"></script>
-    	<script src="js/foundation/foundation.joyride.js"></script>
-		<script src="js/foundation/foundation.reveal.js"></script>
+    	<script src="../js/vendor/jquery.js"></script>
+    	<script src="../js/foundation/foundation.js"></script>
+    	<script src="../js/foundation/foundation.joyride.js"></script>
+		<script src="../js/foundation/foundation.reveal.js"></script>
 		
     	<script>
     		$(document).foundation();
@@ -121,12 +121,10 @@
 								echo "<td>$row[LastLoggedOn]</td>";
 								echo "<td>$row[CurrentlyLoggedOn]</td>";
 								echo "<td>$row[userEmail]</td>";
-								echo "<td>$row[UserType]</td>";
+								echo "<td>$row[userType]</td>";
 						        echo "</tr>";
 						    }
-						  
 						}
-				
 				
 				?>
 				</tbody>
