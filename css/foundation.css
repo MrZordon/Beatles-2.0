@@ -3249,6 +3249,15 @@ blockquote p {
   top: 0;
   left: 0; }
 
+.reveal-modal #GenericInfo
+{
+	display: block;
+    background: #003366;
+    border: 1px solid #000066;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
 dialog, .reveal-modal {
   visibility: hidden;
   display: none;

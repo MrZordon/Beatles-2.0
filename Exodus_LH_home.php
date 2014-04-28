@@ -8,14 +8,132 @@
 	{
 		header('Location: index.php');
 	}
-
+	   
+    $now = time(); // checking the time now when home page starts
+    if($now > $_SESSION['expire'])
+    {
+        header('Location: includes/Exodus_logout.php');
+    }
+	else
+	{
+		$_SESSION['expire'] = time()+1600;		
+	}
+	
 ?>
+
+
 <html>
 	<!-- Include header file -->
 	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			
+
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		    <script type="text/javascript">
+				$(document).ready(function() 			
+				{
+					//alert("ready");
+		    		//##### Add record when Add Record Button is click #########
+		    		$("#FormSubmit").click(function (e) 
+		    		{
+		    			e.preventDefault();
+					    if($("#content_Text").val()==='')
+					    {
+					    	alert("Please enter some text!");
+					    	return false;
+					    }
+					    var myData = {content_txt: $("#contentText").val(),content_txt2: $("#contentText2").val()}; //build a post data structure
+			    	
+					    /*var myData					={firstNameGeneric: $("#contentText").val(),
+					    							  middleInitialGeneric: $("#middleInitialGeneric").val(),
+					    							  lastNameGeneric: $("#lastNameGeneric").val(),
+					    							  genderGeneric: $("#genderGeneric").val(),
+					    							  ssn: $("#ssn").val(),
+					    							  cellPhoneGeneric: $("#cellPhoneGeneric").val(),
+					    							  religionGeneric: $("#religionGeneric").val(),
+					    							  streetAddressGeneric: $("#streetAddressGeneric").val(),
+					    							  cityAddressGeneric: $("#cityAddressGeneric").val(),
+					    							  stateAddressGeneric: $("#stateAddressGeneric").val(),
+					    							  zipAddressGeneric: $("#zipAddressGeneric").val()}
+				    	*/
+				    	//var firstNameGeneric 		= ; //build a post data structure
+				    	//var middleInitialGeneric 	= ; //build a post data structure
+				    	//var lastNameGeneric 		= ; //build a post data structure
+				    	//var genderGeneric 			= ; //build a post data structure
+				    	/var ssn 					= ; //build a post data structure
+				    	
+				    	// This will be saved for Date of Birth and Age
+				    	//var myData 				= 'content_txt='+ $("#contentText").val(); //build a post data structure
+				    	//var myData 				= 'content_txt='+ $("#contentText").val(); //build a post data structure
+				    	//var cellPhoneGeneric 		= ; //build a post data structure
+				    	/var religionGeneric 		= ; //build a post data structure
+				    	
+				    	// Previous Residential Info
+				    	//var streetAddressGeneric 	= ; //build a post data structure
+				    	//var cityAddressGeneric 		= ; //build a post data structure
+				    	//var stateAddressGeneric 	= ; //build a post data structure
+				    	//var zipAddressGeneric		= ; //build a post data structure
+				    	
+				    	
+				    	jQuery.ajax(
+				    	{
+				    			type: "POST", // Post / Get method
+				    			url: "includes/response.php", //Where form data is sent on submission
+				    			dataType:"text", // Data type, HTML, json etc.
+				    			
+				    			//Form variables
+				    			data:myData,
+				    			 
+				    			success:function(response)
+				    			{
+				    				$("#responds").append(response);
+				  				},
+						    	error:function (xhr, ajaxOptions, thrownError)
+						    	{
+						    		alert(thrownError);
+				    			}
+		    			});
+		    		});
+		 
+				});
+			</script>
 			<?php
 					include ('includes/header.php');
 			?>
+			<style>
+    
+			    .form_style #textarea {
+			    border: 1px solid #CCCCCC;
+			    }
+			     
+			    .form_style #FormSubmit {
+			    display: block;
+			    background: #000000;
+			    border: 1px solid #000066;
+			    color: #FFFFFF;
+			    margin-top: 5px;
+			    }
+			    #responds{
+			    margin: 0px;
+			    padding: 0px;
+			    list-style: none;
+			    }
+			    #responds li{
+			    list-style: none;
+			    padding: 10px;
+			    background: #D1CFCE;
+			    margin-bottom: 5px;
+			    border-radius: 5px;
+			    width: 400px;
+			    font-family: arial;
+			    font-size: 13px;
+			    }
+			    .del_wrapper{float:right;}.content_wrapper {
+			    width: 500px;
+			    margin-right: auto;
+			    margin-left: auto;
+			    }
+		    </style>
 	</head>
 	<body>
 
@@ -82,7 +200,6 @@
  
  
       <!-- Search Bar to search for residents in the Database by name -->
-
         <div class="row">
  
           <div class="large-12 columns">
@@ -203,6 +320,8 @@
         </li>
 
     </ol>
+	
+	
 	
 	<!--  This is the Modal for adding generic information to residents profile	-->
 	<?php 

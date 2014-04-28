@@ -25,25 +25,23 @@
 	//throw exception is the query cant run
 	if(!$result) die ('Unable to run search query:'.mysql_error());
 	
-		if($result) 
-		{ 
+	if($result) 
+	{ 
+	
+		$line = mysql_fetch_array($result, MYSQL_ASSOC);
+		foreach (array_keys($line) as $col_name)
+				{
+					
+				}
 		
-			$line = mysql_fetch_array($result, MYSQL_ASSOC);
-			foreach (array_keys($line) as $col_name)
+		do {
+				foreach ($line as $col_value)
 					{
-						
+						$col_value;
 					}
 			
-			do {
-					foreach ($line as $col_value)
-						{
-							$col_value;
-						}
-				
-				} while($line = mysql_fetch_array($result, MYSQL_ASSOC));
-		}
-		
-}
+			} while($line = mysql_fetch_array($result, MYSQL_ASSOC));
+	}
 	else // if not successfull, display an error page
 	{
 		header("Location: Exodus_error.php");

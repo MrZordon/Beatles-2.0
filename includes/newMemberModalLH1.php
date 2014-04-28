@@ -1,18 +1,47 @@
 
 	<div id="NewMemberModal1" class="reveal-modal" data-reveal>
+		<div class="content_wrapper">
+		<div class="form_style">
+					<textarea name="content_txt" id="contentText" cols="45" rows="5"></textarea>
+		    		<textarea name="content_txt2" id="contentText2" cols="45" rows="5"></textarea>
+		    		<button id="FormSubmit">Add record</button>
+		</div>
+		
+		<ul id="responds">
+	    <?php
+		    
+		    	//include db configuration file
+				include_once("connect_ExodusDB.inc");
+				 
+				//MySQL query
+				$Result = mysql_query("SELECT id,content,content2 FROM add_delete_record");
+				 
+				//get all records from add_delete_record table
+				while($row = mysql_fetch_array($Result))
+				{
+					echo '<li id="item_'.$row["id"].'">';
+					echo $row["content"].'</li>';
+					echo $row["content2"].'</li>';
+				}
+				 
+				//close db connection
+		  ?>
+		  </ul>
+		 </div>
+
+		
 		<h2>Generic Information</h2>
 		<p></p>
-		<form>
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>First Name: <input type="text" name="fName" id="fName" placeholder="First Name" /> </label> 
+					
 				</div> 
 				<div class="large-4 columns"> 
-				<label>Middle Initial:<input type="text" name="middleInitial" id="middleInitial" placeholder="Middle Initial" /> </label> 
+				<label>Middle Initial:<input type="text" name="middleInitialGeneric" id="middleInitialGeneric" placeholder="Middle Initial" /> </label> 
 				</div>
 				<div class="large-4 columns"> 
-				<label>Last Name: <input type="text" name="lName" id="lName" placeholder="Last Name" /> </label> 
+				<label>Last Name: <input type="text" name="lastNameGeneric" id="lastNameGeneric" placeholder="Last Name" /> </label> 
 				</div>
 				
 			</div> 
@@ -20,9 +49,9 @@
 			<div class="row"> 
 				<div class="large-4 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
+					<input type="radio" name="genderGeneric" value="M" id="genderGeneric">
 						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
+					<input type="radio" name="genderGeneric" value="F" id="genderGeneric">
 						<label for="Female">Female</label> 	
 				</div> 
 				
@@ -208,12 +237,12 @@
 			<div class="row"> 
 				
 				<div class="large-4 columns"> 
-					<label>Cell Phone:<input type="text" name="cellPhoneNum" id="cellPhoneNum"placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>Cell Phone:<input type="text" name="cellPhoneGeneric" id="cellPhoneGeneric"placeholder="XXX-XXX-XXXX" /> </label> 
 				</div> 
 
 				<div class="large-4 columns"> 
 					<label>Religion:
-					<select name="religion" > 
+					<select name="religionGeneric" > 
 						<option value="-- Select --">-- Select --</option>
 						<option value="Christianity">Christianity</option> 
 						<option value="Judaism">Judaism</option> 
@@ -227,7 +256,7 @@
 				
 					<div class="large-4 columns"> 
 								<label>Select a Resident Type:</label> 
-										<select name="resType" >
+										<select name="genresType" >
 											<option>-- Select --</option>
 											<option value="Lazarus House">Lazarus House</option> 
 										</select>
@@ -238,22 +267,22 @@
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address: <input type="text" id="streetAddress" name="streetAddress" placeholder="Previous Street Address" /> </label> 
+					<label>Street Address: <input type="text" id="streetAddressGeneric" name="streetAddressGeneric" placeholder="Previous Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City: <input type="text" id="city" name="city" placeholder="City" /> </label> 
+					<label>City: <input type="text" id="cityAddressGeneric" name="cityAddressGeneric" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State:<input type="text" id="state" city="state" placeholder="State" /> </label> 
+					<label>State:<input type="text" id="stateAddressGeneric" name="stateAddressGeneric" placeholder="State" /> </label> 
 				</div>
 
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code: <input type="text" id="zipCode" name="zipCode" placeholder="XXXXX" /> </label> 
+					<label>Zip Code: <input type="text" id="zipAddressGeneric" name="zipAddressGeneric" placeholder="XXXXX" /> </label> 
 				</div> 
 			</div>
 			
@@ -313,8 +342,8 @@
 					<label>Comments: <textarea name="comments" id="comments" placeholder="Comments"></textarea> </label> 
 				</div> 
 			</div> 
-		</form>
-	  
+			
+		
 	  <div class="row">
 			<div class="large-3 columns"> 
 				<p><a href="#" data-reveal-id="NewMemberModal2" class="secondary button">Next</a></p>
@@ -325,8 +354,7 @@
 					<span class="meter" style="width: 10%"></span> 
 				</div>
 			</div>
-		<div>
-	  
+	 
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
 	

@@ -11,6 +11,7 @@ include('../includes/connect_ExodusDB.inc');
 
 //get the user name from the session variables
 $userName = $_SESSION['userName'];
+session_destroy();
 
 //sql query to check the username in the DB for a user that is currently logged on
 $sql="SELECT * FROM Users WHERE UserName='$userName'  AND CurrentlyLoggedOn='Y' ";

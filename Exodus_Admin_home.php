@@ -8,14 +8,13 @@
 	{
 		header('Location: index.php');
 	}
-	
+	   
     $now = time(); // checking the time now when home page starts
     if($now > $_SESSION['expire'])
     {
-        session_destroy();
         header('Location: includes/Exodus_logout.php');
     }
-
+	
 ?>
 <html>
 	<!-- Include header file -->
@@ -314,6 +313,8 @@
 		include('includes/currentResidentsModal.php');
 	?>
    
+
+
 
 </body>
 </html>
