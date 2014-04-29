@@ -13,7 +13,7 @@
 			<h2>Register as a New User</h2>
 			<hr/>
 			<!-- Start form to register a new user with Exodus -->
-			<form action="includes/newUserRequest.php"  method="post">
+			<form action="./includes/newUserRequest.php"  method="post">
 				<p> *Required </p>
 				
 					<div class="row">
@@ -28,7 +28,7 @@
 						<div class="large-4 columns"> 
 							<label>*Select a user type:</label> 
 										<select name="userType">
-											<option>-- Select --</option>
+											<option value="">-- Select --</option>
 											<option value="LH">Lazarus House</option> 
 											<option value="CP">Capernaum Place</option> 
 										</select>

@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Policy Agreement</h2>
 			<hr/>
 			<!-- Start form for policy agreement-->
-			<form>
+			<form action="./includes/selectAndViewByResPolicyAgree.php"  method="post">
 					<p>* Required </p>
 					<div class="row">
 							<div class="large-10 columns"> 
@@ -18,7 +18,7 @@
 					
 					<!-- Submit the data to a query for searching for resident by policy agreement -->
 					<div class="right">
-						<p><a href="#" data-reveal-id="searchResultsByPolicyAgreement" name="submit" class="button">Search</a></p>
+						<input type="submit" name="submit" class="button" name="Search">
 					</div>
 	  				<a class="close-reveal-modal">&#215;</a>
 			</form>

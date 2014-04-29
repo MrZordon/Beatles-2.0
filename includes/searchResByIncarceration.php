@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Incarceration / Institutionalization Information</h2>
 			<hr/>
 			<!-- Start form for incarceration info -->
-			<form>
+			<form action="./includes/selectAndViewResByIncarc.php"  method="post">
 				<p>* Required </p>
 				
 						<!-- Incarceration information-->
@@ -19,18 +19,18 @@
 					</div>
 					<div class="row">
 								<div class="large-5 columns"> 
-									<label>Incarceration Location: <input type="text" id="incarcerationLoc" name="incarcerationLoc"  /> </label> 
+									<label>* Incarceration Location: <input type="text" id="incarcerationLoc" name="incarcerationLoc"  /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>Incarceration Charges: <input type="text" id="incarcerationCharges" name="incarcerationCharges" /> </label> 
+									<label>* Incarceration Charges: <input type="text" id="incarcerationCharges" name="incarcerationCharges" /> </label> 
 								</div> 
 						</div>
 						<div class="row">
 								<div class="large-5 columns"> 
-									<label>Incarceration Start Date: <input type="text" id="incarcerationStart" name="incarcerationStart" placeholder="mm/dd/yyyy" /> </label> 
+									<label>* Incarceration Start Date: <input type="text" id="incarcerationStart" name="incarcerationStart" placeholder="mm/dd/yyyy" /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>Incarceration End Date: <input type="text" id="incarcerationEnd" name="incarcerationEnd"  placeholder="mm/dd/yyyy"/> </label> 
+									<label>* Incarceration End Date: <input type="text" id="incarcerationEnd" name="incarcerationEnd"  placeholder="mm/dd/yyyy"/> </label> 
 								</div> 
 						</div>
 						
@@ -46,24 +46,25 @@
 					</div>
 					<div class="row">
 								<div class="large-5 columns"> 
-									<label>Name of Institution: <input type="text" id="institutionName" name="institutionName"  /> </label> 
+									<label>* Name of Institution: <input type="text" id="institutionName" name="institutionName"  /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>Reasons for Institutionalization: <input type="text" id="institutionalizationReasons" id="institutionalizationReasons" /> </label>  
+									<label>* Reasons for Institutionalization: <input type="text" id="institutionalizationReasons" id="institutionalizationReasons" /> </label>  
 								</div> 
 						</div>
 						<div class="row">
 								<div class="large-5 columns"> 
-									<label>Institution Start Date: <input type="text" id="institutionStart" id="institutionStart" placeholder="mm/dd/yyyy" /> </label> 
+									<label>* Institution Start Date: <input type="text" id="institutionStart" id="institutionStart" placeholder="mm/dd/yyyy" /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>Institution Release Date: <input type="text" id="institutionEnd" id="institutionEnd"  placeholder="mm/dd/yyyy"/> </label> 
+									<label>* Institution Release Date: <input type="text" id="institutionEnd" id="institutionEnd"  placeholder="mm/dd/yyyy"/> </label> 
 								</div> 
 						</div>
 					
-						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByIncarcerations" name="submit" class="button">Search</a></p>
-						</div>
+						<!-- Submit the data to a query for searching for resident by incarceration -->
+					<div class="right">
+						<input type="submit" name="submit" class="button" name="Search">
+					</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>

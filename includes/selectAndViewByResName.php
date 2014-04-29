@@ -23,41 +23,7 @@
 		include('../includes/header.php');
 		include('../includes/connect_ExodusDB.inc');
 		?>
-
-<<<<<<< HEAD
-	//sql query to check the username and password in the DB
-	$sql="SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType  FROM GenericInfo WHERE FirstName='$firstName' AND MiddleInitial='$middleInitial' AND LastName='$lastName' ";
-	
-	//submit the query
-	$result=mysql_query($sql);
-	
-	//throw exception is the query cant run
-	if(!$result) die ('Unable to run search query:'.mysql_error());
-	
-	if($result) 
-	{ 
-	
-		$line = mysql_fetch_array($result, MYSQL_ASSOC);
-		foreach (array_keys($line) as $col_name)
-				{
-					
-				}
 		
-		do {
-				foreach ($line as $col_value)
-					{
-						$col_value;
-					}
-			
-			} while($line = mysql_fetch_array($result, MYSQL_ASSOC));
-	}
-	else // if not successfull, display an error page
-	{
-		header("Location: Exodus_error.php");
-	}
-	
-?>
-=======
 	<body>
 
     	<script src="../js/vendor/jquery.js"></script>
@@ -107,7 +73,7 @@
 					 if ( empty($firstName) || empty($middleInitial) || empty($lastName) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
-						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">'; 
+						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
 					}
 					 else 
 					 {
@@ -120,7 +86,7 @@
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';
-						   			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../Exodus_SA_MasterSearches.php">';    
+						   			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
 								} 
 								else 
 								{
@@ -151,4 +117,3 @@
 
 	</body>
 </html>
->>>>>>> dc4a116869eadae56be5e4e3a9db05b2a9b8c731

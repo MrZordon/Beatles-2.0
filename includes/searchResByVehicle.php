@@ -4,8 +4,8 @@
 			<h2>Search Resident(s) By Vehicle Information</h2>
 			<hr/>
 			<!-- Start form for vehicle info -->
-			<form>
-				<p>**At least one field is required to be completed in order to search for a resident.</p>
+			<form action="./includes/selectAndViewByResVehicle.php"  method="post">
+				<p>* Required.</p>
 				
 					<div class="row">
 								<div class="large-4 columns"> 
@@ -32,9 +32,10 @@
 									<label>OLN: <input type="text" id="oln" name="oln" placeholder="SXXXXXXXX" /> </label> 
 								</div> 
 						</div>
-						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByVehicle"  name="submit" class="button">Search</a></p>
-						</div>
+						<!-- Submit the data to a query for searching for resident by vehicle information -->
+					<div class="right">
+						<input type="submit" name="submit" class="button" name="Search">
+					</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>

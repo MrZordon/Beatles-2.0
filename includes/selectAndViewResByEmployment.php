@@ -22,8 +22,7 @@
 	<?php
 		include('../includes/header.php');
 		include('../includes/connect_ExodusDB.inc');
-		?>
-
+?>
 	<body>
 
     	<script src="../js/vendor/jquery.js"></script>
@@ -63,11 +62,18 @@
 			</thead> 
 				<tbody style="width:80%; overflow:auto;"> 
 				
-				<?php	
-						$numChildren=$_POST['numChildren'];
+						<?php	
+						
+							$companyName=$_POST['companyName'];
+							$managerName=$_POST['managerName'];
+							$managerPhoneNum=$_POST['managerPhoneNum'];
+							$hoursFrom=$_POST['hoursFrom'];
+							$hoursTo=$_POST['hoursTo'];
+							$rateOfPay=$_POST['rateOfPay'];
+							$income=$_POST['income'];
 							
 					//if any fields are empty, redirect back to master search page and do not execute the insert
-					 if ( empty($numChildren) ) 
+					 if ( (empty($companyName)) || (empty($managerName))  || (empty($managerPhoneNum))  || (empty($hoursFrom))  || (empty($hoursTo))  || (empty($rateOfPay)) || (empty($income)) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
 						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
@@ -75,13 +81,19 @@
 					 else 
 					 {
 							//real escape the credentials
-							$numChildren = mysql_real_escape_string($numChildren);
-							
-								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM GenericInfo, Children WHERE GenericInfo.ResidentID=Children.ResidentID AND totalChildren = (SELECT COUNT((ChildSSN1) + (ChildSSN2) + (ChildSSN3) + (ChildSSN4) + (ChildSSN5 ) + (ChildSSN6) + (ChildSSN7) + (ChildSSN8)) FROM Children WHERE totalChildren = '$numChildren');");
+							$companyName = mysql_real_escape_string($companyName);
+							$managerName = mysql_real_escape_string($managerName);
+							$managerPhoneNum = mysql_real_escape_string($managerPhoneNum);
+							$hoursFrom = mysql_real_escape_string($hoursFrom);
+							$hoursTo = mysql_real_escape_string($hoursTo);
+							$rateOfPay = mysql_real_escape_string($rateOfPay);
+							$income = mysql_real_escape_string($income);
+						
+								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM Employment WHERE ='$companyName' AND ='$managerName' AND ='$managerPhoneNum' AND ='$hoursFrom' AND ='$hoursTo' AND ='$rateOfPay' AND ='$income';");
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';
-						   			  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">';       
+						   			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">';  
 								} 
 								else 
 								{

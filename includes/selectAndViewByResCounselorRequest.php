@@ -22,8 +22,7 @@
 	<?php
 		include('../includes/header.php');
 		include('../includes/connect_ExodusDB.inc');
-		?>
-
+?>
 	<body>
 
     	<script src="../js/vendor/jquery.js"></script>
@@ -63,25 +62,29 @@
 			</thead> 
 				<tbody style="width:80%; overflow:auto;"> 
 				
-				<?php	
-						$numChildren=$_POST['numChildren'];
+						<?php	
+						
+							$requestCounselor=$_POST['requestCounselor'];
+							$counselorName=$_POST['counselorName'];
 							
 					//if any fields are empty, redirect back to master search page and do not execute the insert
-					 if ( empty($numChildren) ) 
+					 if ( (empty($requestCounselor)) || (empty($counselorName)) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
-						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
+						  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">';    
 					}
 					 else 
 					 {
 							//real escape the credentials
-							$numChildren = mysql_real_escape_string($numChildren);
-							
-								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM GenericInfo, Children WHERE GenericInfo.ResidentID=Children.ResidentID AND totalChildren = (SELECT COUNT((ChildSSN1) + (ChildSSN2) + (ChildSSN3) + (ChildSSN4) + (ChildSSN5 ) + (ChildSSN6) + (ChildSSN7) + (ChildSSN8)) FROM Children WHERE totalChildren = '$numChildren');");
+							$firstName = mysql_real_escape_string($firstName);
+							$middleInitial = mysql_real_escape_string($middleInitial);
+							$lastName = mysql_real_escape_string($lastName);
+						
+								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM GenericInfo WHERE ='$requestCounselor' AND ='$counselorName';");
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';
-						   			  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">';       
+						   			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
 								} 
 								else 
 								{

@@ -5,6 +5,16 @@
 	$userName=$_POST['userName'];
 	$emailAddress=$_POST['emailAddress'];
 	
+		//if any fields are empty, redirect to error page and do not execute the query
+	 if ( empty($_POST["userName"]) || empty($_POST["emailAddress"]) ) 
+	{
+	   echo '<script>alert("Please complete all required fields to request your password\n");</script>';
+       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">';    
+  	  exit;  
+    }
+ else 
+{
+	
 	//real escape the credentials
 	$userName = mysql_real_escape_string($userName);
 	$emailAddress = mysql_real_escape_string($emailAddress);
@@ -62,5 +72,7 @@
 		{
 			header("Location: /Exodus/includes/Exodus_error.php");
 		}
+		
+}
 	
 ?>

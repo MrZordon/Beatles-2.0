@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Status</h2>
 			<hr/>
 			<!-- Start form for resident residency status information -->
-			<form>
+			<form action="./includes/selectAndViewByResStatus.php"  method="post">
 				<p>*Required</p>
 					<div class="row">
 						<div class="large-10 columns"> 
@@ -25,9 +25,10 @@
 										</select>
 						</div> 
 					</div>
-						<div class="right">
-							<p><a href="#" data-reveal-id="searchResultsByStatus" name="submit" class="button">Search</a></p>
-						</div>
+						<!-- Submit the data to a query for searching for resident by status -->
+					<div class="right">
+						<input type="submit" name="submit" class="button" name="Search">
+					</div>
 						<a class="close-reveal-modal">&#215;</a>
 			</form>
 		</div>
