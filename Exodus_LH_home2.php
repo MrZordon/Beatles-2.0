@@ -1,6 +1,40 @@
+<?php
+	// Inialize session
+	session_start();
+
+	// Check, if username session is NOT set then this page will jump to login page
+	if (!isset($_SESSION['userName'])) 
+	{
+		header('Location: index.php');
+	}
+	   
+    $now = time(); // checking the time now when home page starts
+    if($now > $_SESSION['expire'])
+    {
+        header('Location: includes/Exodus_logout.php');
+    }
+	else
+	{
+		$_SESSION['expire'] = time()+1600;		
+	}
+?>
 <html>
 	<!-- Include header file -->
 	<head>
+		
+		<script type="text/javascript">
+			<!--
+			    function toggle_visibility(id) 
+			    {
+			       var e = document.getElementById(id);
+			       if(e.style.display == 'block')
+			          e.style.display = 'none';
+			       else
+			          e.style.display = 'block';
+			    }
+			//-->
+		</script>
+		
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		    
@@ -8,14 +42,36 @@
 		    <script type="text/javascript">
 				$(document).ready(function() 			
 				{
-					alert("ready");
 		    		//##### Add record when Add Record Button is click #########
 		    		$("#FormSubmit").click(function (e) 
 		    		{
 		    			e.preventDefault();
-					    if($("#content_Text").val()==='')
+		    			
+		    			// Make sure the residents first name is filled out
+					    if($("#firstNameGeneric").val()==='')
 					    {
-					    	alert("Please enter some text!");
+					    	alert("Please enter the resident's first name!");
+					    	return false;
+					    }
+					    
+					    // Make sure the residents last name is filled out
+					    if($("#lastNameGeneric").val()==='')
+					    {
+					    	alert("Please enter the resident's last name!");
+					    	return false;
+					    }
+					    
+					    // Make sure the residents gender is filled out
+					    if($("#genderGeneric").val()==='')
+					    {
+					    	alert("Please enter the resident's gender!");
+					    	return false;
+					    }
+					    
+					    // Make sure the residents SSN is filled out
+					    if($("#ssnGeneric").val()==='')
+					    {
+					    	alert("Please enter the resident's Social Security Number!");
 					    	return false;
 					    }
 					    var myData = {	first_NameGeneric: $("#firstNameGeneric").val(),
@@ -40,13 +96,15 @@
 					    				cityKin_Generic: $("#cityKinGeneric").val(),
 					    				stateKin_Generic: $("#stateKinGeneric").val(),
 					    				zipKin_Generic: $("#zipKinGeneric").val(),
+					    				currentResident_Generic: $("#currentResidentGeneric").val(),
+					    				language_Generic: $("#languageGeneric").val(),
 					    				comments_Generic: $("#commentsGeneric").val()}; //build a post data structure
 				    
 				    	jQuery.ajax(
 				    	{
 				    			type: "POST", // Post / Get method
-				    			url: "response.php", //Where form data is sent on submission
-				    			 dataType:"text", // Data type, HTML, json etc.
+				    			url: "genericInfoAdd.php", //Where form data is sent on submission
+				    			dataType:"text", // Data type, HTML, json etc.
 				    			//Form variables
 				    			data:myData,
 				    			success:function(response)
@@ -201,7 +259,23 @@
 		
 		<!-- Some Modals that will be used -->
 		<?php
+		
+			// Modal for adding a new member
 			include ('includes/newMemberModalLH1(2).php');
+			include ('includes/newMemberModalLH2.php');
+			include ('includes/newMemberModalLH3.php');
+			include ('includes/newMemberModalLH4.php');
+			include ('includes/newMemberModalLH5.php');
+			include ('includes/newMemberModalLH6.php');
+			include ('includes/newMemberModalLH7.php');
+			include ('includes/newMemberModalLH8.php');
+			include ('includes/newMemberModalLH9.php');
+			
+			// Modal for Searching Members
+			include ('includes/searchMainModal.php');
+			
+			// Modal for viewing all current residents
+			include ('includes/currentResidentsModal.php');
 		?>
 			
 		</body>

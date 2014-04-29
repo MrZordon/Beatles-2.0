@@ -1,5 +1,6 @@
 <div id="NewMemberModal1" class="reveal-modal" data-reveal>
 			
+			<h2>Generic Information</h2>
 			<div class="row"> 
 				<div class="large-4 columns"> 
 					<label>First Name: <input type="text" name="first_NameGeneric" id="firstNameGeneric" placeholder="First Name" /> </label> 
@@ -299,6 +300,28 @@
 				<div class="large-4 columns"> 
 					<label>Zip Code: <input type="text" name="zipKin_Generic" id="zipKinGeneric" placeholder="XXXXX" /> </label> 
 				</div>
+				<div class="large-4 columns"> 
+					<label>Current Resident:
+						<select name="currentResident_Generic" id="currentResidentGeneric"> 
+							<option value="-- Select --">-- Select --</option>
+							<option value="Y">Yes</option> 
+							<option value="N">No</option> 
+						</select> 
+					</label>
+				</div>
+				<div class="large-4 columns"> 
+					<label>Language:
+						<select name="language_Generic" id="languageGeneric"> 
+							<option value="-- Select --">-- Select --</option>
+							<option value="English">English</option> 
+							<option value="Spanish">Spanish</option> 
+							<option value="French">French</option> 
+							<option value="Portuguese">Portuguese</option>
+							<option value="Chineese">Chineese</option> 
+							<option value="Other">Other</option> 
+						</select> 
+					</label> 
+				</div>
 			</div>
 				
 			
@@ -308,27 +331,26 @@
 				</div> 
 			</div> 
 			
-					<!--<textarea name="firstName_Generic" id="firstNameGeneric" cols="45" rows="5"></textarea>
-		    		 <textarea name="middleInitial_Generic" id="midleInitialGeneric" cols="45" rows="5"></textarea> -->
-		    <button id="FormSubmit">Add record</button>
-
-		
-			<ul id="responds">
-	    	<?php
-		    
-		    	//include db configuration file
-				include_once("includes/connect_ExodusDB.inc");
-				 
-				//MySQL query
-				$Result = mysql_query("SELECT FirstName,MiddleInitial,LastName FROM genericinfo");
-				 
-				//get all records from add_delete_record table
-				while($row = mysql_fetch_array($Result))
-				{
+			<div class="row">
+				<div class="large-3 columns">
+					<button id="FormSubmit" onclick="toggle_visibility('hideShow1');">Save Information</button>
+				</div>
+	  		</div>
+		  	
+		  	<div class="row">
+				<div class="large-3 columns">
+							
+						<p><button href="#" id="hideShow1" data-reveal-id="NewMemberModal2" style="display:none;" class="secondary button">Next</button></p>
+					
+				</div>
+				<div class="large-9 columns">
+					<h4>Progress</h4>
+					<div class="progress large-9 round"> 
+						<span class="meter" style="width: 10%"></span> 
+					</div>
+				</div>
+			</div>	
 			
-				}
-				 
-				//close db connection
-		  	?>
-		  	</ul>
+	 	 	<a class="close-reveal-modal" >&#215;</a>
+		  	
 		 </div>
