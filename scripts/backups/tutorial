@@ -1,0 +1,5 @@
+I have this set up such that in the phpMyAdmin folder, I've created and Exodus folder that houses basically everything.
+
+In that Exodus folder, I've created a Backups folder, that will save all backups generated.
+
+If you put the backup script in the Exodus folder (NOT the BACKUPS folder) it will work just dandily.
