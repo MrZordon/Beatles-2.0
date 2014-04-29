@@ -4,13 +4,13 @@
 			<h2>Search Resident(s) By Residency Type</h2>
 			<hr/>
 			<!-- Start form for residency type-->
-			<form action="./includes/selectAndViewByResType.php"  method="post">
+			<form action="./includes/selectAndViewResByType.php"  method="post">
 					<p>* Required </p>
 					<div class="row">
 						<div class="large-4 columns"> 
 							<label>*Select a Resident type:</label> 
 										<select name="resType">
-											<option>-- Select --</option>
+											<option value="">-- Select --</option>
 											<option value="CP">Capernaum Place</option> 
 											<option value="LH">Lazarus House</option> 
 										</select>

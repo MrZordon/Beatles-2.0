@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Referral Information</h2>
 			<hr/>
 			<!-- Start form for referral  info -->
-			<form action="./includes/selectAndViewByResReferral.php"  method="post">
+			<form action="./includes/selectAndViewResByReferral.php"  method="post">
 				<p>* Required.</p>
 				
 					<div class="row">

@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Vehicle Information</h2>
 			<hr/>
 			<!-- Start form for vehicle info -->
-			<form action="./includes/selectAndViewByResVehicle.php"  method="post">
+			<form action="./includes/selectAndViewResByVehicle.php"  method="post">
 				<p>* Required.</p>
 				
 					<div class="row">

@@ -64,6 +64,7 @@
 				
 						<?php	
 						
+							$employed=$_POST['employed'];
 							$companyName=$_POST['companyName'];
 							$managerName=$_POST['managerName'];
 							$managerPhoneNum=$_POST['managerPhoneNum'];
@@ -73,7 +74,7 @@
 							$income=$_POST['income'];
 							
 					//if any fields are empty, redirect back to master search page and do not execute the insert
-					 if ( (empty($companyName)) || (empty($managerName))  || (empty($managerPhoneNum))  || (empty($hoursFrom))  || (empty($hoursTo))  || (empty($rateOfPay)) || (empty($income)) ) 
+					 if ( (empty($employed)) || (empty($companyName)) || (empty($managerName))  || (empty($managerPhoneNum))  || (empty($hoursFrom))  || (empty($hoursTo))  || (empty($rateOfPay)) || (empty($income)) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
 						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
@@ -81,6 +82,7 @@
 					 else 
 					 {
 							//real escape the credentials
+							$employed = mysql_real_escape_string($employed);
 							$companyName = mysql_real_escape_string($companyName);
 							$managerName = mysql_real_escape_string($managerName);
 							$managerPhoneNum = mysql_real_escape_string($managerPhoneNum);
@@ -89,7 +91,7 @@
 							$rateOfPay = mysql_real_escape_string($rateOfPay);
 							$income = mysql_real_escape_string($income);
 						
-								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM Employment WHERE ='$companyName' AND ='$managerName' AND ='$managerPhoneNum' AND ='$hoursFrom' AND ='$hoursTo' AND ='$rateOfPay' AND ='$income';");
+								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM Employment WHERE ='$employed' AND ='$companyName' AND ='$managerName' AND ='$managerPhoneNum' AND ='$hoursFrom' AND ='$hoursTo' AND ='$rateOfPay' AND ='$income';");
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';

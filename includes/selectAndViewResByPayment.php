@@ -64,19 +64,12 @@
 				
 						<?php	
 						
-							$incarcerationYN=$_POST['incarcerationYN'];
-							$incarcerationLoc=$_POST['incarcerationLoc'];
-							$incarcerationCharges=$_POST['incarcerationCharges'];
-							$incarcerationStart=$_POST['incarcerationStart'];
-							$incarcerationEnd=$_POST['incarcerationEnd'];
-							$institutionalizedYN=$_POST['institutionalizedYN'];
-							$institutionName=$_POST['institutionName'];
-							$institutionalizationReasons=$_POST['institutionalizationReasons'];
-							$institutionStart=$_POST['institutionStart'];
-							$institutionEnd=$_POST['institutionEnd'];
+							$outstandingPayments=$_POST['outstandingPayments'];
+							$companiesOwed=$_POST['companiesOwed'];
+							$amountOwed=$_POST['amountOwed'];
 							
 					//if any fields are empty, redirect back to master search page and do not execute the insert
-					 if ( empty($incarcerationYN) || empty($incarcerationLoc) || empty($incarcerationCharges) || empty($incarcerationStart) || empty($incarcerationEnd)  || empty($institutionalizedYN)  || empty($institutionName) || empty($institutionalizationReasons) || empty($institutionStart) || empty($institutionEnd))
+					 if ( (empty($outstandingPayments)) || (empty($companiesOwed))  || (empty($amountOwed)) ) 
 					{
 						echo '<script>alert("Please complete all required fields to search.\n");</script>';
 						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=javascript:history.go(-1)">'; 
@@ -84,18 +77,11 @@
 					 else 
 					 {
 							//real escape the credentials
-							$incarcerationYN = mysql_real_escape_string($incarcerationYN);
-							$incarcerationLoc = mysql_real_escape_string($incarcerationLoc);
-							$incarcerationCharges = mysql_real_escape_string($incarcerationCharges);
-							$incarcerationStart = mysql_real_escape_string($incarcerationStart);
-							$incarcerationEnd = mysql_real_escape_string($incarcerationEnd);
-							$institutionalizedYN = mysql_real_escape_string($institutionalizedYN);
-							$institutionName = mysql_real_escape_string($institutionName);
-							$institutionalizationReasons = mysql_real_escape_string($institutionalizationReasons);
-							$institutionStart = mysql_real_escape_string($institutionStart);
-							$institutionEnd = mysql_real_escape_string($institutionEnd);
+							$outstandingPayments = mysql_real_escape_string($outstandingPayments);
+							$companiesOwed = mysql_real_escape_string($companiesOwed);
+							$amountOwed = mysql_real_escape_string($amountOwed);
 						
-								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM Incarcerations WHERE ='$incarcerationYN' AND ='$incarcerationLoc' AND ='$incarcerationCharges' AND ='$incarcerationStart' AND ='$incarcerationEnd' AND ='$institutionalizedYN' AND ='$institutionName' AND ='$institutionalizationReasons' AND ='$institutionStart' AND ='$institutionEnd';");
+								$query = mysql_query("SELECT ResidentID, FirstName, MiddleInitial, LastName, ResidentType FROM  WHERE ='$outstandingPayments' AND ='$companiesOwed' AND ='$amountOwed';");
 								if (mysql_num_rows($query) < 1) 
 								{
 									echo '<script>alert("No residents match your search.\nPlease try different search criteria.");</script>';
@@ -116,7 +102,6 @@
 									}
 								}
 							}
-							
 						?>
 						</tbody>
 					</table>
@@ -128,7 +113,6 @@
 		<?php
 			include ('../includes/footer.php')
 		?>
-		
 
 	</body>
 </html>

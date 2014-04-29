@@ -39,8 +39,6 @@
 			<ul class="right button-group">
 				<li><p class="button">Current User: <?php echo $_SESSION['userName']; ?></p></li>
 				<li><a href="Exodus_SA_MasterSearches.php" class="button" id="searchForResidents">Search for a Resident</a></li>
-				<li><a href="#" class="button" id="link2">Link 3</a></li>
-				<li><a href="#" class="button" id="link3">Link 4</a></li>
 			</ul>
  		 </div>
     <!-- End Header and Nav -->
@@ -241,19 +239,6 @@
             <h4>Search for a Resident</h4>
             <p>Search for a resident using different search criteria</p>
         </li>
-        <li data-id="link2" data-class="custom so-awesome" data-text="Next">
-            <h4>Link2</h4>
-            <p>Link2</p>
-        </li>
-        <li data-id="link3" data-class="custom so-awesome" data-text="Next">
-            <h4>Link3</h4>
-            <p>Link3</p>
-        </li>
-        <li data-id="link4" data-class="custom so-awesome" data-text="End">
-            <h4>Link4</h4>
-            <p>Link4</p>
-        </li>
-
     </ol>
 	
 	

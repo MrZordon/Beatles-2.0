@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Status</h2>
 			<hr/>
 			<!-- Start form for resident residency status information -->
-			<form action="./includes/selectAndViewByResStatus.php"  method="post">
+			<form action="./includes/selectAndViewResByStatus.php"  method="post">
 				<p>*Required</p>
 					<div class="row">
 						<div class="large-10 columns"> 
@@ -19,7 +19,7 @@
 						<div class="large-4 columns"> 
 							<label>*Select a facility:</label> 
 										<select name="facilityName">
-											<option>-- Select --</option>
+											<option value="">-- Select --</option>
 											<option value="Lazarus House">Lazarus House</option> 
 											<option value="Capernaum Place">Capernaum Place</option> 
 										</select>

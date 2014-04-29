@@ -49,15 +49,15 @@
 									<label>* Name of Institution: <input type="text" id="institutionName" name="institutionName"  /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>* Reasons for Institutionalization: <input type="text" id="institutionalizationReasons" id="institutionalizationReasons" /> </label>  
+									<label>* Reasons for Institutionalization: <input type="text" id="institutionalizationReasons" name="institutionalizationReasons" /> </label>  
 								</div> 
 						</div>
 						<div class="row">
 								<div class="large-5 columns"> 
-									<label>* Institution Start Date: <input type="text" id="institutionStart" id="institutionStart" placeholder="mm/dd/yyyy" /> </label> 
+									<label>* Institution Start Date: <input type="text" id="institutionStart" name="institutionStart" placeholder="mm/dd/yyyy" /> </label> 
 								</div> 
 								<div class="large-5 columns"> 
-									<label>* Institution Release Date: <input type="text" id="institutionEnd" id="institutionEnd"  placeholder="mm/dd/yyyy"/> </label> 
+									<label>* Institution Release Date: <input type="text" id="institutionEnd" name="institutionEnd"  placeholder="mm/dd/yyyy"/> </label> 
 								</div> 
 						</div>
 					

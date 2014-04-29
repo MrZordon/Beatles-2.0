@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Policy Agreement</h2>
 			<hr/>
 			<!-- Start form for policy agreement-->
-			<form action="./includes/selectAndViewByResPolicyAgree.php"  method="post">
+			<form action="./includes/selectAndViewResByPolicyAgree.php"  method="post">
 					<p>* Required </p>
 					<div class="row">
 							<div class="large-10 columns"> 

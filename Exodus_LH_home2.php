@@ -137,8 +137,6 @@
 				<ul class="right button-group">
 					<li><p class="button">Current User: <?php echo $_SESSION['userName']; ?></p></li>
 					<li><a href="Exodus_LH_MasterSearches.php" class="button" id="searchForResidents">Search for a Resident</a></li>
-					<li><a href="#" class="button" id="link3">Link 3</a></li>
-					<li><a href="#" class="button" id="link4">Link 4</a></li>
 				</ul>
  		 	</div>
     		<!-- End Header and Nav -->

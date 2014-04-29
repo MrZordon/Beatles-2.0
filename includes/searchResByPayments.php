@@ -4,7 +4,7 @@
 			<h2>Search Resident(s) By Overdue Payments</h2>
 			<hr/>
 			<!-- Start form for resident overdue payment information -->
-			<form action="./includes/selectAndViewByResPayments.php"  method="post">
+			<form action="./includes/selectAndViewResByPayment.php"  method="post">
 				<p>*Required</p>
 					<div class="row">
 						<div class="large-10 columns"> 
