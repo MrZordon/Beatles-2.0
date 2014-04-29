@@ -14,7 +14,6 @@
 							Gender,
 							SSN,
 							DOB,
-							Age,
 							Language,
 							Religion,
 							Street,
@@ -31,16 +30,7 @@
 							KinCityTown,
 							KinState,
 							KinZip,
-							KinPhone,
-							CounselorRequest,
-							TermAgree,
-							SignedBy,
-							PaidRent,
-							LeaseAbility,
-							HousingGoals,
-							OweCompanies,
-							Concerns,
-							ExplainConcerns
+							KinPhone
 							)  VALUES (
 							:residentType, 
 							:active , 
@@ -51,8 +41,7 @@
 							:lastName , 
 							:gender , 
 							:ssn , 
-							:dob , 
-							:age , 
+							:dob ,  
 							:language , 
 							:religion , 
 							:street , 
@@ -69,16 +58,7 @@
 							:kinCityTown , 
 							:kinState , 
 							:kinZip , 
-							:kinPhone , 
-							:counselorRequest , 
-							:termAgree , 
-							:signedBy , 
-							:paidRent , 
-							:leaseAbility , 
-							:housingGoals , 
-							:oweCompanies , 
-							:concerns ,
-							:explainConcerns
+							:kinPhone
 							)";
 	
 	//Prepare the statement
@@ -136,11 +116,6 @@
 	if ( !$stmt->bindValue ( ':dob', $dob, $string) )
 	{
 		echo "Binding dob failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':age', $age, $string) )
-	{
-		echo "Binding age failed.";
 	}
 	//--------------------------------------------------------------------------------------------------------------------------/
 	if ( !$stmt->bindValue ( ':language', $language, $string) )
@@ -228,50 +203,7 @@
 		echo "Binding kinPhone failed.";
 	}
 	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':counselorRequest', $counselorRequest, $string) )
-	{
-		echo "Binding counselorRequest failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':termAgree', $termAgree, $string) )
-	{
-		echo "Binding termAgree failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':signedBy', $signedBy, $string) )
-	{
-		echo "Binding signedBy failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':paidRent', $paidRent, $string) )
-	{
-		echo "Binding paidRent failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':leaseAbility', $leaseAbility, $string) )
-	{
-		echo "Binding leaseAbility failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':housingGoals', $housingGoals, $string) )
-	{
-		echo "Binding housingGoals failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':oweCompanies', $oweCompanies, $string) )
-	{
-		echo "Binding oweCompanies failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':concerns', $concerns, $string) )
-	{
-		echo "Binding concerns failed.";
-	}
-	//--------------------------------------------------------------------------------------------------------------------------/
-	if ( !$stmt->bindValue ( ':explainConcerns', $explainConcerns, $string) )
-	{
-		echo "Binding explainConcerns failed.";
-	}
+	
 
 	//Execute the insert
 	try
