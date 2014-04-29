@@ -1,0 +1,96 @@
+<?php
+	
+	//Tables to be made
+	$insert = "INSERT INTO ";
+	
+	$personalStatusTable = "PersonalStatus (
+							ResidentID,
+							CounselorRequest,
+							TermAgree,
+							SignedBy,
+							PaidRent,
+							LeaseAbility,
+							HousingGoals,
+							OweCompanies,
+							Concerns,
+							ExplainConcerns
+							)  VALUES ( 
+							:residentID , 
+							:counselorRequest , 
+							:termAgree , 
+							:signedBy , 
+							:paidRent , 
+							:leaseAbility , 
+							:housingGoals , 
+							:oweCompanies , 
+							:concerns ,
+							:explainConcerns
+							)";
+	
+	//Prepare the statement
+	if ( ! $stmt = $con->prepare ( $insert . $personalStatusTable ) )
+	{
+		echo "Prepare failed";
+	}
+	
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':residentID', $residentID, $string) )
+	{
+		echo "Binding residentID failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':counselorRequest', $counselorRequest, $string) )
+	{
+		echo "Binding counselorRequest failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':termAgree', $termAgree, $string) )
+	{
+		echo "Binding termAgree failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':signedBy', $signedBy, $string) )
+	{
+		echo "Binding signedBy failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':paidRent', $paidRent, $string) )
+	{
+		echo "Binding paidRent failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':leaseAbility', $leaseAbility, $string) )
+	{
+		echo "Binding leaseAbility failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':housingGoals', $housingGoals, $string) )
+	{
+		echo "Binding housingGoals failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':oweCompanies', $oweCompanies, $string) )
+	{
+		echo "Binding oweCompanies failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':concerns', $concerns, $string) )
+	{
+		echo "Binding concerns failed.";
+	}
+	//--------------------------------------------------------------------------------------------------------------------------/
+	if ( !$stmt->bindValue ( ':explainConcerns', $explainConcerns, $string) )
+	{
+		echo "Binding explainConcerns failed.";
+	}
+
+	//Execute the insert
+	try
+	{
+		$stmt->execute();
+	} 
+	catch (PDOException $exception)
+	{
+		echo "Insertion into Generic failed. " . $exception->getMessage();
+	}
+?>
