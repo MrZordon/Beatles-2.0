@@ -6,8 +6,7 @@
 	// This is the date format
 	// 2014-04-01
     if(isset($_POST["first_NameGeneric"]) && strlen($_POST["first_NameGeneric"])>0)
-    {
-    	echo'hello';	
+    {	
     	$firstName = filter_var($_POST["first_NameGeneric"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
      	$middleName = filter_var($_POST["middleInitial_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$lastName = filter_var($_POST["last_NameGeneric"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
@@ -31,12 +30,21 @@
 		$stateKin = filter_var($_POST["stateKin_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$zipKin = filter_var($_POST["zipKin_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$comments = filter_var($_POST["comments_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-		$language = filter_var($_POST["comments_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-		$currentResident = filter_var($_POST["comments_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$language = filter_var($_POST["language_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$currentResident = filter_var($_POST["currentResident_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$year = filter_var($_POST["yearDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$month= filter_var($_POST["monthDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$day = filter_var($_POST["dayDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		
+		$DOBGeneric= strtotime("$year" + "-" + "$month" + "-" + "$day");
+		$DateAdded = date("Y-m-d");
+		
+		echo '$DateAdded';
+		echo '$DOBGeneric';
 	}
 
 	echo $ssn;
-	$sql="SELECT * FROM `genericinfo` WHERE `SSN` = '$ssn'";
+	$sql="SELECT ResidentID FROM `genericinfo` WHERE `SSN` = '$ssn'";
 	
 	//input the sql string into a query function and save the results to a variable
 	$result=mysql_query($sql);
@@ -51,24 +59,30 @@
 	// if there is a result with the same SSN we are going to do an update
 	if($count == 0) 
 	{
-		if(mysql_query("INSERT INTO genericinfo (FirstName,MiddleInitial,LastName,Gender,SSN,PhoneNum,Religion,ResidentType,Street,CityTown,State,Zip,RefPerson,RefAgency,RefPhone,NextKin,Kinship,KinStreet,KinCityTown,KinState,KinPhone,KinZip,Comments,Active,Language) VALUES('$firstName','$middleName','$lastName','$gender','$ssn','$cellPhone','$religion','$residentType','$streetAddress','$cityAddress','$stateAddress','$zipAddress','$referralName','$referralAgency','$referralPhone','$nameKin','$relationshipKin','$phoneNumKin','$streetKin','$cityKin','$stateKin','$zipKin','$comments','$currentResident','$language')",$con))
+		if(mysql_query("INSERT INTO genericinfo (FirstName,MiddleInitial,LastName,Gender,SSN,PhoneNum,Religion,ResidentType,Street,CityTown,State,Zip,RefPerson,RefAgency,RefPhone,NextKin,Kinship,KinStreet,KinCityTown,KinState,KinPhone,KinZip,Comments,Active,Language,DateAdded,DOB) VALUES('$firstName','$middleName','$lastName','$gender','$ssn','$cellPhone','$religion','$residentType','$streetAddress','$cityAddress','$stateAddress','$zipAddress','$referralName','$referralAgency','$referralPhone','$nameKin','$relationshipKin','$streetKin','$cityKin','$stateKin','$phoneNumKin','$zipKin','$comments','$currentResident','$language','$DateAdded','$DOBGeneric')",$con))
 	    {
-		   
+	    	$data = "insert";
+		   	file_put_contents ("test.txt" , $data );
 	    }
 		else
 		{
-	  		echo "Error Adding Information: " . mysql_error();	
+	  		$data = "Error Inserting Information: " . mysql_error();	
+			file_put_contents ("test.txt" , $data );	
 		}
 	}
 	else 
-	{		
-		if(mysql_query("UPDATE genericinfo SET `ResidentType`='$residentType',`Active`='$currentResident',`ResidentID`='$residentType',`DateAdded`='NULL',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`Gender`='$gender',`SSN`='$ssn',`DOB`='NULL',`Age`='NULL',`Language`='$language',`Religion`='$religion',`Street`='$streetAddress',`CityTown`='$cityAddress',`State`='$stateAddress',`Zip`='zipAddress',`PhoneNum`='$cellPhone',`RefPerson`='$referralName',`RefAgency`='$referralAgency',`RefPhone`='$referralPhone',`NextKin`='$nameKin',`Kinship`='$relationshipKin',`KinStreet`='$streetKin',`KinCityTown`='$cityKin',`KinState`='$stateKin',`KinZip`='$zipKin',`KinPhone`='$phoneNumKin',`Comments`='$comments'"))
+	{
+		
+		if(mysql_query("UPDATE genericinfo SET `ResidentType`='$residentType',`Active`='$currentResident',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`Gender`='$gender',`SSN`='$ssn',`DOB`='$DOBGeneric',`Age`='NULL',`Language`='$language',`Religion`='$religion',`Street`='$streetAddress',`CityTown`='$cityAddress',`State`='$stateAddress',`Zip`='zipAddress',`PhoneNum`='$cellPhone',`RefPerson`='$referralName',`RefAgency`='$referralAgency',`RefPhone`='$referralPhone',`NextKin`='$nameKin',`Kinship`='$relationshipKin',`KinStreet`='$streetKin',`KinCityTown`='$cityKin',`KinState`='$stateKin',`KinZip`='$zipKin',`KinPhone`='$phoneNumKin',`Comments`='$comments' WHERE SSN='$ssn'"))
 	    {
-		   
+	    	$data = "update";
+		   	file_put_contents ("test.txt" , $data );
 	    }
 		else
 		{
-	  		echo "Error Adding Information: " . mysql_error();	
+			$data = "Error Updating Information: " . mysql_error();	
+			file_put_contents ("test.txt" , $data );
+	  		
 		}
 	}
 	

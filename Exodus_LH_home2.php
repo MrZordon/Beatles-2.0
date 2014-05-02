@@ -22,17 +22,54 @@
 	<!-- Include header file -->
 	<head>
 		
+		<!-- Javascript that allows the appears and disappearence
+			 of html based on its ID
+		-->
 		<script type="text/javascript">
-			<!--
-			    function toggle_visibility(id) 
-			    {
-			       var e = document.getElementById(id);
-			       if(e.style.display == 'block')
-			          e.style.display = 'none';
-			       else
-			          e.style.display = 'block';
-			    }
-			//-->
+			    
+		    function toggle_visibility(id) 
+		    {	
+			       	var e = document.getElementById(id);
+			       	if(e.style.display == 'none')
+			           	e.style.display = 'block';
+			          	
+		    }
+		</script>
+		<script type="text/javascript">
+            var counter = 0;
+
+            function moreFields() 
+            {
+                counter++;
+                var newFields = document.getElementById("childrenHidden").cloneNode(true);
+                newFields.id = '';
+                newFields.style.display = 'block';
+                var newField = newFields.childNodes;
+                
+                if (counter > 4)
+                {
+                	alert("A maximum of 4 children is allowed")
+                }
+                else
+                {
+                	for (var i=0;i<newField.length;i++) 
+	                {
+	                    var theName = newField[i].name
+						var theId = newField[i].id
+	                    if (theName)
+						{
+	                       	newField[i].name = theName + counter;
+							newField[i].id = theId + counter;
+						}
+	                }
+					
+					var insertHere = document.getElementById("childrenPrinted");
+                	insertHere.parentNode.insertBefore(newFields,insertHere);
+                }
+                
+			}
+
+            window.onload = moreFields;
 		</script>
 		
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -98,7 +135,10 @@
 					    				zipKin_Generic: $("#zipKinGeneric").val(),
 					    				currentResident_Generic: $("#currentResidentGeneric").val(),
 					    				language_Generic: $("#languageGeneric").val(),
-					    				comments_Generic: $("#commentsGeneric").val()}; //build a post data structure
+					    				comments_Generic: $("#commentsGeneric").val(),
+					    				monthDOB_Generic: $("#monthDOBGeneric").val(),
+					    				dayDOB_Generic: $("#dayDOBGeneric").val(),
+					    				yearDOB_Generic: $("#yearDOBGeneric").val()}; //build a post data structure
 				    
 				    	jQuery.ajax(
 				    	{
@@ -122,6 +162,7 @@
 			</script>
 			<?php
 					include ('includes/header.php');
+					include ('includes/jScripts.php');
 			?>
 			
 			<!-- <script src="js/vendor/jquery.js"></script> -->
@@ -259,7 +300,7 @@
 		<?php
 		
 			// Modal for adding a new member
-			include ('includes/newMemberModalLH1(2).php');
+			include ('includes/newMemberModalLH1.php');
 			include ('includes/newMemberModalLH2.php');
 			include ('includes/newMemberModalLH3.php');
 			include ('includes/newMemberModalLH4.php');
@@ -275,6 +316,54 @@
 			// Modal for viewing all current residents
 			include ('includes/currentResidentsModal.php');
 		?>
+		
+		<!-- code block to handle tutorial -->
+		<script>
+		$(document).foundation().foundation('reveal', 'start');
+		</script>
+	   	<!-- Joyride Code -->
+	    <ol class="joyride-list" data-joyride>
+	        <li data-id="searchResidentBar" data-text="Next" data-options="tip_location: top">
+	            <p>You can search for a member by name using this search function.</p>
+	        </li>
+	        <li data-id="viewCurrentResidents" data-class="custom so-awesome" data-text="Next">
+	            <h4>View Current Lazarus House Residents</h4>
+	            <p>View all current residents of Lazarus House.</p>
+	        </li>
+	        <li data-id="addResident" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
+	            <h4>Add a Lazarus House Resident</h4>
+	            <p>Create a profile for a new Lazarus House resident</p>
+	        </li>
+	        <li data-id="editResidentProfile" data-class="custom so-awesome" data-text="Next">
+	            <h4>Edit a Lazarus House Resident's Profile</h4>
+	            <p>Edit the profile of an existing Lazarus House resident</p>
+	        </li>
+	        <li data-id="backUpDB" data-class="custom so-awesome" data-options="tip_location: top" data-text="Next">
+	            <h4>Backup Database</h4>
+	            <p>Download a zip file of the entire database for backup</p>
+	        </li>
+	        <li data-id="logOut" data-class="custom so-awesome" data-text="Next">
+	            <h4>Logout</h4>
+	            <p>Logout of the Exodus application</p>
+	        </li>
+	        <li data-id="searchForResidents" data-class="custom so-awesome" data-text="Next">
+	            <h4>Search for a Lazarus House Resident</h4>
+	            <p>Search for a Lazarus House resident using different search criteria</p>
+	        </li>
+	        <li data-id="link2" data-class="custom so-awesome" data-text="Next">
+	            <h4>Link2</h4>
+	            <p>Link2</p>
+	        </li>
+	        <li data-id="link3" data-class="custom so-awesome" data-text="Next">
+	            <h4>Link3</h4>
+	            <p>Link3</p>
+	        </li>
+	        <li data-id="link4" data-class="custom so-awesome" data-text="End">
+	            <h4>Link4</h4>
+	            <p>Link4</p>
+	        </li>
+	
+	    </ol>
 			
 		</body>
 		

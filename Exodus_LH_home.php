@@ -271,11 +271,11 @@
  
       <!-- End Thumbnails -->
  
- <!-- code block to handle tutorial -->
+ 	<!-- code block to handle tutorial -->
 	<script>
 	$(document).foundation().foundation('reveal', 'start');
 	</script>
-   <!-- Joyride Code -->
+   	<!-- Joyride Code -->
     <ol class="joyride-list" data-joyride>
         <li data-id="searchResidentBar" data-text="Next" data-options="tip_location: top">
             <p>You can search for a member by name using this search function.</p>

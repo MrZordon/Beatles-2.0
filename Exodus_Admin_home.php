@@ -105,7 +105,7 @@
 				<?php	
 						
 						$query = mysql_query("SELECT * FROM users");
-						if (mysql_num_rows($query) < 1) 
+						if (mysql_num_rows($query) == 0) 
 						{
 						    echo "No data.";
 						} 
