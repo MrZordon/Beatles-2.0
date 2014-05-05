@@ -158,6 +158,7 @@
 	
 	$childrenTable = "Children (
 								ResidentID	BIGINT,
+								NumChildren INT,
 								ChildFirstName1	NVARCHAR(25),
 								ChildLastName1	NVARCHAR(25),
 								ChildGender1	NVARCHAR(10),
