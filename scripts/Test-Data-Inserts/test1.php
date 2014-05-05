@@ -25,7 +25,7 @@
 	 $password  = "aaron12";
 	 $lastLoggedOn = NULL;
 	 $currentlyLoggedOn  = 'Y';
-	 $userType = 'A';
+	 $userType = 'SA';
 	
 	//Perform the insert
 	include getcwd() . '../Insert/InsertUser.php';
