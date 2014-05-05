@@ -46,9 +46,9 @@
                 newFields.style.display = 'block';
                 var newField = newFields.childNodes;
                 
-                if (counter > 4)
+                if (counter > 8)
                 {
-                	alert("A maximum of 4 children is allowed")
+                	alert("A maximum of 8 children is allowed")
                 }
                 else
                 {
@@ -167,7 +167,7 @@
 			
 			<!-- <script src="js/vendor/jquery.js"></script> -->
 			<script src="js/foundation/foundation.js"></script>
-			<!-- <script src="js/foundation/foundation.joyride.js"></script> -->
+			<script src="js/foundation/foundation.joyride.js"></script>
 			<script src="js/foundation/foundation.reveal.js"></script>
 			
 		</head>

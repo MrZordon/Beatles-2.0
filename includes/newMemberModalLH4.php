@@ -7,40 +7,40 @@
 	  
 			<div class="row">
 				<div class="large-9 columns">
-					<label>Doctor's Full Name:<input type="text" name="docName" id="docName" placeholder="Doctor's Full Name" /> </label> 
+					<label>Doctor's Full Name:<input type="text" name="docName_Medical" id="docNameMedical" placeholder="Doctor's Full Name" /> </label> 
 				</div>
 
 				<div class="large-3 columns"> 
-					<label>Phone Number:<input type="text" name="docPhoneNum" id="docPhoneNum" placeholder="XXX-XXX-XXXX" /></label> 
+					<label>Phone Number:<input type="text" name="docPhoneNum_Medical" id="docPhoneNumMedical" placeholder="XXX-XXX-XXXX" /></label> 
 				</div> 
 				
 			</div>
 				
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Street Address: <input type="text" name="docStreetAddress" id="docStreetAddress" placeholder="Street Address" /> </label> 
+					<label>Street Address: <input type="text" name="docStreetAddress_Medical" id="docStreetAddressMedical" placeholder="Street Address" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>City: <input type="text" name="docCity" id="docCity" placeholder="City" /> </label> 
+					<label>City: <input type="text" name="docCity_Medical" id="docCityMedical" placeholder="City" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>State:<input type="text" name="docState" id="docState" placeholder="State" /> </label> 
+					<label>State:<input type="text" name="docState_Medical" id="docStateMedical" placeholder="State" /> </label> 
 				</div>
 
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Zip Code:<input type="text" name="docZip" id="docZip" placeholder="XXXXX" /> </label> 
+					<label>Zip Code:<input type="text" name="docZip_Medical" id="docZipMedical" placeholder="XXXXX" /> </label> 
 				</div> 
 			</div>
 			
 			<div class="row">
 				<div class="large-3 columns"> 
 					<label>Are you on Medication?</label> 
-						<select name="medsYN' id="medsYN">
+						<select name="medsYN_Medical' id="medsYNMedical">
 							<option>-- Select --</option>
 							<option value="Yes">Yes</option> 
 							<option value="No">No</option> 
@@ -50,36 +50,36 @@
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName1" id="medsName1" placeholder="Medication Name" /> </label> 
+					<label>Medication Name:<input type="text" name="medsName1_Medical" id="medsName1Medical" placeholder="Medication Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage1" id="medsDosage1" placeholder="Dosage" /> </label> 
+					<label>Dosage:<input type="text" name="medsDosage1_Medical" id="medsDosage1Medical" placeholder="Dosage" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen1" id="medsWhen1" placeholder="When" /> </label> 
+					<label>When:<input type="text" name="medsWhen1_Medical" id="medsWhen1Medical" placeholder="When" /> </label> 
 				</div>			
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName2" id="medsName2"  placeholder="Medication Name" /> </label> 
+					<label>Medication Name:<input type="text" name="medsName2_Medical" id="medsName2Medical"  placeholder="Medication Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage2" id="medsDosage2" placeholder="Dosage" /> </label> 
+					<label>Dosage:<input type="text" name="medsDosage2_Medical" id="medsDosage2Medical" placeholder="Dosage" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen2" id="medsWhen2" placeholder="When" /> </label> 
+					<label>When:<input type="text" name="medsWhen2_Medical" id="medsWhen2Medical" placeholder="When" /> </label> 
 				</div>			
 			</div>
 			
 			<div class="row">
 				<div class="large-3 columns"> 
 					<label>Do you have any Allergies?</label> 
-						<select name="allergiesYN" id="allergiesYN">
+						<select name="allergiesYN_Medical" id="allergiesYNMedical">
 							<option>-- Select --</option>
 							<option value="Yes">Yes</option> 
 							<option value="No">No</option> 
@@ -87,14 +87,14 @@
 				</div>
 				<div class="large-9 columns">
 				      <label>If yes, what?</label>
-				      <textarea id="ifYes" name="ifYes" placeholder="notes"></textarea>
+				      <textarea id="ifYes_Medical" name="ifYesMedical" placeholder="notes"></textarea>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
 					<label>Seizers of Epilepsy?</label> 
-						<select name="seizersYN" id="seizersYN" >
+						<select name="seizersYN_Medical" id="seizersYNMedical" >
 							<option>-- Select --</option>
 							<option value="Yes">Yes</option> 
 							<option value="No">No</option> 
@@ -102,7 +102,7 @@
 				</div>
 				<div class="large-4 columns"> 
 					<label>Client of DMH?</label> 
-						<select name="clientYN" id="clientYN" >
+						<select name="clientYN_Medical" id="clientYNMedical" >
 							<option>-- Select --</option>
 							<option value="Yes">Yes</option> 
 							<option value="No">No</option> 
@@ -115,11 +115,11 @@
 			<div class="row">
 			
 				<div class="large-4 columns"> 
-					<label>DMH Worker's Full Name:<input type="text" name="dmhName" id="dmhName"  placeholder="DMH Worker Name" /> </label> 
+					<label>DMH Worker's Full Name:<input type="text" name="dmhName_Medical" id="dmhNameMedical"  placeholder="DMH Worker Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>DMH Worker's Phone Number:<input type="text" name="dmhPhoneNum" id="dmhPhoneNum" placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>DMH Worker's Phone Number:<input type="text" name="dmhPhoneNum_Medical" id="dmhPhoneNumMedical" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div>
 				<div class="large-4 columns"> 
 				</div>
@@ -128,25 +128,25 @@
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName4" id="medsName4" placeholder="Medication Name" /> </label> 
+					<label>Medication Name:<input type="text" name="medsName4_Medical" id="medsName4Medical" placeholder="Medication Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage4" id="medsDosage4" placeholder="Dosage" /> </label> 
+					<label>Dosage:<input type="text" name="medsDosage4_Medical" id="medsDosage4Medical" placeholder="Dosage" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen4" id="medsWhen4" placeholder="When" /> </label> 
+					<label>When:<input type="text" name="medsWhen4_Medical" id="medsWhen4Medical" placeholder="When" /> </label> 
 				</div>			
 			</div>
 			
 			<div class="row">
 				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName5" id="medsName5" placeholder="Medication Name" /> </label> 
+					<label>Medication Name:<input type="text" name="medsName5_Medical" id="medsName5Medical" placeholder="Medication Name" /> </label> 
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage5" id="medsDosage5" placeholder="Dosage" /> </label> 
+					<label>Dosage:<input type="text" name="medsDosage5_Medical" id="medsDosage5Medical" placeholder="Dosage" /> </label> 
 				</div>
 					
 				<div class="large-4 columns"> 
