@@ -64,6 +64,7 @@
 							PaidRent	ENUM ('Y', 'N'),
 							LeaseAbility	NVARCHAR(140),
 							HousingGoals	NVARCHAR(255),
+							OverDue ENUM ('Y', 'N'),
 							OweCompanies	INT,
 							Concerns ENUM ('Y', 'N'),
 							ExplainConcerns NVARCHAR(255) CHECK (Concerns = 'Y'),
