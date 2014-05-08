@@ -1,20 +1,21 @@
-<div id="NewMemberModalCP2" class="reveal-modal" data-reveal>
+
+		<div id="NewMemberModal2" class="reveal-modal" data-reveal>
 		<h2>Children</h2>
 		<div class="row" id="childrenHidden" style="display:none">
-
+			
 					<label>Full Name:</label><input type="text" name="child_Name" id="childName" placeholder="Full Name" />
-
+					
 					<label>Gender:</label> 
 					<input type="radio" name="child_Gender" value="Male" id="childGender">
 						<label for="Male1">Male</label> 
 					<input type="radio" name="child_Gender" value="Female" id="childGender">
 						<label for="Female1">Female</label> 	
 
-
+		
 					<label>Social Security Number: </label><input type="text" name="child_SSN" id="childSSN" placeholder="XXX-XX-XXXX" />
 
-
-
+				
+			
 						<label>Date Of Birth:</label> 
 							<select name="child_Month" id="childMonth">
 							<option>Month</option>
@@ -31,7 +32,7 @@
 							<option value="November">November</option> 
 							<option value="December">December</option> 
 							</select>
-
+										
 							<select name="child_Day" id="childDay">
 								<option>Day</option>
 								<option value="01">01</option> 
@@ -66,8 +67,8 @@
 								<option value="30">30</option>
 								<option value="31">31</option>
 							</select>
-
-
+					
+				
 							<select name="child_Year" id="childYear">
 								<option>Year</option>
 								<option value="2011">2011</option>
@@ -183,20 +184,20 @@
 								<option value="1901">1901</option>
 								<option value="1900">1900</option>
 							</select>
-
+						
 						<label>Custody Issues: </label>
 						<textarea name="child_Custody" id="childCustody" placeholder="CustodyIssues"></textarea> 
-
+		
 			</div>
-
+		
 		<span id="childrenPrinted"></span>
-
+		
 		<button onclick="moreFields();">Add Child</button>
-
+			
 		<div class="row">
 			<div class="large-3 columns">				
 				<button id="ChildrenSubmit" onclick="toggle_visibility('hideShow2');">Save Information</button>	
-				<p><button href="#" data-reveal-id="NewMemberModalCP3" class="secondary button" id="hideShow2"  style="display:none;">Next</buttonW></p>
+				<p><button href="#" data-reveal-id="NewMemberModal3" class="secondary button" id="hideShow2"  style="display:none;">Next</buttonW></p>
 			</div>
 			<div class="large-9 columns">
 				<h4>Progress</h4>
