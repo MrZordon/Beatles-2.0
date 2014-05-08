@@ -92,7 +92,6 @@
 		$("#AgencySubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("agencyadd");
 		    var myData = {	agency_Name: $("#agencyName").val(),
 		    				agency_monthlyAmount: $("#agencymonthlyAmount").val(),
 		    				agency_Name2: $("#agencyName2").val(),
