@@ -185,6 +185,8 @@
 								<option value="1900">1900</option>
 							</select>
 						
+						<label>Custody Issues: </label>
+						<textarea name="child_Custody" id="childCustody" placeholder="CustodyIssues"></textarea> 
 		
 			</div>
 		
@@ -192,14 +194,10 @@
 		
 		<button onclick="moreFields();">Add Child</button>
 			
-	
 		<div class="row">
-			<div class="large-3 columns">
-				<button id="ChildrenSubmit">Save Information</button>
-				
-				<div id="responds"></div>	
-					 
-				<p><a href="#" data-reveal-id="NewMemberModal3" class="secondary button">Next</a></p>
+			<div class="large-3 columns">				
+				<button id="ChildrenSubmit" onclick="toggle_visibility('hideShow2');">Save Information</button>	
+				<p><button href="#" data-reveal-id="NewMemberModal3" class="secondary button" id="hideShow2"  style="display:none;">Next</buttonW></p>
 			</div>
 			<div class="large-9 columns">
 				<h4>Progress</h4>
@@ -207,6 +205,6 @@
 					<span class="meter" style="width: 20%"></span> 
 				</div>
 			</div>
-		<div>
+		</div>
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>

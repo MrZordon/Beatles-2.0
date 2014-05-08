@@ -330,13 +330,6 @@
 					<label>Comments: <textarea name="comments_Generic" id="commentsGeneric" placeholder="Comments"></textarea> </label> 
 				</div> 
 			</div> 
-			
-			<div class="row">
-				<div class="large-3 columns">
-					<!--<input id="checkbox1" type="checkbox" onclick="toggle_visibility('hideShow1');"><label for="checkbox1">All the above information is Correct</label>
-					-->
-				</div>
-	  		</div>
 		  	
 		  	<div class="row">
 				<div class="large-3 columns">

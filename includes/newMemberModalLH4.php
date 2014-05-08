@@ -3,8 +3,6 @@
 	<div id="NewMemberModal4" class="reveal-modal" data-reveal>
 		
 		<h2>Medical Information</h2>
-		<form>
-	  
 			<div class="row">
 				<div class="large-9 columns">
 					<label>Doctor's Full Name:<input type="text" name="docName_Medical" id="docNameMedical" placeholder="Doctor's Full Name" /> </label> 
@@ -119,59 +117,17 @@
 				</div> 
 					
 				<div class="large-4 columns"> 
-					<label>DMH Worker's Phone Number:<input type="text" name="dmhPhoneNum_Medical" id="dmhPhoneNumMedical" placeholder="XXX-XXX-XXXX" /> </label> 
+					
 				</div>
 				<div class="large-4 columns"> 
 				</div>
 
 			</div>
-			
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName4_Medical" id="medsName4Medical" placeholder="Medication Name" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage4_Medical" id="medsDosage4Medical" placeholder="Dosage" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen4_Medical" id="medsWhen4Medical" placeholder="When" /> </label> 
-				</div>			
-			</div>
-			
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName5_Medical" id="medsName5Medical" placeholder="Medication Name" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage5_Medical" id="medsDosage5Medical" placeholder="Dosage" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen5" id="medsWhen5" placeholder="When" /> </label> 
-				</div>			
-			</div>
-			
-			<div class="row">
-				<div class="large-4 columns"> 
-					<label>Medication Name:<input type="text" name="medsName6" id="medsName6" placeholder="Medication Name" /> </label> 
-				</div> 
-					
-				<div class="large-4 columns"> 
-					<label>Dosage:<input type="text" name="medsDosage6" id="medsDosage6"  placeholder="Dosage" /> </label> 
-				</div>
-					
-				<div class="large-4 columns"> 
-					<label>When:<input type="text" name="medsWhen6" id="medsWhen6" placeholder="When" /> </label> 
-				</div>			
-			</div>
-		</form>
 		
 		<div class="row">
-			<div class="large-3 columns"> 
-				<p><p><a href="#" data-reveal-id="NewMemberModal5" class="secondary button">Next</a></p>
+			<div class="large-3 columns">
+				<button id="MedicalSubmit" onclick="toggle_visibility('hideShow4');">Save Information</button>	 
+				<p><button href="#" data-reveal-id="NewMemberModal5" id="hideShow4" class="secondary button" style="display:none;">Next</button></p>
 			</div>
 			<div class="large-9 columns">
 				
@@ -180,7 +136,7 @@
 					<span class="meter" style="width: 40%"></span> 
 				</div>
 			</div>
-		<div>
+		</div>
 		
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>

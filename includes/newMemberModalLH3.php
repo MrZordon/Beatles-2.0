@@ -2,8 +2,7 @@
 	<div id="NewMemberModal3" class="reveal-modal" data-reveal>
 		
 		<h2>Agency Assistance Information</h2>
-		<form>
-	  
+
 			<div class="row">
 				<div class="large-9 columns">
 					<label>Name of Agency:<input type="text" name="agency_Name" id="agencyName" placeholder="Agency Name" /> </label> 
@@ -57,8 +56,9 @@
 				
 			</div>
 		<div class="row">
-			<div class="large-3 columns"> 
-				<p><p><a href="#" data-reveal-id="NewMemberModal4" class="secondary button">Next</a></p>
+			<div class="large-3 columns">
+				<button id="AgencySubmit" onclick="toggle_visibility('hideShow3');">Save Information</button>	
+				<p><button href="#" data-reveal-id="NewMemberModal4" id="hideShow3" class="secondary button" style="display:none;">Next</button></p>
 			</div>
 			<div class="large-9 columns">
 				
@@ -67,7 +67,7 @@
 					<span class="meter" style="width: 30%"></span> 
 				</div>
 			</div>
-		<div>
+		</div>
 		
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
