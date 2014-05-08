@@ -2,38 +2,36 @@
 	<div id="NewMemberModalCP1" class="reveal-modal" data-reveal>
 		<h2>Generic Information</h2>
 		<p></p>
-		<form>
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
-					<label>First Name: <input type="text" name="fName" placeholder="First Name" /> </label> 
+					<label>First Name: <input type="text" name="first_NameGeneric" id="firstNameGeneric" placeholder="First Name" /> </label> 
 				</div> 
 				<div class="large-4 columns"> 
-				<label>Middle Initial:<input type="text" name="middleInitial" placeholder="Middle Initial" /> </label> 
+					<label>Middle Initial:<input type="text" name="middleInitial_Generic" id="middleInitialGeneric" placeholder="Middle Initial" /> </label> 
 				</div>
 				<div class="large-4 columns"> 
-				<label>Last Name: <input type="text" name="lName" placeholder="Last Name" /> </label> 
+					<label>Last Name: <input type="text" name="last_NameGeneric" id="lastNameGeneric" placeholder="Last Name" /> </label> 
 				</div>
-				
 			</div> 
 			
 			<div class="row"> 
 				<div class="large-4 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender" value="Male" id="Male">
+					<input type="radio" name="gender_Generic" value="Male" id="genderGeneric">
 						<label for="Male">Male</label> 
-					<input type="radio" name="gender" value="Female" id="Female">
+					<input type="radio" name="gender_Generic" value="Female" id="genderGeneric">
 						<label for="Female">Female</label> 	
 				</div> 
 				
 				<div class="large-4 columns"> 
-					<label>Social Security Number:<input type="text" name="ssn" placeholder="XXX-XX-XXXX" /> </label> 
+					<label>Social Security Number:<input type="text" name="ssn_Generic" id="ssnGeneric" placeholder="XXX-XX-XXXX" /> </label> 
 				</div>
 				
 				<div class="large-4 columns"> 
 				<label>Date Of Birth:</label> 
 					<div class="large-4 columns"> 
-					<select name="month">
+					<select name="monthDOB_Generic" id="monthDOBGeneric">
 						<option>Month</option>
 						<option value="January">January</option> 
 						<option value="February">February</option> 
@@ -50,7 +48,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select name="day">
+					<select name="dayDOB_Generic" id="dayDOBGeneric">
 						<option>Day</option>
 						<option value="01">01</option> 
 						<option value="02">02</option> 
@@ -86,7 +84,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select name="year">
+					<select name="yearDOB_Generic" id="yearDOBGeneric">
 						<option>Year</option>
 						<option value="2011">2011</option>
 						<option value="2010">2010</option>
@@ -208,25 +206,23 @@
 			<div class="row"> 
 				
 				<div class="large-4 columns"> 
-					<label>Cell Phone:<input type="text" name="cellPhoneNum" placeholder="XXX-XXX-XXXX" /> </label> 
+					<label>Cell Phone:<input type="text" name="cellPhone_Generic" id="cellPhoneGeneric" placeholder="XXX-XXX-XXXX" /> </label> 
 				</div> 
 
 					
 			</div> 
-			
-			
-		</form>
 	  
 	  <div class="row">
-			<div class="large-3 columns"> 
-				<p><a href="#" data-reveal-id="NewMemberModalCP2" class="secondary button">Next</a></p>
-			</div>
-			<div class="large-9 columns">
-				<h4>Progress</h4>
-				<div class="progress large-9 round"> 
-					<span class="meter" style="width: 10%"></span> 
+			<div class="large-3 columns">
+					<button id="FormSubmit" onclick="toggle_visibility('hideShow1');">Save Information</button>	
+					<p><button href="#" data-reveal-id="NewMemberModalCP2" class="secondary button" id="hideShow1" style="display:none;">Next</button></p>
 				</div>
-			</div>
+				<div class="large-9 columns">
+					<h4>Progress</h4>
+					<div class="progress large-9 round"> 
+						<span class="meter" style="width: 10%"></span> 
+					</div>
+				</div>
 		<div>
 	  
 	  <a class="close-reveal-modal">&#215;</a>
