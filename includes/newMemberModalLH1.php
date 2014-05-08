@@ -83,7 +83,7 @@
 					</select>
 					</div>
 					<div class="large-4 columns"> 
-					<select name="yearDOB_Generic" id="yearDOBGeneric>
+					<select name="yearDOB_Generic" id="yearDOBGeneric">
 						<option>Year</option>
 						<option value="2011">2011</option>
 						<option value="2010">2010</option>
