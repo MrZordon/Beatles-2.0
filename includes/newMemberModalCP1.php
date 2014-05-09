@@ -223,7 +223,7 @@
 						<span class="meter" style="width: 10%"></span> 
 					</div>
 				</div>
-		<div>
+		</div>
 	  
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
