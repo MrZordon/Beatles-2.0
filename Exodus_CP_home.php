@@ -228,7 +228,7 @@
 		
 	<!--  This is the Modal for adding Vehichle Info to residents profile	-->
 	<?php 
-			include('includes/newMemberModalCP7.php');
+			//include('includes/newMemberModalCP7.php');
 		?>
 		
 	<!--  This is the Modal for search for members	-->
