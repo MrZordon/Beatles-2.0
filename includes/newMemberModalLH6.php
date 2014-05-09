@@ -10,7 +10,7 @@
 									<input type="radio" name="incarceration_YN" value="Yes" id="incarcerationYN">
 							<label for="incarcerationY">Yes</label> 
 									<input type="radio" name="incarceration_YN" value="No" id="incarcerationYN">
-							label for="incarcerationN">No</label> 
+							<label for="incarcerationN">No</label> 
 						</div>
 					</div>
 					<div class="row">
