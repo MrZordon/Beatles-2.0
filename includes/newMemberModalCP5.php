@@ -1,63 +1,40 @@
-
-	
-	<div id="NewMemberModalCP5" class="reveal-modal" data-reveal>
+<div id="NewMemberModalCP5" class="reveal-modal" data-reveal>
 		
-		<h2>Employment</h2>
-		<form>
-		<div class="row"> 
-				<div class="large-4 columns"> 
-									<label>Currently employed?</label> 
-											<input type="radio" name="agreementYN" value="Yes" id="agreementY">
-												<label for="agreementY">Yes</label> 
-											<input type="radio" name="agreementYN" value="No" id="agreementN">
-												<label for="agreementN">No</label> 	
-				</div> 
-		</div>
-			<div class="row"> 
-					<div class="large-4 columns"> 
-						<label>Company Name: <input type="text" id="companyName" name="companyName" placeholder="Company Name" /> </label> 
+		<h2>Education Information</h2>
+		
+					<div class="row">
+						<div class="large-8 columns"> 
+							<label>Resident's highest achieved degree: <input type="text" id="residentDegreeEducation" name="residentDegree_Education"  /> </label> 
+						</div> 
+					</div>
+					<div class="row">
+						<div class="large-10 columns"> 
+								<label>Does the resident have plans to further their education?</label> 
+										<input type="radio" name="continueEd_Education" value="Yes" id="continueEdEducation">
+											<label for="continueEdY">Yes</label> 
+										<input type="radio" name="continueEd_Education" value="No" id="continueEdEducation">
+											<label for="continueEdN">No</label> 	
+							</div> 
+					</div>
+					<div class="row"> 
+						<div class="large-12 columns"> 
+							<label>If yes, what are the plans for further education? <textarea name="futurePlans_Education" id="futurePlansEducation" placeholder="Future educational plans"></textarea> </label> 
+						</div> 
 					</div> 
-					<div class="large-4 columns"> 
-						<label>Manager's Name: <input type="text" id="managerName" name="managerName" placeholder="Manager's Name" /> </label> 
-					</div>
-					<div class="large-4 columns"> 
-						<label>Manager's Phone Number:<input type="text" id="managerPhoneNum" name="managerPhoneNum" placeholder="xxx-xxx-xxxx" /> </label> 
-					</div>
-			</div> 
-			<div class="row"> 
-					<div class="large-4 columns"> 
-						<label>Hours From: <input type="text" name="hoursFrom" id="hoursFrom" /> </label> 
-					</div> 
-					<div class="large-4 columns"> 
-						<label>Hours To: <input type="text"  name="hoursTo" id="hoursTo"  /> </label> 
-					</div>
-					<div class="large-4 columns"> 
-						<label>Rate of Pay:<input type="text" name="rateOfPay" id="rateOfPay" /> </label> 
-					</div>
-				</div> 
-				<div class="row"> 
-					<div class="large-4 columns"> 
-							<label>Income:<input type="text" name="income" id="income" /> </label> 
-						</div>
-					</div>
-			
-		</form>
+		
 		
 		<div class="row">
-			<div class="large-3 columns"> 
-				<p><p><a href="#" data-reveal-id="NewMemberModalCP6" class="secondary button">Next</a></p>
+			<div class="large-3 columns">				
+				<button id="EducationSubmit" onclick="toggle_visibility('hideShow5');">Save Information</button>	
+				<p><button href="#" data-reveal-id="NewMemberModalCP6" class="secondary button" id="hideShow5"  style="display:none;">Next</buttonW></p>
 			</div>
 			<div class="large-9 columns">
-				
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
-					<span class="meter" style="width: 50%"></span> 
+					<span class="meter" style="width: 20%"></span> 
 				</div>
 			</div>
-		<div>
+		</div>
 		
 	  <a class="close-reveal-modal">&#215;</a>
-	</div>
-	
-
-	
+</div>
