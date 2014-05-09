@@ -61,8 +61,6 @@
 							CounselorRequest	ENUM ('Y', 'N'),
 							TermAgree	ENUM ('Y', 'N'),
 							SignedBy	NVARCHAR(50),
-							PaidRent	ENUM ('Y', 'N'),
-							LeaseAbility	NVARCHAR(140),
 							HousingGoals	NVARCHAR(255),
 							OverDue ENUM ('Y', 'N'),
 							OweCompanies	INT,
@@ -90,6 +88,8 @@
 									HomelessHistory	NVARCHAR(255),
 									HousingHistory	NVARCHAR(255),
 									Independent ENUM ('Y', 'N'),
+									PaidRent	ENUM ('Y', 'N'),
+									LeaseAbility	NVARCHAR(140),
 									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 									)";
 	
