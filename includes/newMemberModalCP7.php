@@ -1,5 +1,7 @@
 
-	
+echo "DONT USE ME!"
+
+/*	
 	<div id="NewMemberModalCP7" class="reveal-modal" data-reveal>
 		
 		
@@ -76,6 +78,5 @@
 		
 	  <a class="close-reveal-modal">&#215;</a>
 	</div>
-	
 
-	
+*/
