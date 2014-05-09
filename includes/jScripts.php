@@ -180,17 +180,17 @@
 		{
 			e.preventDefault();
 			alert("criminaladd");
-		    var myData = {	$incarceration_YN: $("#incarcerationYN").val(),
-		    				$incarceration_Loc: $("#incarcerationLoc").val(),
-		    				$incarceration_Charges: $("#incarcerationCharges").val(),
-		    				$incarceration_Start: $("#incarcerationStart").val(),
-		    				$incarceration_End: $("#incarcerationEnd").val(),
-		    				$incarceration_Reason: $("#incarcerationReason").val(),
-		    				$institutionalized_YN: $("#institutionalizedYN").val(),
-		    				$institution_Name: $("#institutionName").val(),
-		    				$institution_Start: $("#institutionStart").val(),
-		    				$institution_End: $("#institutionEnd").val(),
-		    				$institution_Reason: $("#institutionReason").val()
+		    var myData = {	incarceration_YN: $("#incarcerationYN").val(),
+		    				incarceration_Loc: $("#incarcerationLoc").val(),
+		    				incarceration_Charges: $("#incarcerationCharges").val(),
+		    				incarceration_Start: $("#incarcerationStart").val(),
+		    				incarceration_End: $("#incarcerationEnd").val(),
+		    				incarceration_Reason: $("#incarcerationReason").val(),
+		    				institutionalized_YN: $("#institutionalizedYN").val(),
+		    				institution_Name: $("#institutionName").val(),
+		    				institution_Start: $("#institutionStart").val(),
+		    				institution_End: $("#institutionEnd").val(),
+		    				institution_Reason: $("#institutionReason").val()
 		    				}; //build a post data structure
 		    			
 	    	jQuery.ajax(
