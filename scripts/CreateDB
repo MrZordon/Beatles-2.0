@@ -2,19 +2,19 @@
 
 	//Start our session
 	session_start();
-	
+
 	//Passing around session data for DB connect
 	$_SESSION['user'] = 'root';
 	$_SESSION['password'] = "";
 
 	//Open the connection
 	include 'OpenConnection.php';
-	
+
 	//include 'DropDB.php';
-	
+
 	//Tables to be made
 	$createTable = "CREATE TABLE ";
-	
+
 	$userTable = "Users (
 							UserName NVARCHAR(25),
 							Password NVARCHAR(20),
@@ -23,7 +23,7 @@
 							UserType CHAR (2), 
 							PRIMARY KEY (UserName)
 							)";
-						
+
 	$genericTable = "GenericInfo (
 							ResidentType CHAR(2) NOT NULL,
 							Active ENUM ('Y', 'N') NOT NULL,
@@ -45,8 +45,8 @@
 							RefPerson	NVARCHAR(50),
 							RefAgency	NVARCHAR(25),
 							RefPhone	NVARCHAR(12),
-							NextKin	NVARCHAR(50) NOT NULL,
-							Kinship	NVARCHAR(10) NOT NULL,
+							NextKin	NVARCHAR(50),
+							Kinship	NVARCHAR(10),
 							KinStreet	NVARCHAR(30),
 							KinCityTown	NVARCHAR(26),
 							KinState	NVARCHAR(2),
@@ -55,7 +55,7 @@
 							Comments NVARCHAR(255),
 							PRIMARY KEY (ResidentID) 
 							)";
-							
+
 	$personalStatus = "PersonalStatus (
 							ResidentID BIGINT,
 							CounselorRequest	ENUM ('Y', 'N'),
@@ -68,7 +68,7 @@
 							ExplainConcerns NVARCHAR(255) CHECK (Concerns = 'Y'),
 							FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 							)";
-	
+
 	$educationTable = "Education (
 									ResidentID	BIGINT,
 									EducationMax	NVARCHAR(30),
@@ -76,7 +76,7 @@
 									FurtherPlans	NVARCHAR(255) CHECK (FurtherEd ='Y'),
 									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 									)";
-	
+
 	$domesticTable = "DomesticInfo (
 									ResidentID	BIGINT,
 									CoParentIssues	NVARCHAR(255),
@@ -92,7 +92,7 @@
 									LeaseAbility	NVARCHAR(140),
 									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 									)";
-	
+
 	$membershipTable = "Membership (
 										ResidentID	BIGINT,
 										AgencyName1	NVARCHAR(25),
@@ -129,7 +129,7 @@
 								MentalHealthDoc	NVARCHAR(50) CHECK (MentalHealthClient = 'Y'),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-										
+
 	$incarcerationTable = "Incarceration (
 										ResidentID	BIGINT,
 										Incarcerated	ENUM ('Y', 'N'),
@@ -144,7 +144,7 @@
 										ReasonForInstitutionalization	NVARCHAR(80),
 										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 										)";
-								
+
 	$vehicleTable = "Vehicle (
 								ResidentID	BIGINT,
 								NameOnRegistration	NVARCHAR(50),
@@ -156,7 +156,7 @@
 								OLN	NVARCHAR(20),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-	
+
 	$childrenTable = "Children (
 								ResidentID	BIGINT,
 								NumChildren INT,
@@ -217,7 +217,7 @@
 								ChildCustodyIssues8	NVARCHAR(150),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-	
+
 	$employmentTable = "Employment (
 										ResidentID	BIGINT,
 										CompanyName	NVARCHAR(100),
@@ -231,7 +231,7 @@
 										EmploymentGoals	NVARCHAR(250),
 										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 										)";
-	
+
 	$moneyTrackerTable = "MoneyTracker(
 											ResidentID	BIGINT,
 											CurrentBalance	NVARCHAR(10),
@@ -241,98 +241,98 @@
 											ApprovedBy	NVARCHAR(50),
 											FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 											)";
-								
+
 	//Strings
 	$newLine = "<br>";
-	
+
 	//Create User Table
 	if ( !$con->query( $createTable.$userTable) )
 	{
 		echo "Failed to create User Table." . $newLine;
 	}
-	
+
 	//Create Generic Table
 	if ( !$con->query( $createTable.$genericTable) )
 	{
 		echo "Failed to create Generic Table." . $newLine;
 	}
-	
+
 	//Create User Table
 	if ( !$con->query( $createTable.$personalStatus) )
 	{
 		echo "Failed to create Personal Status Table." . $newLine;
 	}
-	
+
 	//Create Education Table
 	if ( !$con->query( $createTable.$educationTable) )
 	{
 		echo "Failed to create Education Table." . $newLine;
 	}
-	
+
 	//Create Domestic Info Table
 	if ( !$con->query( $createTable.$domesticTable) )
 	{
 		echo "Failed to create Domestic Info Table." . $newLine;
 	}
-	
+
 	//Create Membership Table
 	if ( !$con->query( $createTable.$membershipTable) )
 	{
 		echo "Failed to create Membership Table." . $newLine;
 	}
-	
+
 	//Create Medical Table
 	if ( !$con->query( $createTable.$medicalTable) )
 	{
 		echo "Failed to create Medical Table." . $newLine;
 	}
-	
+
 	//Create Incarceration Table
 	if ( !$con->query( $createTable.$incarcerationTable) )
 	{
 		echo "Failed to create Incarceration Table." . $newLine;
 	}
-	
+
 	//Create Vehicle Table
 	if ( !$con->query( $createTable.$vehicleTable) )
 	{
 		echo "Failed to create Vehicle Table." . $newLine;
 	}
-	
+
 	//Create Children Table
 	if ( !$con->query( $createTable.$childrenTable) )
 	{
 		echo "Failed to create Children Table." . $newLine;
 	}
-	
+
 	//Create  Employment Table
 	if ( !$con->query( $createTable.$employmentTable) )
 	{
 		echo "Failed to create Employment Table." . $newLine;
 	}
-	
+
 	//Create Resident Money Tracker Table
 	if ( !$con->query( $createTable.$moneyTrackerTable) )
 	{
 		echo "Failed to create MoneyTracker Table." . $newLine;
 	}
-	
+
 	//Restrict the ENUM inputs to those specfied here
 	$restrictDatabase = "SET @@global.sql_mode = 'STRICT_ALL_TABLES' ";
-	
+
 	if ( !$con->query ( $restrictDatabase) )
 	{
 		echo "Restriction Failed!" . $newLine;
 	}
-	
-	
+
+
 	//Drop Database Option
 	//include 'DropDB.php';
-	
+
 	//Close the connection to the DB
 	include 'CloseConnection.php';
-	
+
 	 $completeLink = '<a href="http://localhost/phpmyadmin">Complete</a>';
-	 
+
 	 echo $newLine . $completeLink;
 ?>
