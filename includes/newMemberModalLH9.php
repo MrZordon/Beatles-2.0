@@ -11,7 +11,7 @@
 		
 		<div class="row">
 				<div class="large-3 columns"> 
-					<p><a href="#" data-reveal-id="NewMemberModal9" class="secondary button">Submit</a></p>
+					<p><button href="#" class="close-reveal-modal">Finish</buttonW></p>
 				</div>
 				<div class="large-9 columns">
 						<h4>Progress</h4>
