@@ -1,6 +1,6 @@
 <?php
     //include db configuration file
-    include_once("includes/connect_ExodusDB.inc");
+    include_once("/connect_ExodusDB.inc");
 	session_start();
     
 
@@ -13,7 +13,7 @@
 		$ssn = filter_var($_POST["ssn_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$cellPhone = filter_var($_POST["cellPhone_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$residentType = filter_var($_POST["residentType_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-		$currentResident = filter_var($_POST["currentResident_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+		$currentResident = 'Y';
 		$year = filter_var($_POST["yearDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$month= filter_var($_POST["monthDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$day = filter_var($_POST["dayDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
@@ -60,8 +60,8 @@
 	    }
 		else
 		{
-
-
+			$data = "Error Inserting Information: " . mysql_error();	
+			file_put_contents ("test.txt" , $data );	
 		}
 	}
 
