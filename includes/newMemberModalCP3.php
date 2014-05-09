@@ -6,25 +6,25 @@
 
 				<div class="large-3 columns"> 
 					<label>Have you been a victim of Domestic Violence:</label> 
-					<input type="radio" name="violenceYN_Domestic" value="Yes" id="violenceYNDomestic">
+					<input type="radio" name="violenceYN_Domestic" value="Y" id="violenceYNDomestic">
 						<label for="yes1">Yes</label> 
-					<input type="radio" name="violenceYN_Domestic" value="No" id="violenceYNDomestic">
+					<input type="radio" name="violenceYN_Domestic" value="N" id="violenceYNDomestic">
 						<label for="no1">No</label> 	
 				</div>
 
 				<div class="large-3 columns"> 
 					<label>If so, do you have a safety plan:</label> 
-					<input type="radio" name="safetyYN_Domestic" value="Yes" id="safetyYNDomestic">
+					<input type="radio" name="safetyYN_Domestic" value="Y" id="safetyYNDomestic">
 						<label for="yes2">Yes</label> 
-					<input type="radio" name="safetyYN_Domestic" value="No" id="safetyYNDomestic">
+					<input type="radio" name="safetyYN_Domestic" value="N" id="safetyYNDomestic">
 						<label for="no2">No</label> 	
 				</div>
 
 				<div class="large-6 columns"> 
 					<label>If so, is there a restraining order:</label> 
-					<input type="radio" name="restrainingOrderYN_Domestic" value="Yes" id="restrainingOrderYNDomestic">
+					<input type="radio" name="restrainingOrderYN_Domestic" value="Y" id="restrainingOrderYNDomestic">
 						<label for="yes3">Yes</label> 
-					<input type="radio" name="restrainingOrderYN_Domestic" value="No" id="restrainingOrderYNDomestic">
+					<input type="radio" name="restrainingOrderYN_Domestic" value="N" id="restrainingOrderYNDomestic">
 						<label for="no3">No</label> 	
 				</div>
 
@@ -55,16 +55,16 @@
 			<div class="row">
 				<div class="large-4 columns"> 
 					<label>Have you ever lived on your own?</label> 
-					<input type="radio" name="livedAloneYN_Domestic" value="Yes" id="livedAloneYNDomestic">
+					<input type="radio" name="livedAloneYN_Domestic" value="Y" id="livedAloneYNDomestic">
 						<label for="livedY">Yes</label> 
-					<input type="radio" name="livedAloneYN_Domestic" value="No" id="livedAloneYNDomestic">
+					<input type="radio" name="livedAloneYN_Domestic" value="N" id="livedAloneYNDomestic">
 						<label for="livedN">No</label> 	
 				</div>
 				<div class="large-4 columns"> 
 					<label>Were you responsible for rent?</label> 
-					<input type="radio" name="rentYN_Domestic" value="Yes" id="rentYNDomestic">
+					<input type="radio" name="rentYN_Domestic" value="Y" id="rentYNDomestic">
 						<label for="rentY">Yes</label> 
-					<input type="radio" name="rentYN_Domestic" value="No" id="rentYNDomestic">
+					<input type="radio" name="rentYN_Domestic" value="N" id="rentYNDomestic">
 						<label for="rentN">No</label> 	
 				</div>
 				<div class="large-4 columns">
