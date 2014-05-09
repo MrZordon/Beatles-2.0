@@ -2,29 +2,28 @@
 
 	//Start our session
 	session_start();
-	
+
 	//Passing around session data for DB connect
 	$_SESSION['user'] = 'root';
 	$_SESSION['password'] = "";
 
 	//Open the connection
 	include 'OpenConnection.php';
-	
+
 	//include 'DropDB.php';
-	
+
 	//Tables to be made
 	$createTable = "CREATE TABLE ";
-	
+
 	$userTable = "Users (
 							UserName NVARCHAR(25),
 							Password NVARCHAR(20),
 							LastLoggedOn DATE,
 							CurrentlyLoggedOn ENUM ('Y', 'N'),
 							UserType CHAR (2), 
-							UserEmail NVARCHAR(50),
 							PRIMARY KEY (UserName)
 							)";
-						
+
 	$genericTable = "GenericInfo (
 							ResidentType CHAR(2) NOT NULL,
 							Active ENUM ('Y', 'N') NOT NULL,
@@ -36,34 +35,32 @@
 							Gender ENUM ('M', 'F') NOT NULL,
 							SSN	NVARCHAR(11) NOT NULL,
 							DOB	DATE NOT NULL,
-							Language	NVARCHAR(10) NOT NULL,
-							Religion	NVARCHAR(13) NOT NULL,
-							Street	NVARCHAR(30) NOT NULL,
-							CityTown	NVARCHAR(26) NOT NULL,
-							State	NVARCHAR(2) NOT NULL,
-							Zip	NVARCHAR(10) NOT NULL,
-							PhoneNum	NVARCHAR(12) NOT NULL,
-							RefPerson	NVARCHAR(50) NOT NULL,
-							RefAgency	NVARCHAR(25) NOT NULL,
-							RefPhone	NVARCHAR(12) NOT NULL,
-							NextKin	NVARCHAR(50) NOT NULL,
-							Kinship	NVARCHAR(10) NOT NULL,
-							KinStreet	NVARCHAR(30) NOT NULL,
-							KinCityTown	NVARCHAR(26) NOT NULL,
-							KinState	NVARCHAR(2) NOT NULL,
-							KinZip	NVARCHAR(10) NOT NULL,
-							KinPhone	NVARCHAR(12) NOT NULL,
+							Language	NVARCHAR(10),
+							Religion	NVARCHAR(13),
+							Street	NVARCHAR(30),
+							CityTown	NVARCHAR(26),
+							State	NVARCHAR(2),
+							Zip	NVARCHAR(10),
+							PhoneNum	NVARCHAR(12),
+							RefPerson	NVARCHAR(50),
+							RefAgency	NVARCHAR(25),
+							RefPhone	NVARCHAR(12),
+							NextKin	NVARCHAR(50),
+							Kinship	NVARCHAR(10),
+							KinStreet	NVARCHAR(30),
+							KinCityTown	NVARCHAR(26),
+							KinState	NVARCHAR(2),
+							KinZip	NVARCHAR(10),
+							KinPhone	NVARCHAR(12),
 							Comments NVARCHAR(255),
 							PRIMARY KEY (ResidentID) 
 							)";
-							
+
 	$personalStatus = "PersonalStatus (
 							ResidentID BIGINT,
 							CounselorRequest	ENUM ('Y', 'N'),
 							TermAgree	ENUM ('Y', 'N'),
 							SignedBy	NVARCHAR(50),
-							PaidRent	ENUM ('Y', 'N'),
-							LeaseAbility	NVARCHAR(140),
 							HousingGoals	NVARCHAR(255),
 							OverDue ENUM ('Y', 'N'),
 							OweCompanies	INT,
@@ -71,7 +68,7 @@
 							ExplainConcerns NVARCHAR(255) CHECK (Concerns = 'Y'),
 							FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 							)";
-	
+
 	$educationTable = "Education (
 									ResidentID	BIGINT,
 									EducationMax	NVARCHAR(30),
@@ -79,7 +76,7 @@
 									FurtherPlans	NVARCHAR(255) CHECK (FurtherEd ='Y'),
 									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 									)";
-	
+
 	$domesticTable = "DomesticInfo (
 									ResidentID	BIGINT,
 									CoParentIssues	NVARCHAR(255),
@@ -91,9 +88,11 @@
 									HomelessHistory	NVARCHAR(255),
 									HousingHistory	NVARCHAR(255),
 									Independent ENUM ('Y', 'N'),
+									PaidRent	ENUM ('Y', 'N'),
+									LeaseAbility	NVARCHAR(140),
 									FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 									)";
-	
+
 	$membershipTable = "Membership (
 										ResidentID	BIGINT,
 										AgencyName1	NVARCHAR(25),
@@ -130,7 +129,7 @@
 								MentalHealthDoc	NVARCHAR(50) CHECK (MentalHealthClient = 'Y'),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-										
+
 	$incarcerationTable = "Incarceration (
 										ResidentID	BIGINT,
 										Incarcerated	ENUM ('Y', 'N'),
@@ -145,7 +144,7 @@
 										ReasonForInstitutionalization	NVARCHAR(80),
 										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 										)";
-								
+
 	$vehicleTable = "Vehicle (
 								ResidentID	BIGINT,
 								NameOnRegistration	NVARCHAR(50),
@@ -157,60 +156,68 @@
 								OLN	NVARCHAR(20),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-	
+
 	$childrenTable = "Children (
 								ResidentID	BIGINT,
 								NumChildren INT,
-								ChildFullName1	NVARCHAR(50),
+								ChildFirstName1	NVARCHAR(25),
+								ChildLastName1	NVARCHAR(25),
 								ChildGender1	NVARCHAR(10),
-								ChildDOB1	NVARCHAR(11),
+								ChildDOB1	DATE,
 								ChildSSN1	NVARCHAR(10),
 								ChildCustodyIssues1	NVARCHAR(150),
 								
-								ChildFullName2	NVARCHAR(50),
+								ChildFirstName2	NVARCHAR(25),
+								ChildLastName2	NVARCHAR(25),
 								ChildGender2	NVARCHAR(10),
-								ChildDOB2	NVARCHAR(11),
+								ChildDOB2	DATE,
 								ChildSSN2	NVARCHAR(10),
 								ChildCustodyIssues2	NVARCHAR(150),
 								
-								ChildFullName3	NVARCHAR(50),
+								ChildFirstName3	NVARCHAR(25),
+								ChildLastName3	NVARCHAR(25),
 								ChildGender3	NVARCHAR(10),
-								ChildDOB3	NVARCHAR(11),
+								ChildDOB3	DATE,
 								ChildSSN3	NVARCHAR(10),
 								ChildCustodyIssues3	NVARCHAR(150),
 								
-								ChildFullName4	NVARCHAR(50),
+								ChildFirstName4	NVARCHAR(25),
+								ChildLastName4	NVARCHAR(25),
 								ChildGender4	NVARCHAR(10),
-								ChildDOB4	NVARCHAR(11),
+								ChildDOB4	DATE,
 								ChildSSN4	NVARCHAR(10),
 								ChildCustodyIssues4	NVARCHAR(150),
 								
-								ChildFullName5	NVARCHAR(50),
+								ChildFirstName5	NVARCHAR(25),
+								ChildLastName5	NVARCHAR(25),
 								ChildGender5	NVARCHAR(10),
-								ChildDOB5	NVARCHAR(11),
+								ChildDOB5	DATE,
 								ChildSSN5	NVARCHAR(10),
 								ChildCustodyIssues5	NVARCHAR(150),
 								
-								ChildFullName6	NVARCHAR(50),
+								ChildFirstName6	NVARCHAR(25),
+								ChildLastName6	NVARCHAR(25),
 								ChildGender6	NVARCHAR(10),
-								ChildDOB6	NVARCHAR(11),
+								ChildDOB6	DATE,
 								ChildSSN6	NVARCHAR(10),
 								ChildCustodyIssues6	NVARCHAR(150),
 								
-								ChildFullName7	NVARCHAR(50),
+								ChildFirstName7	NVARCHAR(25),
+								ChildLastName7	NVARCHAR(25),
 								ChildGender7	NVARCHAR(10),
-								ChildDOB7	NVARCHAR(11),
+								ChildDOB7	DATE,
 								ChildSSN7	NVARCHAR(10),
 								ChildCustodyIssues7	NVARCHAR(150),
 								
-								ChildFullName8	NVARCHAR(50),
+								ChildFirstName8	NVARCHAR(25),
+								ChildLastName8	NVARCHAR(25),
 								ChildGender8	NVARCHAR(10),
-								ChildDOB8	NVARCHAR(11),
+								ChildDOB8	DATE,
 								ChildSSN8	NVARCHAR(10),
 								ChildCustodyIssues8	NVARCHAR(150),
 								FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 								)";
-	
+
 	$employmentTable = "Employment (
 										ResidentID	BIGINT,
 										CompanyName	NVARCHAR(100),
@@ -224,7 +231,7 @@
 										EmploymentGoals	NVARCHAR(250),
 										FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 										)";
-	
+
 	$moneyTrackerTable = "MoneyTracker(
 											ResidentID	BIGINT,
 											CurrentBalance	NVARCHAR(10),
@@ -234,98 +241,98 @@
 											ApprovedBy	NVARCHAR(50),
 											FOREIGN KEY (ResidentID) REFERENCES GenericInfo (ResidentID)
 											)";
-								
+
 	//Strings
 	$newLine = "<br>";
-	
+
 	//Create User Table
 	if ( !$con->query( $createTable.$userTable) )
 	{
 		echo "Failed to create User Table." . $newLine;
 	}
-	
+
 	//Create Generic Table
 	if ( !$con->query( $createTable.$genericTable) )
 	{
 		echo "Failed to create Generic Table." . $newLine;
 	}
-	
+
 	//Create User Table
 	if ( !$con->query( $createTable.$personalStatus) )
 	{
 		echo "Failed to create Personal Status Table." . $newLine;
 	}
-	
+
 	//Create Education Table
 	if ( !$con->query( $createTable.$educationTable) )
 	{
 		echo "Failed to create Education Table." . $newLine;
 	}
-	
+
 	//Create Domestic Info Table
 	if ( !$con->query( $createTable.$domesticTable) )
 	{
 		echo "Failed to create Domestic Info Table." . $newLine;
 	}
-	
+
 	//Create Membership Table
 	if ( !$con->query( $createTable.$membershipTable) )
 	{
 		echo "Failed to create Membership Table." . $newLine;
 	}
-	
+
 	//Create Medical Table
 	if ( !$con->query( $createTable.$medicalTable) )
 	{
 		echo "Failed to create Medical Table." . $newLine;
 	}
-	
+
 	//Create Incarceration Table
 	if ( !$con->query( $createTable.$incarcerationTable) )
 	{
 		echo "Failed to create Incarceration Table." . $newLine;
 	}
-	
+
 	//Create Vehicle Table
 	if ( !$con->query( $createTable.$vehicleTable) )
 	{
 		echo "Failed to create Vehicle Table." . $newLine;
 	}
-	
+
 	//Create Children Table
 	if ( !$con->query( $createTable.$childrenTable) )
 	{
 		echo "Failed to create Children Table." . $newLine;
 	}
-	
+
 	//Create  Employment Table
 	if ( !$con->query( $createTable.$employmentTable) )
 	{
 		echo "Failed to create Employment Table." . $newLine;
 	}
-	
+
 	//Create Resident Money Tracker Table
 	if ( !$con->query( $createTable.$moneyTrackerTable) )
 	{
 		echo "Failed to create MoneyTracker Table." . $newLine;
 	}
-	
+
 	//Restrict the ENUM inputs to those specfied here
 	$restrictDatabase = "SET @@global.sql_mode = 'STRICT_ALL_TABLES' ";
-	
+
 	if ( !$con->query ( $restrictDatabase) )
 	{
 		echo "Restriction Failed!" . $newLine;
 	}
-	
-	
+
+
 	//Drop Database Option
 	//include 'DropDB.php';
-	
+
 	//Close the connection to the DB
 	include 'CloseConnection.php';
-	
+
 	 $completeLink = '<a href="http://localhost/phpmyadmin">Complete</a>';
-	 
+
 	 echo $newLine . $completeLink;
 ?>
