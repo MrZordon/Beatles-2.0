@@ -29,12 +29,7 @@
 		if(mysql_query("UPDATE genericinfo SET `Active`='$currentResident',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`SSN`='$ssn',`Language`='$language',`Religion`='$religion',`Street`='$streetAddress',`CityTown`='$cityAddress',`State`='$stateAddress',`Zip`='$zipAddress',`PhoneNum`='$cellPhone',`RefPerson`='$referralName',`RefAgency`='$referralAgency',`RefPhone`='$referralPhone',`NextKin`='$nameKin',`Kinship`='$relationshipKin',`KinStreet`='$streetKin',`KinCityTown`='$cityKin',`KinState`='$stateKin',`KinZip`='$zipKin',`KinPhone`='$phoneNumKin',`Comments`='$comments' WHERE `ResidentID`='$ResidentId'"))
 	    {
 	    	$page = "../userInfoPage.php?id=".$ResidentId.'';
-			echo'success';
 	    	header("Location:{$page}"); 
-			
-			
-			//$leadid=$_SESSION['leadid'];
-			//header ("location: buy.php?leadid={$leadid}");
 			
 	    }
 		else
@@ -42,8 +37,7 @@
 			// FUTURE Error Checking
 	  		$data = "Error Inserting Information: " . mysql_error();	
 			file_put_contents ("test.txt" , $data );
-			$page = "userInfoPage.php?id=".$ResidentId;
-			echo $page;
-	    	//header('Location: $page');
+			$page = "../userInfoPage.php?id=".$ResidentId.'';
+	    	header("Location:{$page}"); 
 		}
 ?>

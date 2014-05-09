@@ -5,7 +5,7 @@
 		$ResidentId = $_GET['id'];
 		include_once("includes/connect_ExodusDB.inc");
 
-		$result = mysql_query("SELECT * FROM `genericinfo` WHERE `ResidentID`='$ResidentId'");
+		$result = mysql_query("SELECT * FROM `genericInfo` WHERE `ResidentID`='$ResidentId'");
 			
 		while($row = mysql_fetch_array($result)) 
 		{
@@ -34,7 +34,6 @@
 			$comments = $row['Comments'];
 			$language = $row['Language'];
 			$currentResident = $row['Active'];
-			
 		}	
 ?>
 	<h2>Generic Information</h2>
@@ -216,7 +215,7 @@
 	
 	<div class="row"> 
 		<div class="large-12 columns"> 
-			<label>Comments: <textarea name="comments_Generic" id="commentsGeneric" value="<?=$comments;?>"></textarea> </label> 
+			<label>Comments: <input type="text" name="comments_Generic" id="commentsGeneric" value="<?=$comments;?>" /> </label> 
 		</div> 
 	</div> 
 	
