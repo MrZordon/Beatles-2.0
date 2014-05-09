@@ -43,7 +43,9 @@
 	    {
 	    	$data = "insert";
 		   	file_put_contents ("test.txt" , $data );
-
+			
+			$result= mysql_query("SELECT `ResidentID` FROM `genericinfo` WHERE `SSN` =$ssn");
+			$_SESSION['ResidentID'] = $ResidentId;
 	    }
 		else
 		{
