@@ -20,8 +20,13 @@
 <html>
 	<!-- Include header file -->
 	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	
 			<?php
 					include ('includes/header.php');
+					
+					include ('/includes/jScript_CP.php');
 			?>
 	</head>
 	<body>
