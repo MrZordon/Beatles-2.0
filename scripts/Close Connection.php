@@ -1,6 +1,9 @@
 <?php
-	//Shut it down!
-	mysql_close($con);
+	//Shut it down! -- only if using mysqli
+		//mysql_close($con);
+	
+	
+	$con = null;
 	
 	//Destroys Session Variables
 	session_unset();
