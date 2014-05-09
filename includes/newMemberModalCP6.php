@@ -5,9 +5,9 @@
 					<div class="row">
 						<div class=large-6 columns">
 							<label>Has the resident ever been incarcerated?</label> 
-									<input type="radio" name="incarceration_YN" value="Yes" id="incarcerationYN">
+									<input type="radio" name="incarceration_YN" value="Y" id="incarcerationYN">
 										<label for="incarcerationY">Yes</label> 
-									<input type="radio" name="incarceration_YN" value="No" id="incarcerationYN">
+									<input type="radio" name="incarceration_YN" value="N" id="incarcerationYN">
 										<label for="incarcerationN">No</label> 
 							</div>
 					</div>
@@ -32,9 +32,9 @@
 					<div class="row">
 						<div class=large-6 columns">
 							<label>Has the resident ever been institutionalized?</label> 
-									<input type="radio" name="institutionalized_YN" value="Yes" id="institutionalizedYN">
+									<input type="radio" name="institutionalized_YN" value="Y" id="institutionalizedYN">
 										<label for="institutionalizedY">Yes</label> 
-									<input type="radio" name="institutionalized_YN" value="No" id="institutionalizedYN">
+									<input type="radio" name="institutionalized_YN" value="N" id="institutionalizedYN">
 										<label for="institutionalizedN">No</label> 
 							</div>
 					</div>
@@ -58,13 +58,18 @@
 		<div class="row">
 			<div class="large-3 columns">				
 				<button id="IncarcerationSubmit" onclick="toggle_visibility('hideShow6);">Save Information</button>	
-				<p><button href="#" class="close-reveal-modal">Finish</buttonW></p>
 			</div>
 			<div class="large-9 columns">
 				<h4>Progress</h4>
 				<div class="progress large-9 round"> 
 					<span class="meter" style="width: 20%"></span> 
 				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="large-3 columns">				
+				<p><button href="#" class="close-reveal-modal">Finish</buttonW></p>
 			</div>
 		</div>
 		

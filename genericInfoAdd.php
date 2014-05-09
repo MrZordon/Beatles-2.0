@@ -64,8 +64,7 @@
 	    {
 	    	$data = "insert";
 		   	file_put_contents ("test.txt" , $data );
-			
-<<<<<<< HEAD
+
 			$result= mysql_query("SELECT `ResidentID` FROM `genericinfo` WHERE `SSN` =$ssn");
 			
 			
@@ -77,12 +76,12 @@
 			
 			$data = "ResID" . $_SESSION['ResidentID']. "ResID2:" . $ResidentId;
 			file_put_contents ("test.txt" , $data );	
-=======
+
 			$result= mysql_query("SELECT ResidentID FROM GenericInfo WHERE SSN ='$ssn' ");
 			$row = mysql_fetch_array($result);
 			
 			$_SESSION['ResidentID'] = $row['ResidentID'];
->>>>>>> cf7b39fd277935eb47c500e8134b992a5253195a
+
 	    }
 		else
 		{

@@ -11,7 +11,7 @@
 		
 		<div class="row">
 				<div class="large-3 columns"> 
-					<p><button href="#" class="close-reveal-modal">Finish</buttonW></p>
+					<p><button href="#" class="close-reveal-modal">Finish</button></p>
 				</div>
 				<div class="large-9 columns">
 						<h4>Progress</h4>

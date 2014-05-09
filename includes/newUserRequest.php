@@ -28,7 +28,7 @@
 	$password = mysql_real_escape_string($password);
 
 	//sql query to check the username and password in the DB
-	$sql="INSERT INTO Users (UserName, Password, LastLoggedOn, CurrentlyLoggedOn, userEmail, userType) VALUES ('$userName', '$password',' ', '$currentlyLoggedOn', '$emailAddress', '$userType')";
+	$sql="INSERT INTO Users (UserName, Password, LastLoggedOn, CurrentlyLoggedOn, UserEmail, UserType) VALUES ('$userName', '$password',CURDATE(), 'N', '$emailAddress', '$userType')";
 	
 	//submit the query
 	$result=mysql_query($sql);

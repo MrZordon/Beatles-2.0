@@ -3,7 +3,7 @@
     include_once("connect_ExodusDB.inc");
     session_start();
 
-	$currentEmployment = filter_var($_POST["agreementYN_Employment"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+	$agreementYNEmployment = filter_var($_POST["agreementYN_Employment"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
  	$companyNameEmployment = filter_var($_POST["companyName_Employment"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$managerNameEmployment = filter_var($_POST["managerName_Employment"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$managerPhoneNumEmployment = filter_var($_POST["managerPhoneNum_Employment"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
@@ -19,7 +19,7 @@
 	// if there is a result with the same ResidentId we are going to do an update
 	if (mysql_num_rows($query) == 0) 
 	{
-		if(mysql_query("INSERT INTO `employment`(`ResidentID`, `CompanyName`, `HoursFrom`, `HoursTo`, `ManagerName`, `ManagerPhoneNum`, `Income`, `RateOfPay`, `CurrentlyEmployed`) VALUES ('$ResidentId','$companyNameEmployment','$hoursFromEmployment','$hoursToEmployment','$managerNameEmployment','$managerPhoneNumEmployment','$incomeEmployment','$rateOfPayEmployment','$currentEmployment')",$con))
+		if(mysql_query("INSERT INTO `employment`(`ResidentID`, `CompanyName`, `HoursFrom`, `HoursTo`, `ManagerName`, `ManagerPhoneNum`, `Income`, `RateOfPay`, `CurrentlyEmployed`) VALUES ('$ResidentId','$companyNameEmployment','$hoursFromEmployment','$hoursToEmployment','$managerNameEmployment','$managerPhoneNumEmployment','$incomeEmployment','$rateOfPayEmployment','$agreementYNEmployment')",$con))
 	    {
 
 	    }
@@ -27,13 +27,14 @@
 		{
 			// Future Error Logs
 	  		$data = "Error Inserting Information: " . mysql_error() . 'ResidentID:' . $_SESSION['ResidentID'];
-			file_put_contents ("test.txt" , $data );
+			$new = '                                 CurrentEmployment: ' . $agreementYNEmployment;
+			file_put_contents ("test.txt" , $data . $new);
 		}
 	}
 	else 
 	{
 
-		if(mysql_query("UPDATE `employment` SET `CompanyName`='$companyNameEmployment',`HoursFrom`='$hoursFromEmployment',`HoursTo`='$hoursToEmployment',`ManagerName`='$managerNameEmployment',`ManagerPhoneNum`='$managerPhoneNumEmployment',`Income`='$incomeEmployment',`RateOfPay`='$rateOfPayEmployment',`CurrentlyEmployed`='$currentEmployment' WHERE `ResidentID` = '$ResidentId'"))
+		if(mysql_query("UPDATE `employment` SET `CompanyName`='$companyNameEmployment',`HoursFrom`='$hoursFromEmployment',`HoursTo`='$hoursToEmployment',`ManagerName`='$managerNameEmployment',`ManagerPhoneNum`='$managerPhoneNumEmployment',`Income`='$incomeEmployment',`RateOfPay`='$rateOfPayEmployment',`CurrentlyEmployed`='$agreementYNEmployment' WHERE `ResidentID` = '$ResidentId'"))
 	    {
 
 	    }

@@ -6,6 +6,8 @@
     
 	// The reason for the cascading ifs is to see how many variables
 	// we have to add to the database.  No need to add more than necessary
+	
+	$counter=0; //initialize the counter silly
     if(isset($_POST["child_Name1"]) && strlen($_POST["child_Name1"])>0)
     {
     	$childName1 = filter_var($_POST["child_Name1"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);

@@ -10,9 +10,9 @@
 					<div class="row">
 						<div class="large-10 columns"> 
 								<label>Does the resident have plans to further their education?</label> 
-										<input type="radio" name="continueEd_Education" value="Yes" id="continueEdEducation">
+										<input type="radio" name="continueEd_Education" value='Y' id="continueEdEducation">
 											<label for="continueEdY">Yes</label> 
-										<input type="radio" name="continueEd_Education" value="No" id="continueEdEducation">
+										<input type="radio" name="continueEd_Education" value='N' id="continueEdEducation">
 											<label for="continueEdN">No</label> 	
 							</div> 
 					</div>

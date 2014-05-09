@@ -39,13 +39,16 @@
 
 	if($count == 0) 
 	{
-		if(mysql_query("INSERT INTO genericinfo (FirstName,MiddleInitial,LastName,Gender,SSN,PhoneNum,ResidentType,Active,DateAdded,DOB) VALUES('$firstName','$middleName','$lastName','$gender','$ssn','$cellPhone','$residentType','$currentResident','$DateAdded','$DOBGeneric')",$con))
+		if(mysql_query("INSERT INTO GenericInfo (FirstName,MiddleInitial,LastName,Gender,SSN,PhoneNum,ResidentType,Active,DateAdded,DOB) VALUES('$firstName','$middleName','$lastName','$gender','$ssn','$cellPhone','$residentType','$currentResident','$DateAdded','$DOBGeneric')",$con))
 	    {
 	    	$data = "insert";
 		   	file_put_contents ("test.txt" , $data );
 			
-			$result= mysql_query("SELECT `ResidentID` FROM `genericinfo` WHERE `SSN` =$ssn");
-			$_SESSION['ResidentID'] = $ResidentId;
+			$result= mysql_query("SELECT ResidentID FROM GenericInfo WHERE SSN ='$ssn' ");
+			$row = mysql_fetch_array($result);
+			
+			$_SESSION['ResidentID'] = $row['ResidentID'];
+			file_put_contents ("test.txt" , $_SESSION['ResidentID'] );
 	    }
 		else
 		{
@@ -58,7 +61,11 @@
 
 		if(mysql_query("UPDATE genericinfo SET `ResidentType`='$residentType',`Active`='$currentResident',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`Gender`='$gender',`SSN`='$ssn',`DOB`='$DOBGeneric',`PhoneNum`='$cellPhone' WHERE `SSN`='$ssn'"))
 	    {
-
+			$result= mysql_query("SELECT ResidentID FROM GenericInfo WHERE SSN ='$ssn' ");
+			$row = mysql_fetch_array($result);
+			
+			$_SESSION['ResidentID'] = $row['ResidentID'];
+			//file_put_contents ("test.txt" , $_SESSION['ResidentID'] );
 	    }
 		else
 		{
