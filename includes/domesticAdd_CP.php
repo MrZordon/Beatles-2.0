@@ -17,14 +17,12 @@
 	$landlordCommentsDomestic = filter_var($_POST["landlordComments_Domestic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 	$ResidentId = $_SESSION['ResidentID'];
-	$query = mysql_query("SELECT ResidentID FROM `incarceration` WHERE `ResidentID` = $ResidentId");
-
 
 	// If there are no results with the same ResidentId that means we are doing an Insert
 	// if there is a result with the same ResidentId we are going to do an update
 	if (mysql_num_rows($query) == 0) 
 	{
-		if(mysql_query("INSERT INTO Domestic (ResidentId,DomViolence,SafetyPlan,RestrainingOrder ,PerpName,FamilyInfo,HomelessHistory,HousingHistory,Independent,PaidRent,LeaseAbility) VALUES('$ResidentID','$violenceYNDomestic','$safetyYNDomestic','$restrainingOrderYNDomestic','$perpNameDomestic','$familyDetailsDomestic','$homelessDetailsDomestic','$housingDetailsDomestic','$livedAloneYNDomestic','$rentYNDomestic','$landlordCommentsDomestic')",$con))
+		if(mysql_query("INSERT INTO DomesticInfo (ResidentId,DomViolence,SafetyPlan,RestrainingOrder ,PerpName,FamilyInfo,HomelessHistory,HousingHistory,Independent,PaidRent,LeaseAbility) VALUES('$ResidentId','$violenceYNDomestic','$safetyYNDomestic','$restrainingOrderYNDomestic','$perpNameDomestic','$familyDetailsDomestic','$homelessDetailsDomestic','$housingDetailsDomestic','$livedAloneYNDomestic','$rentYNDomestic','$landlordCommentsDomestic')",$con))
 	    {
 
 	    }
@@ -38,7 +36,7 @@
 	}
 	else 
 	{
-		if(mysql_query("UPDATE `Domestic` SET `DomViolence`= '$violenceYNDomestic',`SafetyPlan`= '$safetyYNDomestic',`RestrainingOrder`= '$restrainingOrderYNDomestic',`PerpName`='$perpNameDomestic',`FamilyInfo`='$familyDetailsDomestic',`HomelessHistory`='$homelessDetailsDomestic',`HousingHistory`='$housingDetailsDomestic',`Independent`='$livedAloneYNDomestic',`PaidRent`='$rentYNDomestic',`LeaseAbility`='$landlordCommentsDomestic' WHERE `ResidentID` = '$ResidentId'"))
+		if(mysql_query("UPDATE `DomesticInfo` SET `DomViolence`= '$violenceYNDomestic',`SafetyPlan`= '$safetyYNDomestic',`RestrainingOrder`= '$restrainingOrderYNDomestic',`PerpName`='$perpNameDomestic',`FamilyInfo`='$familyDetailsDomestic',`HomelessHistory`='$homelessDetailsDomestic',`HousingHistory`='$housingDetailsDomestic',`Independent`='$livedAloneYNDomestic',`PaidRent`='$rentYNDomestic',`LeaseAbility`='$landlordCommentsDomestic' WHERE `ResidentID` = '$ResidentId'"))
 	    {
 
 	    }
