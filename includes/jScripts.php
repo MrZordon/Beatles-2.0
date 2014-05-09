@@ -300,9 +300,9 @@
 		{
 			e.preventDefault();
 			alert("education");
-		    var myData = {	residentDegree_Education: $("#registrationNameVehichle").val(),
-		    				continueEdYN_Education: $("#licenseNumVehichle").val(),
-		    				futureEdu_Education: $("#stateVehichle").val()
+		    var myData = {	residentDegree_Education: $("#residentDegreeEducation").val(),
+		    				continueEdYN_Education: $("#continueEdEducation").val(),
+		    				futureEdu_Education: $("#futurePlansEducation").val()
 		    				}; //build a post data structure
 		    			
 	    	jQuery.ajax(
