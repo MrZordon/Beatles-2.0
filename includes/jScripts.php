@@ -185,7 +185,7 @@
 		    				$incarceration_Charges: $("#incarcerationCharges").val(),
 		    				$incarceration_Start: $("#incarcerationStart").val(),
 		    				$incarceration_End: $("#incarcerationEnd").val(),
-		    				$incarceration_Reason: $("#incarcerationReason").val(),,
+		    				$incarceration_Reason: $("#incarcerationReason").val(),
 		    				$institutionalized_YN: $("#institutionalizedYN").val(),
 		    				$institution_Name: $("#institutionName").val(),
 		    				$institution_Start: $("#institutionStart").val(),
