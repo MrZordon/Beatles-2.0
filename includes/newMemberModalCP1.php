@@ -214,7 +214,7 @@
 	  
 	  <div class="row">
 			<div class="large-3 columns">
-					<button id="FormSubmit" onclick="toggle_visibility('hideShow1');">Save Information</button>	
+					<button id="GenericSubmit" onclick="toggle_visibility('hideShow1');">Save Information</button>	
 					<p><button href="#" data-reveal-id="NewMemberModalCP2" class="secondary button" id="hideShow1" style="display:none;">Next</button></p>
 				</div>
 				<div class="large-9 columns">
