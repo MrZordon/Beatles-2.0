@@ -5,9 +5,9 @@
 					<label>Full Name:</label><input type="text" name="child_Name" id="childName" placeholder="Full Name" />
 
 					<label>Gender:</label> 
-					<input type="radio" name="child_Gender" value="Male" id="childGender">
+					<input type="radio" name="child_Gender" value="M" id="childGender">
 						<label for="Male1">Male</label> 
-					<input type="radio" name="child_Gender" value="Female" id="childGender">
+					<input type="radio" name="child_Gender" value="F" id="childGender">
 						<label for="Female1">Female</label> 	
 
 
