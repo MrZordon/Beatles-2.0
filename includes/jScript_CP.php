@@ -146,22 +146,22 @@
 		{
 			e.preventDefault();
 			alert("incarcerationadd");
-		    var myData = {	$incarceration_YN: $("#incarcerationYN").val(),
-		    				$incarceration_Loc: $("#incarcerationLoc").val(),
-		    				$incarceration_Charges: $("#incarcerationCharges").val(),
-		    				$incarceration_Start: $("#incarcerationStart").val(),
-		    				$incarceration_End: $("#incarcerationEnd").val(),
-		    				$institutionalized_YN: $("#institutionalizedYN").val(),
-		    				$institution_Name: $("#institutionName").val(),
-		    				$institution_Start: $("#institutionStart").val(),
-		    				$institution_End: $("#institutionEnd").val(),
-		    				$institution_Reason: $("#institutionReason").val()
+		    var myData = {	incarceration_YN: $("#incarcerationYN").val(),
+		    				incarceration_Loc: $("#incarcerationLoc").val(),
+		    				incarceration_Charges: $("#incarcerationCharges").val(),
+		    				incarceration_Start: $("#incarcerationStart").val(),
+		    				incarceration_End: $("#incarcerationEnd").val(),
+		    				institutionalized_YN: $("#institutionalizedYN").val(),
+		    				institution_Name: $("#institutionName").val(),
+		    				institution_Start: $("#institutionStart").val(),
+		    				institution_End: $("#institutionEnd").val(),
+		    				institution_Reason: $("#institutionReason").val()
 		    				}; //build a post data structure
 
 	    	jQuery.ajax(
 	    	{
 	    			type: "POST", // Post / Get method
-	    			url: "includes/criminalAdd_CP.php", //Where form data is sent on submission
+	    			url: "includes/incarcerationAdd_CP.php", //Where form data is sent on submission
 	    			dataType:"text", // Data type, HTML, json etc.
 	    			//Form variables
 	    			data:myData,
@@ -187,7 +187,7 @@
 		{
 			e.preventDefault();
 			alert("employee");
-		    var myData = {	current_Employment: $("#currentEmployment").val(),
+		    var myData = {	agreementYN_Employment: $("#agreementYNEmployment").val(),
 		    				companyName_Employment: $("#companyNameEmployment").val(),
 		    				managerName_Employment: $("#managerNameEmployment").val(),
 		    				managerPhoneNum_Employment: $("#managerPhoneNumEmployment").val(),
@@ -229,7 +229,7 @@
 			alert("education");
 		    var myData = {	residentDegree_Education: $("#residentDegreeEducation").val(),
 		    				continueEd_Education: $("#continueEdEducation").val(),
-		    				futureEdu_Education: $("#futurePlansEducation").val()
+		    				futurePlans_Education: $("#futurePlansEducation").val()
 		    				}; //build a post data structure
 
 	    	jQuery.ajax(
