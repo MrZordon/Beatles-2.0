@@ -6,9 +6,9 @@
 		<div class="row"> 
 				<div class="large-4 columns"> 
 									<label>Currently employed?</label> 
-											<input type="radio" name="current_Employment" value="Yes" id="currentEmployment">
+											<input type="radio" name="current_Employment" value="Y" id="currentEmployment">
 												<label for="agreementY">Yes</label> 
-											<input type="radio" name="current_Employment" value="No" id="currentEmployment">
+											<input type="radio" name="current_Employment" value="N" id="currentEmployment">
 												<label for="agreementN">No</label> 	
 				</div> 
 		</div>

@@ -5,7 +5,7 @@
 	$password = $_SESSION['password'];
 
 	//Database to be created and used
-	$database = 'Exodus';
+	$database = 'Exo';
 	$makeDatabase = "CREATE DATABASE IF NOT EXISTS " . $database;
 	$useDatabase = "USE " . $database;
 	

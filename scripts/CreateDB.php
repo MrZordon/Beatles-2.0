@@ -13,7 +13,7 @@
 	//include 'DropDB.php';
 
 	//Tables to be made
-	$createTable = "CREATE TABLE ";
+	$createTable = "CREATE TABLE";
 
 	$userTable = "Users (
 							UserName NVARCHAR(25),
@@ -238,73 +238,78 @@
 	$newLine = "<br>";
 
 	//Create User Table
-	if ( !$con->query( $createTable.$userTable) )
+	if ( mysql_query(" ". $createTable . " ". $userTable) )
+	{
+		
+	}
+	else
 	{
 		echo "Failed to create User Table." . $newLine;
+		echo " ". $createTable . " ". $userTable;
 	}
 
 	//Create Generic Table
-	if ( !$con->query( $createTable.$genericTable) )
+	if ( mysql_query("". $createTable. " ".$genericTable."") )
 	{
 		echo "Failed to create Generic Table." . $newLine;
 	}
 
 	//Create User Table
-	if ( !$con->query( $createTable.$personalStatus) )
+	if ( !$con->query( $createTable. " ".$personalStatus) )
 	{
 		echo "Failed to create Personal Status Table." . $newLine;
 	}
 
 	//Create Education Table
-	if ( !$con->query( $createTable.$educationTable) )
+	if ( !$con->query( $createTable. " ".$educationTable) )
 	{
 		echo "Failed to create Education Table." . $newLine;
 	}
 
 	//Create Domestic Info Table
-	if ( !$con->query( $createTable.$domesticTable) )
+	if ( !$con->query( $createTable. " ".$domesticTable) )
 	{
 		echo "Failed to create Domestic Info Table." . $newLine;
 	}
 
 	//Create Membership Table
-	if ( !$con->query( $createTable.$membershipTable) )
+	if ( !$con->query( $createTable. " ".$membershipTable) )
 	{
 		echo "Failed to create Membership Table." . $newLine;
 	}
 
 	//Create Medical Table
-	if ( !$con->query( $createTable.$medicalTable) )
+	if ( !$con->query( $createTable. " ".$medicalTable) )
 	{
 		echo "Failed to create Medical Table." . $newLine;
 	}
 
 	//Create Incarceration Table
-	if ( !$con->query( $createTable.$incarcerationTable) )
+	if ( !$con->query( $createTable. " ".$incarcerationTable) )
 	{
 		echo "Failed to create Incarceration Table." . $newLine;
 	}
 
 	//Create Vehicle Table
-	if ( !$con->query( $createTable.$vehicleTable) )
+	if ( !$con->query( $createTable. " ".$vehicleTable) )
 	{
 		echo "Failed to create Vehicle Table." . $newLine;
 	}
 
 	//Create Children Table
-	if ( !$con->query( $createTable.$childrenTable) )
+	if ( !$con->query( $createTable. " ".$childrenTable) )
 	{
 		echo "Failed to create Children Table." . $newLine;
 	}
 
 	//Create  Employment Table
-	if ( !$con->query( $createTable.$employmentTable) )
+	if ( !$con->query( $createTable. " ".$employmentTable) )
 	{
 		echo "Failed to create Employment Table." . $newLine;
 	}
 
 	//Create Resident Money Tracker Table
-	if ( !$con->query( $createTable.$moneyTrackerTable) )
+	if ( !$con->query( $createTable. " ".$moneyTrackerTable) )
 	{
 		echo "Failed to create MoneyTracker Table." . $newLine;
 	}

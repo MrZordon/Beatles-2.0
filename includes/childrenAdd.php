@@ -99,361 +99,361 @@
 				    				} // end of if child 8
 				    				else
 									{											
-										$childName8 = null;
-								     	$childGender8 = null;
-										$childSSN8 = null;
-										$childMonth8 = null;
-										$childDay8 = null;
-										$childYear8 = null;
-										$childCustody8 = null;
-										$child_DOB8 = null;
+										$childName8 = NULL;
+								     	$childGender8 = NULL;
+										$childSSN8 = NULL;
+										$childMonth8 = NULL;
+										$childDay8 = NULL;
+										$childYear8 = NULL;
+										$childCustody8 = NULL;
+										$child_DOB8 = NULL;
 									}
 			    				}// end of if child 7
 			    				else
 								{
-									$childName7 = null;
-							     	$childGender7 = null;
-									$childSSN7 = null;
-									$childMonth7 = null;
-									$childDay7 = null;
-									$childYear7 = null;
-									$childCustody7 = null;
-									$child_DOB7 = null;
+									$childName7 = NULL;
+							     	$childGender7 = NULL;
+									$childSSN7 = NULL;
+									$childMonth7 = NULL;
+									$childDay7 = NULL;
+									$childYear7 = NULL;
+									$childCustody7 = NULL;
+									$child_DOB7 = NULL;
 																										
-									$childName8 = null;
-							     	$childGender8 = null;
-									$childSSN8 = null;
-									$childMonth8 = null;
-									$childDay8 = null;
-									$childYear8 = null;
-									$childCustody8 = null;
-									$child_DOB8 = null;
+									$childName8 = NULL;
+							     	$childGender8 = NULL;
+									$childSSN8 = NULL;
+									$childMonth8 = NULL;
+									$childDay8 = NULL;
+									$childYear8 = NULL;
+									$childCustody8 = NULL;
+									$child_DOB8 = NULL;
 								}
 		    				} // end of if child 6
 		    				else
 							{																	
-								$childName6 = null;
-						     	$childGender6 = null;
-								$childSSN6 = null;
-								$childMonth6 = null;
-								$childDay6 = null;
-								$childYear6 = null;
-								$childCustody6 = null;
-								$child_DOB6 = null;
+								$childName6 = NULL;
+						     	$childGender6 = NULL;
+								$childSSN6 = NULL;
+								$childMonth6 = NULL;
+								$childDay6 = NULL;
+								$childYear6 = NULL;
+								$childCustody6 = NULL;
+								$child_DOB6 = NULL;
 												
-								$childName7 = null;
-						     	$childGender7 = null;
-								$childSSN7 = null;
-								$childMonth7 = null;
-								$childDay7 = null;
-								$childYear7 = null;
-								$childCustody7 = null;
-								$child_DOB7 = null;
+								$childName7 = NULL;
+						     	$childGender7 = NULL;
+								$childSSN7 = NULL;
+								$childMonth7 = NULL;
+								$childDay7 = NULL;
+								$childYear7 = NULL;
+								$childCustody7 = NULL;
+								$child_DOB7 = NULL;
 									
 							
-								$childName8 = null;
-						     	$childGender8 = null;
-								$childSSN8 = null;
-								$childMonth8 = null;
-								$childDay8 = null;
-								$childYear8 = null;
-								$childCustody8 = null;
-								$child_DOB8 = null;
+								$childName8 = NULL;
+						     	$childGender8 = NULL;
+								$childSSN8 = NULL;
+								$childMonth8 = NULL;
+								$childDay8 = NULL;
+								$childYear8 = NULL;
+								$childCustody8 = NULL;
+								$child_DOB8 = NULL;
 							}
 	    				}// end of child 5
 	    				else
 						{	
-							$childName5 = null;
-					     	$childGender5 = null;
-							$childSSN5 = null;
-							$childMonth5 = null;
-							$childDay5 = null;
-							$childYear5 = null;
-							$childCustody5 = null;
-							$child_DOB5 = null;
+							$childName5 = NULL;
+					     	$childGender5 = NULL;
+							$childSSN5 = NULL;
+							$childMonth5 = NULL;
+							$childDay5 = NULL;
+							$childYear5 = NULL;
+							$childCustody5 = NULL;
+							$child_DOB5 = NULL;
 							
-							$childName6 = null;
-					     	$childGender6 = null;
-							$childSSN6 = null;
-							$childMonth6 = null;
-							$childDay6 = null;
-							$childYear6 = null;
-							$childCustody6 = null;
-							$child_DOB6 = null;
+							$childName6 = NULL;
+					     	$childGender6 = NULL;
+							$childSSN6 = NULL;
+							$childMonth6 = NULL;
+							$childDay6 = NULL;
+							$childYear6 = NULL;
+							$childCustody6 = NULL;
+							$child_DOB6 = NULL;
 											
-							$childName7 = null;
-					     	$childGender7 = null;
-							$childSSN7 = null;
-							$childMonth7 = null;
-							$childDay7 = null;
-							$childYear7 = null;
-							$childCustody7 = null;
-							$child_DOB7 = null;
+							$childName7 = NULL;
+					     	$childGender7 = NULL;
+							$childSSN7 = NULL;
+							$childMonth7 = NULL;
+							$childDay7 = NULL;
+							$childYear7 = NULL;
+							$childCustody7 = NULL;
+							$child_DOB7 = NULL;
 								
 						
-							$childName8 = null;
-					     	$childGender8 = null;
-							$childSSN8 = null;
-							$childMonth8 = null;
-							$childDay8 = null;
-							$childYear8 = null;
-							$childCustody8 = null;
-							$child_DOB8 = null;
+							$childName8 = NULL;
+					     	$childGender8 = NULL;
+							$childSSN8 = NULL;
+							$childMonth8 = NULL;
+							$childDay8 = NULL;
+							$childYear8 = NULL;
+							$childCustody8 = NULL;
+							$child_DOB8 = NULL;
 						}
     				} // end of child 4
     				else
 					{
-						$childName4 = null;
-				     	$childGender4 = null;
-						$childSSN4 = null;
-						$childMonth4 = null;
-						$childDay4 = null;
-						$childYear4 = null;
-						$childCustody4 = null;
-						$child_DOB4 = null;
+						$childName4 = NULL;
+				     	$childGender4 = NULL;
+						$childSSN4 = NULL;
+						$childMonth4 = NULL;
+						$childDay4 = NULL;
+						$childYear4 = NULL;
+						$childCustody4 = NULL;
+						$child_DOB4 = NULL;
 				
-						$childName5 = null;
-				     	$childGender5 = null;
-						$childSSN5 = null;
-						$childMonth5 = null;
-						$childDay5 = null;
-						$childYear5 = null;
-						$childCustody5 = null;
-						$child_DOB5 = null;
+						$childName5 = NULL;
+				     	$childGender5 = NULL;
+						$childSSN5 = NULL;
+						$childMonth5 = NULL;
+						$childDay5 = NULL;
+						$childYear5 = NULL;
+						$childCustody5 = NULL;
+						$child_DOB5 = NULL;
 						
-						$childName6 = null;
-				     	$childGender6 = null;
-						$childSSN6 = null;
-						$childMonth6 = null;
-						$childDay6 = null;
-						$childYear6 = null;
-						$childCustody6 = null;
-						$child_DOB6 = null;
+						$childName6 = NULL;
+				     	$childGender6 = NULL;
+						$childSSN6 = NULL;
+						$childMonth6 = NULL;
+						$childDay6 = NULL;
+						$childYear6 = NULL;
+						$childCustody6 = NULL;
+						$child_DOB6 = NULL;
 										
-						$childName7 = null;
-				     	$childGender7 = null;
-						$childSSN7 = null;
-						$childMonth7 = null;
-						$childDay7 = null;
-						$childYear7 = null;
-						$childCustody7 = null;
-						$child_DOB7 = null;
+						$childName7 = NULL;
+				     	$childGender7 = NULL;
+						$childSSN7 = NULL;
+						$childMonth7 = NULL;
+						$childDay7 = NULL;
+						$childYear7 = NULL;
+						$childCustody7 = NULL;
+						$child_DOB7 = NULL;
 							
 					
-						$childName8 = null;
-				     	$childGender8 = null;
-						$childSSN8 = null;
-						$childMonth8 = null;
-						$childDay8 = null;
-						$childYear8 = null;
-						$childCustody8 = null;
-						$child_DOB8 = null;
+						$childName8 = NULL;
+				     	$childGender8 = NULL;
+						$childSSN8 = NULL;
+						$childMonth8 = NULL;
+						$childDay8 = NULL;
+						$childYear8 = NULL;
+						$childCustody8 = NULL;
+						$child_DOB8 = NULL;
 					}
     			} // end of child 3
 				else
 				{
-					$childName3 = null;
-			     	$childGender3 = null;
-					$childSSN3 = null;
-					$childMonth3 = null;
-					$childDay3 = null;
-					$childYear3 = null;
-					$childCustody3 = null;
-					$child_DOB3 = null;
+					$childName3 = NULL;
+			     	$childGender3 = NULL;
+					$childSSN3 = NULL;
+					$childMonth3 = NULL;
+					$childDay3 = NULL;
+					$childYear3 = NULL;
+					$childCustody3 = NULL;
+					$child_DOB3 = NULL;
 					
-					$childName4 = null;
-			     	$childGender4 = null;
-					$childSSN4 = null;
-					$childMonth4 = null;
-					$childDay4 = null;
-					$childYear4 = null;
-					$childCustody4 = null;
-					$child_DOB4 = null;
+					$childName4 = NULL;
+			     	$childGender4 = NULL;
+					$childSSN4 = NULL;
+					$childMonth4 = NULL;
+					$childDay4 = NULL;
+					$childYear4 = NULL;
+					$childCustody4 = NULL;
+					$child_DOB4 = NULL;
 			
-					$childName5 = null;
-			     	$childGender5 = null;
-					$childSSN5 = null;
-					$childMonth5 = null;
-					$childDay5 = null;
-					$childYear5 = null;
-					$childCustody5 = null;
-					$child_DOB5 = null;
+					$childName5 = NULL;
+			     	$childGender5 = NULL;
+					$childSSN5 = NULL;
+					$childMonth5 = NULL;
+					$childDay5 = NULL;
+					$childYear5 = NULL;
+					$childCustody5 = NULL;
+					$child_DOB5 = NULL;
 					
-					$childName6 = null;
-			     	$childGender6 = null;
-					$childSSN6 = null;
-					$childMonth6 = null;
-					$childDay6 = null;
-					$childYear6 = null;
-					$childCustody6 = null;
-					$child_DOB6 = null;
+					$childName6 = NULL;
+			     	$childGender6 = NULL;
+					$childSSN6 = NULL;
+					$childMonth6 = NULL;
+					$childDay6 = NULL;
+					$childYear6 = NULL;
+					$childCustody6 = NULL;
+					$child_DOB6 = NULL;
 									
-					$childName7 = null;
-			     	$childGender7 = null;
-					$childSSN7 = null;
-					$childMonth7 = null;
-					$childDay7 = null;
-					$childYear7 = null;
-					$childCustody7 = null;
-					$child_DOB7 = null;
+					$childName7 = NULL;
+			     	$childGender7 = NULL;
+					$childSSN7 = NULL;
+					$childMonth7 = NULL;
+					$childDay7 = NULL;
+					$childYear7 = NULL;
+					$childCustody7 = NULL;
+					$child_DOB7 = NULL;
 						
 				
-					$childName8 = null;
-			     	$childGender8 = null;
-					$childSSN8 = null;
-					$childMonth8 = null;
-					$childDay8 = null;
-					$childYear8 = null;
-					$childCustody8 = null;
-					$child_DOB8 = null;
+					$childName8 = NULL;
+			     	$childGender8 = NULL;
+					$childSSN8 = NULL;
+					$childMonth8 = NULL;
+					$childDay8 = NULL;
+					$childYear8 = NULL;
+					$childCustody8 = NULL;
+					$child_DOB8 = NULL;
 				}
 				
 			}// end of if child 2
 			else
 			{
-				$childName2 = null;
-		     	$childGender2 = null;
-				$childSSN2 = null;
-				$childMonth2 = null;
-				$childDay2 = null;
-				$childYear2 = null;
-				$childCustody2 = null;
+				$childName2 = NULL;
+		     	$childGender2 = NULL;
+				$childSSN2 = NULL;
+				$childMonth2 = NULL;
+				$childDay2 = NULL;
+				$childYear2 = NULL;
+				$childCustody2 = NULL;
 		
-				$child_DOB2 = null;
+				$child_DOB2 = NULL;
 				
-				$childName3 = null;
-		     	$childGender3 = null;
-				$childSSN3 = null;
-				$childMonth3 = null;
-				$childDay3 = null;
-				$childYear3 = null;
-				$childCustody3 = null;
-				$child_DOB3 = null;
+				$childName3 = NULL;
+		     	$childGender3 = NULL;
+				$childSSN3 = NULL;
+				$childMonth3 = NULL;
+				$childDay3 = NULL;
+				$childYear3 = NULL;
+				$childCustody3 = NULL;
+				$child_DOB3 = NULL;
 				
-				$childName4 = null;
-		     	$childGender4 = null;
-				$childSSN4 = null;
-				$childMonth4 = null;
-				$childDay4 = null;
-				$childYear4 = null;
-				$childCustody4 = null;
-				$child_DOB4 = null;
+				$childName4 = NULL;
+		     	$childGender4 = NULL;
+				$childSSN4 = NULL;
+				$childMonth4 = NULL;
+				$childDay4 = NULL;
+				$childYear4 = NULL;
+				$childCustody4 = NULL;
+				$child_DOB4 = NULL;
 		
-				$childName5 = null;
-		     	$childGender5 = null;
-				$childSSN5 = null;
-				$childMonth5 = null;
-				$childDay5 = null;
-				$childYear5 = null;
-				$childCustody5 = null;
-				$child_DOB5 = null;
+				$childName5 = NULL;
+		     	$childGender5 = NULL;
+				$childSSN5 = NULL;
+				$childMonth5 = NULL;
+				$childDay5 = NULL;
+				$childYear5 = NULL;
+				$childCustody5 = NULL;
+				$child_DOB5 = NULL;
 				
-				$childName6 = null;
-		     	$childGender6 = null;
-				$childSSN6 = null;
-				$childMonth6 = null;
-				$childDay6 = null;
-				$childYear6 = null;
-				$childCustody6 = null;
-				$child_DOB6 = null;
+				$childName6 = NULL;
+		     	$childGender6 = NULL;
+				$childSSN6 = NULL;
+				$childMonth6 = NULL;
+				$childDay6 = NULL;
+				$childYear6 = NULL;
+				$childCustody6 = NULL;
+				$child_DOB6 = NULL;
 								
-				$childName7 = null;
-		     	$childGender7 = null;
-				$childSSN7 = null;
-				$childMonth7 = null;
-				$childDay7 = null;
-				$childYear7 = null;
-				$childCustody7 = null;
-				$child_DOB7 = null;
+				$childName7 = NULL;
+		     	$childGender7 = NULL;
+				$childSSN7 = NULL;
+				$childMonth7 = NULL;
+				$childDay7 = NULL;
+				$childYear7 = NULL;
+				$childCustody7 = NULL;
+				$child_DOB7 = NULL;
 					
 			
-				$childName8 = null;
-		     	$childGender8 = null;
-				$childSSN8 = null;
-				$childMonth8 = null;
-				$childDay8 = null;
-				$childYear8 = null;
-				$childCustody8 = null;
-				$child_DOB8 = null;
+				$childName8 = NULL;
+		     	$childGender8 = NULL;
+				$childSSN8 = NULL;
+				$childMonth8 = NULL;
+				$childDay8 = NULL;
+				$childYear8 = NULL;
+				$childCustody8 = NULL;
+				$child_DOB8 = NULL;
 			}
 	
 	} // end of child 1
 	else
 	{
-		$childName1 = null;
-     	$childGender1 = null;
-		$childSSN1 = null;
-		$childMonth1 = null;
-		$childDay1 = null;
-		$childYear1 = null;
-		$childCustody1 = null;
+		$childName1 = NULL;
+     	$childGender1 = NULL;
+		$childSSN1 = NULL;
+		$childMonth1 = NULL;
+		$childDay1 = NULL;
+		$childYear1 = NULL;
+		$childCustody1 = NULL;
 
-		$child_DOB1 = null;
+		$child_DOB1 = NULL;
 		
-		$childName2 = null;
-     	$childGender2 = null;
-		$childSSN2 = null;
-		$childMonth2 = null;
-		$childDay2 = null;
-		$childYear2 = null;
-		$childCustody2 = null;
+		$childName2 = NULL;
+     	$childGender2 = NULL;
+		$childSSN2 = NULL;
+		$childMonth2 = NULL;
+		$childDay2 = NULL;
+		$childYear2 = NULL;
+		$childCustody2 = NULL;
 
-		$child_DOB2 = null;
+		$child_DOB2 = NULL;
 		
-		$childName3 = null;
-     	$childGender3 = null;
-		$childSSN3 = null;
-		$childMonth3 = null;
-		$childDay3 = null;
-		$childYear3 = null;
-		$childCustody3 = null;
-		$child_DOB3 = null;
+		$childName3 = NULL;
+     	$childGender3 = NULL;
+		$childSSN3 = NULL;
+		$childMonth3 = NULL;
+		$childDay3 = NULL;
+		$childYear3 = NULL;
+		$childCustody3 = NULL;
+		$child_DOB3 = NULL;
 		
-		$childName4 = null;
-     	$childGender4 = null;
-		$childSSN4 = null;
-		$childMonth4 = null;
-		$childDay4 = null;
-		$childYear4 = null;
-		$childCustody4 = null;
-		$child_DOB4 = null;
+		$childName4 = NULL;
+     	$childGender4 = NULL;
+		$childSSN4 = NULL;
+		$childMonth4 = NULL;
+		$childDay4 = NULL;
+		$childYear4 = NULL;
+		$childCustody4 = NULL;
+		$child_DOB4 = NULL;
 
-		$childName5 = null;
-     	$childGender5 = null;
-		$childSSN5 = null;
-		$childMonth5 = null;
-		$childDay5 = null;
-		$childYear5 = null;
-		$childCustody5 = null;
-		$child_DOB5 = null;
+		$childName5 = NULL;
+     	$childGender5 = NULL;
+		$childSSN5 = NULL;
+		$childMonth5 = NULL;
+		$childDay5 = NULL;
+		$childYear5 = NULL;
+		$childCustody5 = NULL;
+		$child_DOB5 = NULL;
 		
-		$childName6 = null;
-     	$childGender6 = null;
-		$childSSN6 = null;
-		$childMonth6 = null;
-		$childDay6 = null;
-		$childYear6 = null;
-		$childCustody6 = null;
-		$child_DOB6 = null;
+		$childName6 = NULL;
+     	$childGender6 = NULL;
+		$childSSN6 = NULL;
+		$childMonth6 = NULL;
+		$childDay6 = NULL;
+		$childYear6 = NULL;
+		$childCustody6 = NULL;
+		$child_DOB6 = NULL;
 						
-		$childName7 = null;
-     	$childGender7 = null;
-		$childSSN7 = null;
-		$childMonth7 = null;
-		$childDay7 = null;
-		$childYear7 = null;
-		$childCustody7 = null;
-		$child_DOB7 = null;
+		$childName7 = NULL;
+     	$childGender7 = NULL;
+		$childSSN7 = NULL;
+		$childMonth7 = NULL;
+		$childDay7 = NULL;
+		$childYear7 = NULL;
+		$childCustody7 = NULL;
+		$child_DOB7 = NULL;
 			
 	
-		$childName8 = null;
-     	$childGender8 = null;
-		$childSSN8 = null;
-		$childMonth8 = null;
-		$childDay8 = null;
-		$childYear8 = null;
-		$childCustody8 = null;
-		$child_DOB8 = null;
+		$childName8 = NULL;
+     	$childGender8 = NULL;
+		$childSSN8 = NULL;
+		$childMonth8 = NULL;
+		$childDay8 = NULL;
+		$childYear8 = NULL;
+		$childCustody8 = NULL;
+		$child_DOB8 = NULL;
 	}
 	
 	$ResidentId = $_SESSION['ResidentID'];

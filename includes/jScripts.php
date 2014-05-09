@@ -131,7 +131,7 @@
 		$("#MedicalSubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("medicaladd");
+			
 		    var myData = {	docName_Medical: $("#docNameMedical").val(),
 		    				docPhoneNum_Medical: $("#docPhoneNumMedical").val(),
 		    				docStreetAddress_Medical: $("#docStreetAddressMedical").val(),
@@ -179,7 +179,6 @@
 		$("#CriminalSubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("criminaladd");
 		    var myData = {	$incarceration_YN: $("#incarcerationYN").val(),
 		    				$incarceration_Loc: $("#incarcerationLoc").val(),
 		    				$incarceration_Charges: $("#incarcerationCharges").val(),
@@ -221,7 +220,6 @@
 		$("#EmploymentSubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("emoployee");
 		    var myData = {	current_Employment: $("#currentEmployment").val(),
 		    				companyName_Employment: $("#companyNameEmployment").val(),
 		    				managerName_Employment: $("#managerNameEmployment").val(),
@@ -261,7 +259,6 @@
 		$("#VehichleSubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("vehichleadd");
 		    var myData = {	registrationName_Vehichle: $("#registrationNameVehichle").val(),
 		    				licenseNum_Vehichle: $("#licenseNumVehichle").val(),
 		    				state_Vehichle: $("#stateVehichle").val(),
@@ -299,7 +296,6 @@
 		$("#EducationSubmit").click(function (e) 
 		{
 			e.preventDefault();
-			alert("education");
 		    var myData = {	residentDegree_Education: $("#residentDegreeEducation").val(),
 		    				continueEdYN_Education: $("#continueEdEducation").val(),
 		    				futureEdu_Education: $("#futurePlansEducation").val()

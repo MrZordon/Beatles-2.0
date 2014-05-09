@@ -66,7 +66,16 @@
 		   	file_put_contents ("test.txt" , $data );
 			
 			$result= mysql_query("SELECT `ResidentID` FROM `genericinfo` WHERE `SSN` =$ssn");
-			$_SESSION['ResidentID'] = $ResidentId;
+			
+			
+			while($row = mysql_fetch_array($result)) 
+			{
+				$ResidentId = $row[ResidentID];
+				$_SESSION['ResidentID'] = $ResidentId;
+			}
+			
+			$data = "ResID" . $_SESSION['ResidentID']. "ResID2:" . $ResidentId;
+			file_put_contents ("test.txt" , $data );	
 	    }
 		else
 		{

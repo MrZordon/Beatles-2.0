@@ -1,4 +1,26 @@
+<?php
+	// Inialize session
+	session_start();
+
+	// Check, if username session is NOT set then this page will jump to login page
+	if (!isset($_SESSION['userName'])) 
+	{
+		header('Location: index.php');
+	}
+	   
+    $now = time(); // checking the time now when home page starts
+    if($now > $_SESSION['expire'])
+    {
+        header('Location: includes/Exodus_logout.php');
+    }
+	else
+	{
+		$_SESSION['expire'] = time()+1600;		
+	}
+?>
+
 <html>
+
 
 <head>
 
@@ -21,22 +43,13 @@
   
     </script>
 
-  <!-- Header and Nav -->
-  <div class="row">
-    <div class="large-3 columns">
-      <h1><img src="http://placehold.it/400x100&text=Logo"></h1>
-    </div>
-   
-    <div class="large-9 columns">
-        <ul class="right button-group">
-        <li><a href="index2.php" class="button">Lazarus House Page</a></li>
-        <li><a href="#" class="button">Link 2</a></li>
-        <li><a href="#" class="button">Link 3</a></li>
-        <li><a href="#" class="button">Link 4</a></li>
-        </ul>
-    </div>
-  </div>
- 
+	<!-- Header and Nav -->
+    		<div class="large-11 columns">
+				<ul class="right button-group">
+					<li><p class="button">Current User: <?php echo $_SESSION['userName']; ?></p></li>
+					<li><a href="Exodus_LH_MasterSearches.php" class="button" id="searchForResidents">Search for a Resident</a></li>
+				</ul>
+ 		 	</div>
     <!-- End Header and Nav -->
 	<p></p>
 	<div class="row">

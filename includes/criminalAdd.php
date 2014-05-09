@@ -25,7 +25,7 @@
 	// if there is a result with the same ResidentId we are going to do an update
 	if (mysql_num_rows($query) == 0) 
 	{
-		if(mysql_query("INSERT INTO incarceration (ResidentId,Incarcerated,IncarcerationLoc,IncarceratedStartDate,IncarceratedEndDate,IncarceratedCharges,Institutionalized,NameOfInstitution,InstituteStartDate,InstituteReleaseDate,ReasonForInstitutionalization) VALUES('$ResidentID','$incarcerationYN','$incarcerationLoc','$incarcerationStart','$incarcerationEnd','$incarcerationReason','$institutionalizedYN','$institutionName','$institutionStart','$institutionEnd','$institutionReason')",$con))
+		if(mysql_query("INSERT INTO incarceration (ResidentId,Incarcerated,IncarcerationLoc,IncarceratedStartDate,IncarceratedEndDate,IncarcerationCharges,Institutionalized,NameOfInstitution,InstituteStartDate,InstituteReleaseDate,ReasonForInstitutionalization) VALUES('$ResidentID','$incarcerationYN','$incarcerationLoc','$incarcerationStart','$incarcerationEnd','$incarcerationReason','$institutionalizedYN','$institutionName','$institutionStart','$institutionEnd','$institutionReason')",$con))
 	    {
 	    
 	    }
