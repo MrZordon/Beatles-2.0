@@ -18,9 +18,9 @@
 			<div class="row"> 
 				<div class="large-4 columns"> 
 					<label>Gender:</label> 
-					<input type="radio" name="gender_Generic" value="Male" id="genderGeneric">
+					<input type="radio" name="gender_Generic" value="M" id="genderGeneric">
 						<label for="Male">Male</label> 
-					<input type="radio" name="gender_Generic" value="Female" id="genderGeneric">
+					<input type="radio" name="gender_Generic" value="F" id="genderGeneric">
 						<label for="Female">Female</label> 	
 				</div> 
 				
