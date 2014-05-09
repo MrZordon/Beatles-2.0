@@ -16,20 +16,25 @@
 	$rentYNDomestic = filter_var($_POST["rentYN_Domestic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 	$landlordCommentsDomestic = filter_var($_POST["landlordComments_Domestic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
+	//file_put_contents ("test.txt" , $_SESSION['ResidentID'];
+	
+	//file_put_contents ("test.txt" , "     ----     ");
+	
 	$ResidentId = $_SESSION['ResidentID'];
+
 
 	// If there are no results with the same ResidentId that means we are doing an Insert
 	// if there is a result with the same ResidentId we are going to do an update
 	if (mysql_num_rows($query) == 0) 
 	{
-		if(mysql_query("INSERT INTO DomesticInfo (ResidentId,DomViolence,SafetyPlan,RestrainingOrder ,PerpName,FamilyInfo,HomelessHistory,HousingHistory,Independent,PaidRent,LeaseAbility) VALUES('$ResidentId','$violenceYNDomestic','$safetyYNDomestic','$restrainingOrderYNDomestic','$perpNameDomestic','$familyDetailsDomestic','$homelessDetailsDomestic','$housingDetailsDomestic','$livedAloneYNDomestic','$rentYNDomestic','$landlordCommentsDomestic')",$con))
+		if(mysql_query("INSERT INTO DomesticInfo (ResidentID,DomViolence,SafetyPlan,RestrainingOrder ,PerpName,FamilyInfo,HomelessHistory,HousingHistory,Independent,PaidRent,LeaseAbility) VALUES('$ResidentId','$violenceYNDomestic','$safetyYNDomestic','$restrainingOrderYNDomestic','$perpNameDomestic','$familyDetailsDomestic','$homelessDetailsDomestic','$housingDetailsDomestic','$livedAloneYNDomestic','$rentYNDomestic','$landlordCommentsDomestic')",$con))
 	    {
 
 	    }
 		else
 		{
 			// Future Error Logs
-	  		$data = "Error Inserting Information: " . mysql_error() . 'ResidentID:' . $_SESSION['ResidentID'];
+	  		$data = "Error Inserting Information: " . mysql_error() . '    ResidentID:' . $_SESSION['ResidentID'];
 			file_put_contents ("test.txt" , $data );
 
 		}
