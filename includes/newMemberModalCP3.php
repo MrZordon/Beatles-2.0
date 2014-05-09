@@ -35,10 +35,52 @@
 					<label>Name of Perpetrator:<input type="text" name="perpName_Domestic" id="perpNameDomestic" placeholder="Full Name" /> </label> 
 				</div>
 			</div>
-		
+			
+			<div class="row">		
+				<div class="large-12 columns">
+					<label>Tell Us about your Family: <textarea name="familyDetails_Domestic" id="familyDetailsDomestic" placeholder="Tell Us about your Family"> </textarea> </label> 
+				</div>
+			</div>
+			<div class="row">		
+				<div class="large-12 columns">
+					<label>How did you become homeless?: <textarea name="homelessDetails_Domestic" id="homelessDetailsDomestic" placeholder="How did you become homeless?"> </textarea> </label> 
+				</div>
+			</div>
+			<div class="row">		
+				<div class="large-12 columns">
+					<label>Describe your housing history: <textarea name="housingDetails_Domestic" id="housingDetailsDomestic" placeholder="Describe your housing history"> </textarea> </label> 
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="large-4 columns"> 
+					<label>Have you ever lived on your own?</label> 
+					<input type="radio" name="livedAloneYN_Domestic" value="Yes" id="livedAloneYNDomestic">
+						<label for="livedY">Yes</label> 
+					<input type="radio" name="livedAloneYN_Domestic" value="No" id="livedAloneYNDomestic">
+						<label for="livedN">No</label> 	
+				</div>
+				<div class="large-4 columns"> 
+					<label>Were you responsible for rent?</label> 
+					<input type="radio" name="rentYN_Domestic" value="Yes" id="rentYNDomestic">
+						<label for="rentY">Yes</label> 
+					<input type="radio" name="rentYN_Domestic" value="No" id="rentYNDomestic">
+						<label for="rentN">No</label> 	
+				</div>
+				<div class="large-4 columns">
+					
+				</div>
+			</div>
+			
+			<div class="row">		
+				<div class="large-12 columns">
+					<label>What would your landlord say about your ability to abide by a lease?<textarea name="landlordComments_Domestic" id="landlordCommentsDomestic" placeholder="Comments"> </textarea> </label> 
+				</div>
+			</div>
+			
 		<div class="row">
 			<div class="large-3 columns">				
-				<button id="DomesticInfo" onclick="toggle_visibility('hideShow3');">Save Information</button>	
+				<button id="DomesticSubmit" onclick="toggle_visibility('hideShow3');">Save Information</button>	
 				<p><button href="#" data-reveal-id="NewMemberModalCP4" class="secondary button" id="hideShow3"  style="display:none;">Next</buttonW></p>
 			</div>
 			<div class="large-9 columns">
