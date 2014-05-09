@@ -54,6 +54,8 @@
 		//##### Add record when Add Record Button is click #########
 		$("#ChildrenSubmit").click(function (e) 
 		{
+			alert('WHY');
+		
 			e.preventDefault();
 
 		    var myData = {	child_Name1: $("#childName1").val(),
@@ -296,9 +298,10 @@
 				$(document).ready(function() 			
 				{
 		    		//##### Add record when Add Record Button is click #########
-		    		$("#FormSubmit").click(function (e) 
+		    		$("#GenericSubmit").click(function (e) 
 		    		{
 		    			e.preventDefault();
+						//alert('GENERIC');
 		    			
 		    			// Make sure the residents first name is filled out
 					    if($("#firstNameGeneric").val()==='')
@@ -342,7 +345,7 @@
 				    	jQuery.ajax(
 				    	{
 				    			type: "POST", // Post / Get method
-				    			url: "genericInfoAdd_CP.php", //Where form data is sent on submission
+				    			url: "includes/genericAdd_CP.php", //Where form data is sent on submission
 				    			dataType:"text", // Data type, HTML, json etc.
 				    			//Form variables
 				    			data:myData,
