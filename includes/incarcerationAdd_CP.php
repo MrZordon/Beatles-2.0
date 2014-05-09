@@ -19,19 +19,20 @@
 	$ResidentId = $_SESSION['ResidentID'];
 	$query = mysql_query("SELECT ResidentID FROM `incarceration` WHERE `ResidentID` = $ResidentId");
 
+	$data = $incarcerationYN . ', ' . $incarcerationLoc. ', ' . $incarcerationCharges. ', ' . $incarcerationStart. ', ' . $incarcerationEnd. ', ' . $institutionalizedYN. ', ' . $institutionName. ', ' . $institutionStart. ', ' . $institutionEnd. ', ' . $institutionReason;
 
 	// If there are no results with the same ResidentId that means we are doing an Insert
 	// if there is a result with the same ResidentId we are going to do an update
 	if (mysql_num_rows($query) == 0) 
 	{
-		if(mysql_query("INSERT INTO incarceration (ResidentId,Incarcerated,IncarcerationLoc,IncarceratedStartDate,IncarceratedEndDate,IncarceratedCharges,Institutionalized,NameOfInstitution,InstituteStartDate,InstituteReleaseDate,ReasonForInstitutionalization) VALUES('$ResidentID','$incarcerationYN','$incarcerationLoc','$incarcerationStart','$incarcerationEnd','$incarcerationCharges','$institutionalizedYN','$institutionName','$institutionStart','$institutionEnd','$institutionReason')",$con))
+		if(mysql_query("INSERT INTO incarceration (ResidentId,Incarcerated,IncarcerationLoc,IncarceratedStartDate,IncarceratedEndDate,IncarcerationCharges,Institutionalized,NameOfInstitution,InstituteStartDate,InstituteReleaseDate,ReasonForInstitutionalization) VALUES('$ResidentId','$incarcerationYN','$incarcerationLoc','$incarcerationStart','$incarcerationEnd','$incarcerationCharges','$institutionalizedYN','$institutionName','$institutionStart','$institutionEnd','$institutionReason')",$con))
 	    {
 
 	    }
 		else
 		{
 			// Future Error Logs
-	  		$data = "Error Inserting Information: " . mysql_error() . 'ResidentID:' . $_SESSION['ResidentID'];
+	  		//$data = "Error Inserting Information: " . mysql_error() . 'ResidentID:' . $_SESSION['ResidentID'];
 			file_put_contents ("test.txt" , $data );
 
 		}
