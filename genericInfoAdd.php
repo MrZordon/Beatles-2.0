@@ -37,7 +37,7 @@
 		$month= filter_var($_POST["monthDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		$day = filter_var($_POST["dayDOB_Generic"],FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 		
-		$DOBGeneric= strtotime("$year" + "-" + "$month" + "-" + "$day");
+		$DOBGeneric= $year . "-" . $month . "-" . $day;
 		$DateAdded = date("Y-m-d");
 		
 	}
@@ -75,7 +75,7 @@
 	else 
 	{
 		
-		if(mysql_query("UPDATE genericinfo SET `ResidentType`='$residentType',`Active`='$currentResident',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`Gender`='$gender',`SSN`='$ssn',`DOB`='$DOBGeneric',`Language`='$language',`Religion`='$religion',`Street`='$streetAddress',`CityTown`='$cityAddress',`State`='$stateAddress',`Zip`='zipAddress',`PhoneNum`='$cellPhone',`RefPerson`='$referralName',`RefAgency`='$referralAgency',`RefPhone`='$referralPhone',`NextKin`='$nameKin',`Kinship`='$relationshipKin',`KinStreet`='$streetKin',`KinCityTown`='$cityKin',`KinState`='$stateKin',`KinZip`='$zipKin',`KinPhone`='$phoneNumKin',`Comments`='$comments' WHERE `SSN`='$ssn'"))
+		if(mysql_query("UPDATE genericinfo SET `ResidentType`='$residentType',`Active`='$currentResident',`FirstName`='$firstName',`MiddleInitial`='$middleName',`LastName`='$lastName',`Gender`='$gender',`SSN`='$ssn',`DOB`='$DOBGeneric',`Language`='$language',`Religion`='$religion',`Street`='$streetAddress',`CityTown`='$cityAddress',`State`='$stateAddress',`Zip`='$zipAddress',`PhoneNum`='$cellPhone',`RefPerson`='$referralName',`RefAgency`='$referralAgency',`RefPhone`='$referralPhone',`NextKin`='$nameKin',`Kinship`='$relationshipKin',`KinStreet`='$streetKin',`KinCityTown`='$cityKin',`KinState`='$stateKin',`KinZip`='$zipKin',`KinPhone`='$phoneNumKin',`Comments`='$comments' WHERE `SSN`='$ssn'"))
 	    {
 	    	
 	    }

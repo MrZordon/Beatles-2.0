@@ -1,0 +1,1 @@
+Error Inserting Information: Cannot add or update a child row: a foreign key constraint fails (`exodus`.`education`, CONSTRAINT `education_ibfk_1` FOREIGN KEY (`ResidentID`) REFERENCES `genericinfo` (`ResidentID`))ResidentID:

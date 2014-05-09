@@ -224,7 +224,7 @@
 				<div class="large-4 columns"> 
 					<label>Select a Resident Type:</label> 
 						<select>
-							<option name="residentType_Generic" id="residentTypeGeneric" value="Lazarus House">Lazarus House</option> 
+							<option name="residentType_Generic" id="residentTypeGeneric" value="LH">Lazarus House</option> 
 						</select>
 				</div> 
 			</div> 
