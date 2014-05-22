@@ -7,9 +7,9 @@
 					<div class="row">
 						<div class=large-6 columns">
 							<label>Has the resident ever been incarcerated?</label> 
-									<input type="radio" name="incarceration_YN" value="Yes" id="incarcerationYN">
+									<input type="radio" name="incarceration_YN" value="Y" id="incarcerationYN">
 							<label for="incarcerationY">Yes</label> 
-									<input type="radio" name="incarceration_YN" value="No" id="incarcerationYN">
+									<input type="radio" name="incarceration_YN" value="N" id="incarcerationYN">
 							<label for="incarcerationN">No</label> 
 						</div>
 					</div>

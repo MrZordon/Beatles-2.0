@@ -282,7 +282,7 @@
  
  						<!-- Database Back up -->
       				<div class="large-3 small-6 columns">
-        				<a href="#" id="backUpDB"><img src="img/downloadIcon.png"></a>
+        				<a href="scripts/backups/backup.php" id="backUpDB"><img src="img/downloadIcon.png"></a>
         				<div class="panel">
           					<p>Backup Database</p>
         				</div>

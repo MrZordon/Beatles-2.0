@@ -1,4 +1,18 @@
 <?php
+
+		/* Update Page
+		 * 
+		 * The update page is essentially where Information is passed via a
+		 * POST Request in a form from one of the various information Panels.
+		 * All that is done in each of these for the time being is setting up
+		 * a connection to the database, retrieving the information from the
+		 * POST, and then finally making an update call to the database to 
+		 * change any information that is different.
+		 * 
+		 * TODOS - Add Error Checking, Test for all Values, Organize into a
+		 * 		   separate Updates Folder.
+		 */
+		 
 		include_once("connect_ExodusDB.inc");
 		
 		$firstName = $_POST["first_NameGeneric"];

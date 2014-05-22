@@ -1,3 +1,26 @@
+<?php
+		/* Panel Include Page
+		 * 
+		 * The panels are all members of the userInfo page, essentially a
+		 * residents profile page.  Each Panel contains resident data to 
+		 * that resident.  A user of the system can change the data on the
+		 * resident profile page within a panel and hit save.  This save 
+		 * will call an update script that will update the given information.
+		 * 
+		 * A few things to note, we must keep passing the resident ID in the
+		 * URL to keep track of what resident's information is being displayed.
+		 * This is a simple get command, we then need to connect to the database
+		 * and do a select * on the table relative to which panel we are in.
+		 * 
+		 * We will always pass the resident ID in a hidden field no matter which
+		 * panel we are in to the appropriate update script.
+		 * 
+		 * TODOS - Add Error Checking, Test for all Values, Organize into a
+		 * 		   separate Updates Folder.
+		 */
+
+?>
+
 <div class="content" id="panel8">
 	
 	<?php
